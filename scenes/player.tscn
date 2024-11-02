@@ -6,6 +6,9 @@
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_xhjc8"]
 size = Vector2(128, 127)
 
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_1iq26"]
+b = Vector2(0, 0)
+
 [sub_resource type="Animation" id="Animation_lt7e3"]
 resource_name = "walk_right"
 step = 0.25
@@ -111,8 +114,11 @@ region_rect = Rect2(391, 0, 67, 52)
 position = Vector2(0, -0.5)
 shape = SubResource("RectangleShape2D_xhjc8")
 
-[node name="Camera2D" type="Camera2D" parent="."]
-zoom = Vector2(4, 4)
+[node name="Area2D" type="Area2D" parent="."]
+collision_mask = 512
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource("SegmentShape2D_1iq26")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 libraries = {
