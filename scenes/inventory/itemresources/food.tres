@@ -12,5 +12,6 @@ script = ExtResource("1_hvcra")
 name = "Chip"
 description = "YUmmy"
 texture = SubResource("GradientTexture2D_ptple")
+value = 1
 amount = 1
 max_stack = 1
