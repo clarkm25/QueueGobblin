@@ -8,7 +8,7 @@ bounce = 0.4
 absorbent = true
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_11u1f"]
-size = Vector2(172, 19)
+size = Vector2(172, 18)
 
 [node name="BreadSlice" type="RigidBody2D"]
 position = Vector2(576, -147)
@@ -23,6 +23,6 @@ region_enabled = true
 region_rect = Rect2(292, 312, 57, 11)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(-0.123047, 6.97006)
+position = Vector2(0, 7.5)
 scale = Vector2(1, 1)
 shape = SubResource("RectangleShape2D_11u1f")
