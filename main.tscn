@@ -1,26 +1,14 @@
-[gd_scene load_steps=5 format=3 uid="uid://mm3g1mr5qf1a"]
+[gd_scene load_steps=3 format=3 uid="uid://bq7q3elye68v7"]
 
-[ext_resource type="Script" path="res://scripts/player/player.gd" id="1_8qccm"]
-[ext_resource type="Texture2D" uid="uid://ca6chasb6jvon" path="res://icon.svg" id="2_g00uj"]
-[ext_resource type="PackedScene" uid="uid://ch810t8jhy0d6" path="res://house.tscn" id="3_qbmuh"]
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_stfuj"]
-size = Vector2(128, 127)
+[ext_resource type="PackedScene" uid="uid://78psqsuy1rkv" path="res://scenes/player.tscn" id="2_1c6cr"]
+[ext_resource type="PackedScene" uid="uid://dip54pnfsfg58" path="res://house.tscn" id="3_qbmuh"]
 
 [node name="main" type="Node2D"]
 
 [node name="House" parent="." instance=ExtResource("3_qbmuh")]
 position = Vector2(478, 323)
-scale = Vector2(1.8743, 1.68516)
+scale = Vector2(1, 0.899)
 
-[node name="player" type="CharacterBody2D" parent="."]
-position = Vector2(136, 130)
-scale = Vector2(0.2, 0.2)
-script = ExtResource("1_8qccm")
-
-[node name="Sprite2D" type="Sprite2D" parent="player"]
-texture = ExtResource("2_g00uj")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="player"]
-position = Vector2(0, -0.5)
-shape = SubResource("RectangleShape2D_stfuj")
+[node name="Player" parent="." instance=ExtResource("2_1c6cr")]
+position = Vector2(300, 232)
+move_speed = 150.0
