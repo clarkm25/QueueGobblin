@@ -1,11 +1,25 @@
 [gd_scene load_steps=7 format=3 uid="uid://c0e4rm66g3rao"]
 
-[ext_resource type="Script" path="res://pause_menu.gd" id="1_6pfw0"]
-[ext_resource type="Shader" path="res://shaders/pause_shader/pause_shader.gdshader" id="2_i5iaf"]
+[ext_resource type="Script" path="res://scripts/UI/pause/pause_menu.gd" id="1_5cpxb"]
+[ext_resource type="Shader" path="res://shaders/pause_shader/pause_shader.gdshader" id="2_oxcd5"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_eer5t"]
-shader = ExtResource("2_i5iaf")
+shader = ExtResource("2_oxcd5")
 shader_parameter/lod = 0.631
+
+[sub_resource type="Animation" id="Animation_7m7j0"]
+length = 0.001
+tracks/0/type = "bezier"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("ColorRect:material:shader_parameter/lod")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(0.631, -0.15, 0, 0.15, 0),
+"times": PackedFloat32Array(0)
+}
 
 [sub_resource type="Animation" id="Animation_tm282"]
 resource_name = "blur"
@@ -19,20 +33,6 @@ tracks/0/loop_wrap = true
 tracks/0/keys = {
 "handle_modes": PackedInt32Array(0),
 "points": PackedFloat32Array(0.556, -0.15, 0, 0.15, 0),
-"times": PackedFloat32Array(0)
-}
-
-[sub_resource type="Animation" id="Animation_7m7j0"]
-length = 0.001
-tracks/0/type = "bezier"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("ColorRect:material:shader_parameter/lod")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"handle_modes": PackedInt32Array(0),
-"points": PackedFloat32Array(0.631, -0.15, 0, 0.15, 0),
 "times": PackedFloat32Array(0)
 }
 
@@ -50,7 +50,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-script = ExtResource("1_6pfw0")
+script = ExtResource("1_5cpxb")
 
 [node name="ColorRect" type="ColorRect" parent="."]
 material = SubResource("ShaderMaterial_eer5t")
