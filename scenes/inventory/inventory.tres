@@ -1,8 +1,9 @@
-[gd_resource type="Resource" script_class="Inventory" load_steps=3 format=3]
+[gd_resource type="Resource" script_class="Inventory" load_steps=3 format=3 uid="uid://cgev0ol6ns8nc"]
 
 [ext_resource type="Script" path="res://addons/SwiftInv/Scripts/InventoryItem.gd" id="1_s2p60"]
 [ext_resource type="Script" path="res://addons/SwiftInv/Scripts/Inventory.gd" id="2_eyrk3"]
 
 [resource]
+resource_local_to_scene = true
 script = ExtResource("2_eyrk3")
 items = Array[ExtResource("1_s2p60")]([null, null, null])
