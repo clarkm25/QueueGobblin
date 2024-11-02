@@ -1,23 +1,23 @@
 [gd_scene load_steps=11 format=3 uid="uid://jdwkwm4ov1s8"]
 
-[ext_resource type="Script" path="res://scenes/start.gd" id="1_ylxfh"]
-[ext_resource type="Texture2D" uid="uid://cok2ci4546h2u" path="res://scenes/StartBackground.png" id="2_xaakb"]
-[ext_resource type="Texture2D" uid="uid://cb728haosbgv8" path="res://scenes/startHover.png" id="3_ljyj2"]
-[ext_resource type="Texture2D" uid="uid://d3c84qhus8wq6" path="res://scenes/exitHover.png" id="3_qesfo"]
-[ext_resource type="Texture2D" uid="uid://bspf5m5pxav0f" path="res://scenes/startNotHover.png" id="4_bcxfr"]
-[ext_resource type="Texture2D" uid="uid://ce4rxek8kfxtf" path="res://scenes/exitNotHover.png" id="4_qj12d"]
+[ext_resource type="Script" path="res://scripts/UI/start.gd" id="1_ikni2"]
+[ext_resource type="Texture2D" uid="uid://cok2ci4546h2u" path="res://scenes/StartBackground.png" id="2_kql0c"]
+[ext_resource type="Texture2D" uid="uid://d3c84qhus8wq6" path="res://scenes/exitHover.png" id="3_qapej"]
+[ext_resource type="Texture2D" uid="uid://ce4rxek8kfxtf" path="res://scenes/exitNotHover.png" id="4_2s1gf"]
+[ext_resource type="Texture2D" uid="uid://cb728haosbgv8" path="res://scenes/startHover.png" id="5_we681"]
+[ext_resource type="Texture2D" uid="uid://bspf5m5pxav0f" path="res://scenes/startNotHover.png" id="6_t4pnl"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_7a3dk"]
-texture = ExtResource("3_qesfo")
+texture = ExtResource("3_qapej")
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_ricx7"]
-texture = ExtResource("4_qj12d")
+texture = ExtResource("4_2s1gf")
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_g2mlp"]
-texture = ExtResource("3_ljyj2")
+texture = ExtResource("5_we681")
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_hcvoh"]
-texture = ExtResource("4_bcxfr")
+texture = ExtResource("6_t4pnl")
 
 [node name="Start" type="Control"]
 layout_mode = 3
@@ -26,7 +26,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-script = ExtResource("1_ylxfh")
+script = ExtResource("1_ikni2")
 
 [node name="TextureRect" type="TextureRect" parent="."]
 layout_mode = 1
@@ -35,7 +35,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-texture = ExtResource("2_xaakb")
+texture = ExtResource("2_kql0c")
 
 [node name="exit button" type="Button" parent="."]
 layout_mode = 2

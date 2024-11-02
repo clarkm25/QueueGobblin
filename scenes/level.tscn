@@ -1,6 +1,8 @@
-[gd_scene load_steps=12 format=3 uid="uid://csx6uumt536ag"]
+[gd_scene load_steps=14 format=3 uid="uid://csx6uumt536ag"]
 
 [ext_resource type="PackedScene" uid="uid://78psqsuy1rkv" path="res://scenes/player.tscn" id="1_clu1g"]
+[ext_resource type="Script" path="res://scripts/game_loop.gd" id="1_y16ym"]
+[ext_resource type="PackedScene" uid="uid://b25jekrf0yjff" path="res://scenes/inventory/inventory_manager.tscn" id="2_deb0n"]
 [ext_resource type="PackedScene" uid="uid://col3xjunm68cw" path="res://scenes/inventory/inventory.tscn" id="2_vah53"]
 [ext_resource type="PackedScene" uid="uid://br1o5d65lfind" path="res://scenes/inventory/example_slot.tscn" id="3_dvbf2"]
 [ext_resource type="Script" path="res://addons/SwiftInv/Scripts/InventorySlot.gd" id="4_8mdmb"]
@@ -29,7 +31,9 @@ amount = 1
 max_stack = 1
 
 [node name="main" type="Node2D"]
-script = ExtResource("1_mskcw")
+script = ExtResource("1_y16ym")
+
+[node name="InventoryManager" parent="." instance=ExtResource("2_deb0n")]
 
 [node name="Player" parent="." groups=["player"] instance=ExtResource("1_clu1g")]
 z_index = 1
@@ -103,6 +107,5 @@ expand = true
 [node name="GroundItem2" parent="." instance=ExtResource("6_m1kao")]
 position = Vector2(1022, 306)
 item_resource = SubResource("Resource_8taha")
-[node name="Player" parent="." instance=ExtResource("1_clu1g")]
 
 [node name="GameTimer" type="Timer" parent="."]

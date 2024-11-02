@@ -1,6 +1,6 @@
 extends Node2D
 
-var replay_main_scene := preload("res://scenes/main.tscn")
+var replay_main_scene := preload("res://scenes/level.tscn")
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:

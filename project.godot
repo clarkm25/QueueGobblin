@@ -11,13 +11,9 @@ config_version=5
 [application]
 
 config/name="queuegobblin"
-run/main_scene="res://scripts/UI/start.tscn"
+run/main_scene="res://scenes/menus/start.tscn"
 config/features=PackedStringArray("4.3", "Forward Plus")
 config/icon="res://icon.svg"
-
-[autoload]
-
-InventoryManager="*res://scripts/inventory/inventory_manager.gd"
 
 [display]
 
