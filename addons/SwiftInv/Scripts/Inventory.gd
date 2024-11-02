@@ -56,7 +56,8 @@ func remove_by_index(index: int) -> Error:
 		printerr("No item found")
 		return FAILED
 	else:
-		items[index]
+		# MAX: I had to add the = null (I don't know why it wasn't there already lol)
+		items[index] = null
 		return OK
 
 ## Returns [code]true[/code] if inventory is full.
