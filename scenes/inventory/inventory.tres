@@ -1,4 +1,4 @@
-[gd_resource type="Resource" script_class="Inventory" load_steps=3 format=3 uid="uid://c0f8t1ocaub6a"]
+[gd_resource type="Resource" script_class="Inventory" load_steps=3 format=3]
 
 [ext_resource type="Script" path="res://addons/SwiftInv/Scripts/InventoryItem.gd" id="1_s2p60"]
 [ext_resource type="Script" path="res://addons/SwiftInv/Scripts/Inventory.gd" id="2_eyrk3"]
