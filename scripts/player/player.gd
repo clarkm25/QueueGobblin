@@ -1,6 +1,6 @@
 extends CharacterBody2D
 
-const move_speed = 300.0
+@export var move_speed = 300.0
 
 
 func _physics_process(delta):
