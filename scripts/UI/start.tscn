@@ -1,0 +1,99 @@
+[gd_scene load_steps=11 format=3 uid="uid://jdwkwm4ov1s8"]
+
+[ext_resource type="Script" path="res://scenes/start.gd" id="1_ylxfh"]
+[ext_resource type="Texture2D" uid="uid://cok2ci4546h2u" path="res://scenes/StartBackground.png" id="2_xaakb"]
+[ext_resource type="Texture2D" uid="uid://cb728haosbgv8" path="res://scenes/startHover.png" id="3_ljyj2"]
+[ext_resource type="Texture2D" uid="uid://d3c84qhus8wq6" path="res://scenes/exitHover.png" id="3_qesfo"]
+[ext_resource type="Texture2D" uid="uid://bspf5m5pxav0f" path="res://scenes/startNotHover.png" id="4_bcxfr"]
+[ext_resource type="Texture2D" uid="uid://ce4rxek8kfxtf" path="res://scenes/exitNotHover.png" id="4_qj12d"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_7a3dk"]
+texture = ExtResource("3_qesfo")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_ricx7"]
+texture = ExtResource("4_qj12d")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_g2mlp"]
+texture = ExtResource("3_ljyj2")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_hcvoh"]
+texture = ExtResource("4_bcxfr")
+
+[node name="Start" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_ylxfh")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_xaakb")
+
+[node name="exit button" type="Button" parent="."]
+layout_mode = 2
+anchor_right = 0.021
+anchor_bottom = 0.049
+offset_left = 400.0
+offset_top = 416.0
+offset_right = 703.808
+offset_bottom = 512.248
+theme_override_styles/hover = SubResource("StyleBoxTexture_7a3dk")
+theme_override_styles/normal = SubResource("StyleBoxTexture_ricx7")
+
+[node name="start_button" type="Button" parent="."]
+layout_mode = 2
+offset_left = 400.0
+offset_top = 248.0
+offset_right = 728.0
+offset_bottom = 384.0
+theme_override_styles/hover = SubResource("StyleBoxTexture_g2mlp")
+theme_override_styles/normal = SubResource("StyleBoxTexture_hcvoh")
+
+[node name="volume_slider" type="HSlider" parent="."]
+layout_mode = 0
+offset_left = 920.0
+offset_top = 536.0
+offset_right = 1128.0
+offset_bottom = 640.0
+
+[node name="Panel" type="Panel" parent="."]
+layout_mode = 0
+offset_left = 320.0
+offset_top = 72.0
+offset_right = 808.0
+offset_bottom = 208.0
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 0
+offset_left = 320.0
+offset_top = 72.0
+offset_right = 808.0
+offset_bottom = 208.0
+color = Color(0, 0, 0, 1)
+
+[node name="Label" type="Label" parent="ColorRect"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -11.5
+offset_right = 20.0
+offset_bottom = 11.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 60
+text = "Queue Gobblin"
+
+[connection signal="pressed" from="exit button" to="." method="_on_exit_button_pressed"]
+[connection signal="pressed" from="start_button" to="." method="_on_start_button_pressed"]
