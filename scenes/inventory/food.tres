@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="InventoryItem" load_steps=4 format=3 uid="uid://c5euyddtyf0di"]
+
+[ext_resource type="Script" path="res://addons/SwiftInv/Scripts/InventoryItem.gd" id="1_hvcra"]
+
+[sub_resource type="Gradient" id="Gradient_l8o7h"]
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_ptple"]
+gradient = SubResource("Gradient_l8o7h")
+
+[resource]
+script = ExtResource("1_hvcra")
+name = "Chip"
+description = "YUmmy"
+texture = SubResource("GradientTexture2D_ptple")
+amount = 1
+max_stack = 1

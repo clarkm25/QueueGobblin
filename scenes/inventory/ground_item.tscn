@@ -1,0 +1,47 @@
+[gd_scene load_steps=9 format=3 uid="uid://bp45rocdgyvbp"]
+
+[ext_resource type="Script" path="res://scenes/inventory/ground_item.gd" id="1_gjxl0"]
+[ext_resource type="Script" path="res://addons/SwiftInv/Scripts/InventoryItem.gd" id="2_mflm6"]
+[ext_resource type="Shader" path="res://scenes/inventory/ground_item.gdshader" id="3_g7caf"]
+
+[sub_resource type="Gradient" id="Gradient_k8dnl"]
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_meho2"]
+gradient = SubResource("Gradient_k8dnl")
+
+[sub_resource type="Resource" id="Resource_1vacf"]
+script = ExtResource("2_mflm6")
+name = "GroundItem"
+description = ""
+texture = SubResource("GradientTexture2D_meho2")
+value = 1
+amount = 1
+max_stack = 1
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_yx51d"]
+size = Vector2(64, 64)
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_jwet5"]
+shader = ExtResource("3_g7caf")
+shader_parameter/size_effect = 0.2
+shader_parameter/speed = 1.5
+shader_parameter/highlight_strength = 1.0
+shader_parameter/color_mode_toggle = false
+shader_parameter/is_horizontal = true
+shader_parameter/pause_duration = 0.5
+
+[node name="GroundItem" type="Area2D"]
+z_as_relative = false
+texture_filter = 1
+script = ExtResource("1_gjxl0")
+item_resource = SubResource("Resource_1vacf")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_yx51d")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+material = SubResource("ShaderMaterial_jwet5")
+use_parent_material = true
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="body_exited" from="." to="." method="_on_body_exited"]
