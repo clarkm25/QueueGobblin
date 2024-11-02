@@ -1,0 +1,111 @@
+[gd_scene load_steps=14 format=3 uid="uid://csx6uumt536ag"]
+
+[ext_resource type="PackedScene" uid="uid://78psqsuy1rkv" path="res://scenes/player.tscn" id="1_clu1g"]
+[ext_resource type="Script" path="res://scripts/game_loop.gd" id="1_y16ym"]
+[ext_resource type="PackedScene" uid="uid://b25jekrf0yjff" path="res://scenes/inventory/inventory_manager.tscn" id="2_deb0n"]
+[ext_resource type="PackedScene" uid="uid://col3xjunm68cw" path="res://scenes/inventory/inventory.tscn" id="2_vah53"]
+[ext_resource type="PackedScene" uid="uid://br1o5d65lfind" path="res://scenes/inventory/example_slot.tscn" id="3_dvbf2"]
+[ext_resource type="Script" path="res://addons/SwiftInv/Scripts/InventorySlot.gd" id="4_8mdmb"]
+[ext_resource type="Texture2D" uid="uid://cwnjnhapj6fm5" path="res://assets/food/morito.png" id="4_d1jhf"]
+[ext_resource type="Script" path="res://addons/SwiftInv/Scripts/InventoryItem.gd" id="5_cntmp"]
+[ext_resource type="VideoStream" path="res://assets/SkyrimOGG.ogv" id="5_fcc25"]
+[ext_resource type="PackedScene" uid="uid://bp45rocdgyvbp" path="res://scenes/inventory/ground_item.tscn" id="6_m1kao"]
+[ext_resource type="Texture2D" uid="uid://cr4iycc7ppnij" path="res://assets/food/mountdoo.png" id="8_n1nc4"]
+
+[sub_resource type="Resource" id="Resource_njlnr"]
+script = ExtResource("5_cntmp")
+name = "Moritos"
+description = ""
+texture = ExtResource("4_d1jhf")
+value = 5
+amount = 1
+max_stack = 1
+
+[sub_resource type="Resource" id="Resource_8taha"]
+script = ExtResource("5_cntmp")
+name = "MountDoo"
+description = ""
+texture = ExtResource("8_n1nc4")
+value = 1
+amount = 1
+max_stack = 1
+
+[node name="main" type="Node2D"]
+script = ExtResource("1_y16ym")
+
+[node name="InventoryManager" parent="." instance=ExtResource("2_deb0n")]
+
+[node name="Player" parent="." groups=["player"] instance=ExtResource("1_clu1g")]
+z_index = 1
+
+[node name="GroundItem" parent="." instance=ExtResource("6_m1kao")]
+position = Vector2(464, 143)
+item_resource = SubResource("Resource_njlnr")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="Inventory" parent="CanvasLayer" groups=["inventory"] instance=ExtResource("2_vah53")]
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -154.0
+offset_top = -100.0
+offset_right = 154.0
+offset_bottom = 0.0
+grow_horizontal = 2
+grow_vertical = 0
+size_flags_horizontal = 4
+size_flags_vertical = 4
+
+[node name="Slot0" type="TextureRect" parent="CanvasLayer/Inventory" node_paths=PackedStringArray("amount_label") instance=ExtResource("3_dvbf2")]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+mouse_filter = 2
+stretch_mode = 3
+script = ExtResource("4_8mdmb")
+amount_label = NodePath("AmountLabel")
+
+[node name="Slot1" type="TextureRect" parent="CanvasLayer/Inventory" node_paths=PackedStringArray("amount_label") instance=ExtResource("3_dvbf2")]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+mouse_filter = 2
+stretch_mode = 3
+script = ExtResource("4_8mdmb")
+amount_label = NodePath("AmountLabel")
+
+[node name="Slot2" type="TextureRect" parent="CanvasLayer/Inventory" node_paths=PackedStringArray("amount_label") instance=ExtResource("3_dvbf2")]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+mouse_filter = 2
+stretch_mode = 3
+script = ExtResource("4_8mdmb")
+amount_label = NodePath("AmountLabel")
+
+[node name="Control" type="Control" parent="CanvasLayer"]
+visible = false
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VideoStreamPlayer" type="VideoStreamPlayer" parent="CanvasLayer/Control"]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+stream = ExtResource("5_fcc25")
+autoplay = true
+expand = true
+
+[node name="GroundItem2" parent="." instance=ExtResource("6_m1kao")]
+position = Vector2(1022, 306)
+item_resource = SubResource("Resource_8taha")
+
+[node name="GameTimer" type="Timer" parent="."]
