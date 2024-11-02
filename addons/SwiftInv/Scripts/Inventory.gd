@@ -71,7 +71,8 @@ func _get_first_empty(from: int = 0) -> int:
 	# check each slot
 	for item in items:
 		# if item exists
-		if item:
+		# NATE: I PUT THE EXCLAMATION POINT. I MADE THIS WORK! THIS IS MY CODE!!!!
+		if !item:
 			return from
 		else:
 			from += 1

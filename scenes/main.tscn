@@ -9,6 +9,7 @@
 [node name="main" type="Node2D"]
 
 [node name="Player" parent="." groups=["player"] instance=ExtResource("1_clu1g")]
+z_index = 1
 
 [node name="GroundItem" parent="." instance=ExtResource("6_m1kao")]
 position = Vector2(464, 143)
