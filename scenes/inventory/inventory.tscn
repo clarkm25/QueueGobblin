@@ -1,0 +1,13 @@
+[gd_scene load_steps=4 format=3 uid="uid://col3xjunm68cw"]
+
+[ext_resource type="Script" path="res://addons/SwiftInv/Scripts/InventoryContainer.gd" id="1_550kr"]
+[ext_resource type="Resource" uid="uid://c0f8t1ocaub6a" path="res://scenes/inventory/inventory.tres" id="2_h4ksc"]
+[ext_resource type="PackedScene" uid="uid://br1o5d65lfind" path="res://scenes/inventory/example_slot.tscn" id="3_5ibbt"]
+
+[node name="Inventory" type="GridContainer"]
+offset_right = 308.0
+offset_bottom = 308.0
+columns = 3
+script = ExtResource("1_550kr")
+inventory = ExtResource("2_h4ksc")
+slot_scene = ExtResource("3_5ibbt")
