@@ -79,6 +79,7 @@ script = ExtResource("4_8mdmb")
 amount_label = NodePath("AmountLabel")
 
 [node name="Control" type="Control" parent="CanvasLayer"]
+visible = false
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -87,6 +88,7 @@ grow_horizontal = 2
 grow_vertical = 2
 
 [node name="VideoStreamPlayer" type="VideoStreamPlayer" parent="CanvasLayer/Control"]
+visible = false
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
