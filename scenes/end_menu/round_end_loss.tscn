@@ -1,0 +1,81 @@
+[gd_scene load_steps=14 format=3 uid="uid://dre8c7pwxrtag"]
+
+[ext_resource type="Script" path="res://scripts/end_menu/round_end_loss.gd" id="1_nsxxk"]
+[ext_resource type="Texture2D" uid="uid://ug164shoogbk" path="res://scenes/end_menu/restartButton.png" id="2_rb6lx"]
+[ext_resource type="Texture2D" uid="uid://4o2llaaji2i1" path="res://scenes/end_menu/quitButton.png" id="3_hrmih"]
+[ext_resource type="Texture2D" uid="uid://b83d1e4tbnyoi" path="res://scenes/end_menu/Derank.png" id="4_ogqlp"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_oeswi"]
+bg_color = Color(0.230315, 0.230315, 0.230315, 0.866667)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_tblp4"]
+texture = ExtResource("2_rb6lx")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_ux35l"]
+texture = ExtResource("2_rb6lx")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_t00aw"]
+texture = ExtResource("2_rb6lx")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_sj0m6"]
+texture = ExtResource("2_rb6lx")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_1i44h"]
+texture = ExtResource("3_hrmih")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_eui08"]
+texture = ExtResource("3_hrmih")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_wakvy"]
+texture = ExtResource("3_hrmih")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_lvexo"]
+texture = ExtResource("3_hrmih")
+
+[node name="round_end_loss" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_nsxxk")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="Panel" type="Panel" parent="CanvasLayer"]
+offset_right = 1152.0
+offset_bottom = 648.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_oeswi")
+
+[node name="restart" type="Button" parent="CanvasLayer"]
+offset_left = 432.0
+offset_top = 288.0
+offset_right = 719.0
+offset_bottom = 396.0
+mouse_default_cursor_shape = 2
+theme_override_styles/hover_pressed = SubResource("StyleBoxTexture_tblp4")
+theme_override_styles/hover = SubResource("StyleBoxTexture_ux35l")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_t00aw")
+theme_override_styles/normal = SubResource("StyleBoxTexture_sj0m6")
+
+[node name="quit" type="Button" parent="CanvasLayer"]
+offset_left = 432.0
+offset_top = 432.0
+offset_right = 719.0
+offset_bottom = 540.0
+mouse_default_cursor_shape = 2
+theme_override_styles/hover_pressed = SubResource("StyleBoxTexture_1i44h")
+theme_override_styles/hover = SubResource("StyleBoxTexture_eui08")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_wakvy")
+theme_override_styles/normal = SubResource("StyleBoxTexture_lvexo")
+
+[node name="TextureRect" type="TextureRect" parent="CanvasLayer"]
+offset_left = 424.0
+offset_top = 32.0
+offset_right = 724.0
+offset_bottom = 232.0
+texture = ExtResource("4_ogqlp")
+
+[connection signal="pressed" from="CanvasLayer/restart" to="." method="_on_restart_pressed"]
+[connection signal="pressed" from="CanvasLayer/quit" to="." method="_on_quit_pressed"]

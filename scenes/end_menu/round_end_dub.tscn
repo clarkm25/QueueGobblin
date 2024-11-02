@@ -1,0 +1,78 @@
+[gd_scene load_steps=14 format=3 uid="uid://by1qi8k0r1w0m"]
+
+[ext_resource type="Script" path="res://scripts/end_menu/round_end_dub.gd" id="1_ds107"]
+[ext_resource type="Texture2D" uid="uid://ug164shoogbk" path="res://scenes/end_menu/restartButton.png" id="2_kesew"]
+[ext_resource type="Texture2D" uid="uid://4o2llaaji2i1" path="res://scenes/end_menu/quitButton.png" id="3_d2rs7"]
+[ext_resource type="Texture2D" uid="uid://ccuoxkmk2at1d" path="res://scenes/end_menu/Rankup.png" id="4_hl1jv"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_8m2hf"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_isf4i"]
+texture = ExtResource("2_kesew")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_w7ble"]
+texture = ExtResource("2_kesew")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_ddak7"]
+texture = ExtResource("2_kesew")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_wu32k"]
+texture = ExtResource("2_kesew")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_q6h3r"]
+texture = ExtResource("3_d2rs7")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_e5vi5"]
+texture = ExtResource("3_d2rs7")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_jnbvy"]
+texture = ExtResource("3_d2rs7")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_sj0m6"]
+texture = ExtResource("3_d2rs7")
+
+[node name="round_end_dub" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_ds107")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="Panel" type="Panel" parent="CanvasLayer"]
+offset_right = 1152.0
+offset_bottom = 648.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_8m2hf")
+
+[node name="restart_button" type="Button" parent="CanvasLayer"]
+offset_left = 432.0
+offset_top = 288.0
+offset_right = 719.0
+offset_bottom = 396.0
+theme_override_styles/hover_pressed = SubResource("StyleBoxTexture_isf4i")
+theme_override_styles/hover = SubResource("StyleBoxTexture_w7ble")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_ddak7")
+theme_override_styles/normal = SubResource("StyleBoxTexture_wu32k")
+
+[node name="quit_button" type="Button" parent="CanvasLayer"]
+offset_left = 432.0
+offset_top = 432.0
+offset_right = 719.0
+offset_bottom = 540.0
+theme_override_styles/hover_pressed = SubResource("StyleBoxTexture_q6h3r")
+theme_override_styles/hover = SubResource("StyleBoxTexture_e5vi5")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_jnbvy")
+theme_override_styles/normal = SubResource("StyleBoxTexture_sj0m6")
+
+[node name="TextureRect" type="TextureRect" parent="CanvasLayer"]
+offset_left = 424.0
+offset_top = 32.0
+offset_right = 724.0
+offset_bottom = 232.0
+texture = ExtResource("4_hl1jv")
+
+[connection signal="pressed" from="CanvasLayer/restart_button" to="." method="_on_restart_button_pressed"]
+[connection signal="pressed" from="CanvasLayer/quit_button" to="." method="_on_quit_button_pressed"]
