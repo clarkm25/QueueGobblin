@@ -1,0 +1,17 @@
+[gd_scene load_steps=3 format=3 uid="uid://jyuuyr0tff0b"]
+
+[ext_resource type="Script" path="res://scenes/debug/camera_lock.gd" id="1_6uvqf"]
+[ext_resource type="PackedScene" uid="uid://78psqsuy1rkv" path="res://scenes/player.tscn" id="1_78cvd"]
+
+[node name="CameraLockDebug" type="Node2D"]
+script = ExtResource("1_6uvqf")
+
+[node name="Player" parent="." instance=ExtResource("1_78cvd")]
+
+[node name="Camera2DBedRoom" type="Camera2D" parent="."]
+position = Vector2(1178, 2)
+
+[node name="Camera2DGameRoom" type="Camera2D" parent="."]
+
+[node name="Camera2DHallWay" type="Camera2D" parent="."]
+position = Vector2(571, 601)
