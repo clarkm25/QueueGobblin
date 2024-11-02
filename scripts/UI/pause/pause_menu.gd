@@ -16,13 +16,11 @@ func testEsc():
 	elif Input.is_action_just_pressed("pause") and get_tree().paused == true:
 		resume()
 
-
 func _on_resume_pressed() -> void:
 	resume()
 
-
 func _on_restart_pressed() -> void:
-	get_tree().reload_current_scene()
+	get_tree().change_scene_to_file("res://scenes/test_levels/pause_test_level.tscn")
 
 func _on_quit_pressed() -> void:
-	get_tree().quit
+	get_tree().quit()
