@@ -1,9 +1,9 @@
-[gd_scene load_steps=21 format=3 uid="uid://cib2wsxicmb2a"]
+[gd_scene load_steps=22 format=3 uid="uid://c03ie5u7h5xhs"]
 
 [ext_resource type="Script" path="res://scripts/camera/camera_lock.gd" id="1_e3jxk"]
 [ext_resource type="PackedScene" uid="uid://dip54pnfsfg58" path="res://house.tscn" id="1_pknrw"]
 [ext_resource type="PackedScene" uid="uid://78psqsuy1rkv" path="res://scenes/player.tscn" id="2_ead14"]
-[ext_resource type="PackedScene" uid="uid://ymf7fkfoy0vs" path="res://scenes/room.tscn" id="3_fshdu"]
+[ext_resource type="PackedScene" path="res://scenes/room.tscn" id="3_fshdu"]
 [ext_resource type="PackedScene" uid="uid://col3xjunm68cw" path="res://scenes/inventory/inventory.tscn" id="5_hvo0p"]
 [ext_resource type="Script" path="res://addons/SwiftInv/Scripts/InventoryItem.gd" id="6_hy4yl"]
 [ext_resource type="Script" path="res://addons/SwiftInv/Scripts/Inventory.gd" id="7_j2fxr"]
@@ -12,6 +12,7 @@
 [ext_resource type="PackedScene" uid="uid://b25jekrf0yjff" path="res://scenes/inventory/inventory_manager.tscn" id="10_v1bwn"]
 [ext_resource type="PackedScene" uid="uid://bq370gs06pwhw" path="res://scenes/menus/pause_menu.tscn" id="11_o2lub"]
 [ext_resource type="PackedScene" uid="uid://c2l3b5t3d16q7" path="res://scenes/inventory/dropoff/dropoff_zone.tscn" id="12_bwyl4"]
+[ext_resource type="PackedScene" uid="uid://3j56tewil3yj" path="res://scenes/menus/clock.tscn" id="12_erdqb"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_wyeno"]
 resource_local_to_scene = true
@@ -41,7 +42,7 @@ size = Vector2(192, 144)
 resource_local_to_scene = true
 size = Vector2(224, 144)
 
-[sub_resource type="Resource" id="Resource_ievyw"]
+[sub_resource type="Resource" id="Resource_0krco"]
 resource_local_to_scene = true
 script = ExtResource("7_j2fxr")
 items = Array[ExtResource("6_hy4yl")]([null, null, null])
@@ -152,11 +153,14 @@ position = Vector2(112, 280)
 [node name="CollisionShape2D" parent="CameraLocks/LivingRoom/CameraCapture" index="0"]
 shape = SubResource("RectangleShape2D_ehu2j")
 
-[node name="Player" parent="." instance=ExtResource("2_ead14")]
+[node name="Player" parent="." groups=["player"] instance=ExtResource("2_ead14")]
 position = Vector2(176, 64)
 move_speed = 125.0
 
 [node name="InventoryManager" parent="." instance=ExtResource("10_v1bwn")]
+
+[node name="DropoffZone" parent="." instance=ExtResource("12_bwyl4")]
+position = Vector2(208, 72)
 
 [node name="GameTimer" type="Timer" parent="."]
 
@@ -174,7 +178,7 @@ offset_right = 154.0
 offset_bottom = 0.0
 grow_horizontal = 2
 grow_vertical = 0
-inventory = SubResource("Resource_ievyw")
+inventory = SubResource("Resource_0krco")
 
 [node name="Slot0" type="TextureRect" parent="CanvasLayer/Inventory" node_paths=PackedStringArray("amount_label") instance=ExtResource("8_c5su7")]
 custom_minimum_size = Vector2(100, 100)
@@ -200,13 +204,13 @@ stretch_mode = 3
 script = ExtResource("9_xocdk")
 amount_label = NodePath("AmountLabel")
 
+[node name="Clock" parent="CanvasLayer" instance=ExtResource("12_erdqb")]
+size_flags_horizontal = 4
+
 [node name="CanvasLayer2" type="CanvasLayer" parent="."]
 
 [node name="pause-menu" parent="CanvasLayer2" instance=ExtResource("11_o2lub")]
 visible = false
-
-[node name="DropoffZone" parent="." instance=ExtResource("12_bwyl4")]
-position = Vector2(208, 72)
 
 [connection signal="timeout" from="GameTimer" to="." method="_on_game_timer_timeout"]
 

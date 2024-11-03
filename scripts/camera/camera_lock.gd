@@ -3,8 +3,7 @@ extends Node2D
 @onready var camera = $Camera2D
 @onready var player = $Player
 @onready var timer = $GameTimer
-
-var scrub_menu := preload("res://scenes/menus/end/end_menu_loss.tscn")
+@onready var clock = $CanvasLayer/Clock/NinePatchRect/Seconds
 
 var target_pos = null
 
@@ -29,6 +28,9 @@ func _process(delta: float) -> void:
 	# Camera tween when switching between camera locks
 	var tween = get_tree().create_tween()
 	tween.tween_property(camera, "global_position", target_pos, 0.25)
+	
+	# Update clock hud
+	clock.text = str(round($GameTimer.time_left))
 
 
 func set_camera(room : Node2D):
@@ -37,4 +39,5 @@ func set_camera(room : Node2D):
 
 func _on_game_timer_timeout() -> void:
 	# temp functionality of the timer
-	scrub_menu.instantiate()
+	print("YOU LOSE SCRUB!")
+	get_tree().change_scene_to_file("res://scenes/menus/end/end_menu_loss.tscn")
