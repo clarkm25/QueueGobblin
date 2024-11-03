@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://bp45rocdgyvbp"]
+[gd_scene load_steps=10 format=3 uid="uid://bp45rocdgyvbp"]
 
 [ext_resource type="Script" path="res://scenes/inventory/ground_item.gd" id="1_gjxl0"]
 [ext_resource type="Script" path="res://addons/SwiftInv/Scripts/InventoryItem.gd" id="2_mflm6"]
@@ -19,7 +19,7 @@ amount = 1
 max_stack = 1
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_yx51d"]
-size = Vector2(64, 64)
+size = Vector2(24, 24)
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_jwet5"]
 shader = ExtResource("3_g7caf")
@@ -29,6 +29,9 @@ shader_parameter/highlight_strength = 1.0
 shader_parameter/color_mode_toggle = false
 shader_parameter/is_horizontal = true
 shader_parameter/pause_duration = 0.5
+
+[sub_resource type="LabelSettings" id="LabelSettings_nw740"]
+font_size = 22
 
 [node name="GroundItem" type="Area2D"]
 z_as_relative = false
@@ -42,6 +45,24 @@ shape = SubResource("RectangleShape2D_yx51d")
 [node name="Sprite2D" type="Sprite2D" parent="."]
 material = SubResource("ShaderMaterial_jwet5")
 use_parent_material = true
+
+[node name="ItemLabel" type="Label" parent="."]
+visible = false
+anchors_preset = -1
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -19.0
+offset_top = -15.0
+offset_right = 161.0
+offset_bottom = 50.0
+grow_horizontal = 2
+scale = Vector2(0.215, 0.215)
+size_flags_horizontal = 0
+size_flags_vertical = 0
+text = "Press E to pickup
+"
+label_settings = SubResource("LabelSettings_nw740")
+horizontal_alignment = 1
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]
 [connection signal="body_exited" from="." to="." method="_on_body_exited"]

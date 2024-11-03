@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://dywp7vm6h7dr6"
+path="res://.godot/imported/It looks pretty good.ogg-5396caccd0836b009a5e138c400c6d20.oggvorbisstr"
+
+[deps]
+
+source_file="res://assets/foley-and-vo/It looks pretty good.ogg"
+dest_files=["res://.godot/imported/It looks pretty good.ogg-5396caccd0836b009a5e138c400c6d20.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

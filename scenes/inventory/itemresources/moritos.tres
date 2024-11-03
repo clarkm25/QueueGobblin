@@ -8,6 +8,6 @@ script = ExtResource("1_qm48w")
 name = "Moritos"
 description = ""
 texture = ExtResource("2_3284y")
-value = 1
+value = 40
 amount = 1
 max_stack = 1

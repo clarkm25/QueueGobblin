@@ -1,5 +1,6 @@
-[gd_scene load_steps=3 format=3 uid="uid://cybm475b8ydaa"]
+[gd_scene load_steps=4 format=3 uid="uid://cybm475b8ydaa"]
 
+[ext_resource type="Resource" uid="uid://b8ni6upjipuj6" path="res://scenes/inventory/itemresources/moritos.tres" id="1_61va6"]
 [ext_resource type="Texture2D" uid="uid://cto5x3pxr1mr6" path="res://assets/food/morito_highres.png" id="1_dnr41"]
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_l3dps"]
@@ -7,6 +8,7 @@
 [node name="Moritos" type="RigidBody2D"]
 mass = 0.1
 physics_material_override = SubResource("PhysicsMaterial_l3dps")
+metadata/item_resource = ExtResource("1_61va6")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 rotation = -1.5708
