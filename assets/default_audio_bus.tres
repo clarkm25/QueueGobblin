@@ -1,3 +1,15 @@
-[gd_resource type="AudioBusLayout" format=3 uid="uid://bivrax2cgn6t3"]
+[gd_resource type="AudioBusLayout" load_steps=2 format=3 uid="uid://coet7cl6agaca"]
+
+[sub_resource type="AudioEffectAmplify" id="AudioEffectAmplify_oluuu"]
+resource_name = "Amplify"
+volume_db = 20.0
 
 [resource]
+bus/1/name = &"Fridge"
+bus/1/solo = false
+bus/1/mute = false
+bus/1/bypass_fx = false
+bus/1/volume_db = 0.153919
+bus/1/send = &"Master"
+bus/1/effect/0/effect = SubResource("AudioEffectAmplify_oluuu")
+bus/1/effect/0/enabled = true
