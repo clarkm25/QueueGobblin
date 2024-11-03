@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=3 uid="uid://jdwkwm4ov1s8"]
+[gd_scene load_steps=12 format=3 uid="uid://jdwkwm4ov1s8"]
 
 [ext_resource type="Script" path="res://scripts/UI/start.gd" id="1_ikni2"]
 [ext_resource type="Texture2D" uid="uid://cok2ci4546h2u" path="res://scenes/StartBackground.png" id="2_kql0c"]
@@ -6,6 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://ce4rxek8kfxtf" path="res://scenes/exitNotHover.png" id="4_2s1gf"]
 [ext_resource type="Texture2D" uid="uid://cb728haosbgv8" path="res://scenes/startHover.png" id="5_we681"]
 [ext_resource type="Texture2D" uid="uid://bspf5m5pxav0f" path="res://scenes/startNotHover.png" id="6_t4pnl"]
+[ext_resource type="AudioStream" uid="uid://c755j5rmxbynk" path="res://assets/music/761671__loudkevin__reborn.mp3" id="7_0sim4"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_7a3dk"]
 texture = ExtResource("3_qapej")
@@ -63,6 +64,9 @@ offset_left = 920.0
 offset_top = 536.0
 offset_right = 1128.0
 offset_bottom = 640.0
+max_value = 1.0
+step = 0.001
+value = 0.5
 
 [node name="Panel" type="Panel" parent="."]
 layout_mode = 0
@@ -95,5 +99,13 @@ grow_vertical = 2
 theme_override_font_sizes/font_size = 60
 text = "Queue Gobblin"
 
+[node name="AudioListener2D" type="AudioListener2D" parent="."]
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="AudioListener2D"]
+stream = ExtResource("7_0sim4")
+volume_db = 15.0
+autoplay = true
+
 [connection signal="pressed" from="exit button" to="." method="_on_exit_button_pressed"]
 [connection signal="pressed" from="start_button" to="." method="_on_start_button_pressed"]
+[connection signal="value_changed" from="volume_slider" to="." method="_on_volume_slider_value_changed"]
