@@ -174,7 +174,7 @@ possible_resources = Array[ExtResource("5_yduve")]([ExtResource("6_3k5us"), ExtR
 
 [node name="Player" parent="." groups=["player"] instance=ExtResource("2_ead14")]
 position = Vector2(176, 64)
-move_speed = 125.0
+move_speed = 100.0
 
 [node name="InventoryManager" parent="." instance=ExtResource("10_v1bwn")]
 
