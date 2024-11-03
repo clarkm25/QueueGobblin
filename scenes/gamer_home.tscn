@@ -393,8 +393,8 @@ offset_right = 20.0
 offset_bottom = 11.5
 grow_horizontal = 2
 grow_vertical = 2
-text = "ahh... 
-Goon Chair"
+text = "Found some
+loose change"
 label_settings = SubResource("LabelSettings_jpssb")
 
 [node name="CounterArea" type="Area2D" parent="Node2D"]
@@ -440,8 +440,8 @@ shape = SubResource("RectangleShape2D_6o86a")
 visible = false
 offset_left = 24.0
 offset_top = 7.0
-offset_right = 84.0
-offset_bottom = 47.0
+offset_right = 63.0
+offset_bottom = 29.0
 
 [node name="Label" type="Label" parent="Node2D/BedArea/BedPanel"]
 texture_filter = 1
@@ -457,9 +457,8 @@ offset_right = 29.0
 offset_bottom = 18.0
 grow_horizontal = 2
 grow_vertical = 2
-text = "No one shine a 
-blacklight on 
-the bed"
+text = "NO SLEEP 
+MUST GAME"
 label_settings = SubResource("LabelSettings_d1ggg")
 
 [node name="BookArea" type="Area2D" parent="Node2D"]
@@ -555,7 +554,7 @@ offset_right = 20.0
 offset_bottom = 11.5
 grow_horizontal = 2
 grow_vertical = 2
-text = "OH SH*T!
+text = "OH CRAP!
 A RAT!!"
 label_settings = SubResource("LabelSettings_nmbsh")
 
