@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://bq370gs06pwhw"]
+[gd_scene load_steps=10 format=3 uid="uid://bq370gs06pwhw"]
 
 [ext_resource type="Script" path="res://scripts/UI/pause/pause_menu.gd" id="1_5cpxb"]
 [ext_resource type="Shader" path="res://shaders/pause_shader/pause_shader.gdshader" id="2_oxcd5"]
@@ -7,6 +7,11 @@
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_eer5t"]
 shader = ExtResource("2_oxcd5")
 shader_parameter/lod = 0.631
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ge8sb"]
+bg_color = Color(0.180005, 0.180005, 0.180005, 1)
+
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_rxl5y"]
 
 [sub_resource type="Animation" id="Animation_7m7j0"]
 length = 0.001
@@ -49,8 +54,6 @@ layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_top = 11.0
-offset_bottom = 11.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_5cpxb")
@@ -70,7 +73,16 @@ offset_right = 40.0
 offset_bottom = 40.0
 script = ExtResource("3_2bplg")
 
+[node name="Panel" type="Panel" parent="AudioOptions"]
+layout_mode = 2
+offset_left = 742.0
+offset_top = 547.0
+offset_right = 1124.0
+offset_bottom = 601.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_ge8sb")
+
 [node name="VolumeUI" type="VBoxContainer" parent="AudioOptions"]
+material = SubResource("CanvasItemMaterial_rxl5y")
 layout_mode = 2
 offset_left = 748.0
 offset_top = 549.0
