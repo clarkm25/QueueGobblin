@@ -1,4 +1,4 @@
-[gd_resource type="Resource" script_class="InventoryItem" load_steps=3 format=3 uid="uid://dc74y0bo7676m"]
+[gd_resource type="Resource" script_class="InventoryItem" load_steps=3 format=3 uid="uid://8s6uhuulqa6c"]
 
 [ext_resource type="Script" path="res://addons/SwiftInv/Scripts/InventoryItem.gd" id="1_ivn8b"]
 [ext_resource type="Texture2D" uid="uid://cpw8s8m1pqppp" path="res://assets/food/full_lettuce.png" id="2_20hpd"]
@@ -8,6 +8,6 @@ script = ExtResource("1_ivn8b")
 name = "Lettuce"
 description = ""
 texture = ExtResource("2_20hpd")
-value = 1
+value = 30
 amount = 1
 max_stack = 1

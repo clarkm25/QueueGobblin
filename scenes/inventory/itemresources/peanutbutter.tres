@@ -1,4 +1,4 @@
-[gd_resource type="Resource" script_class="InventoryItem" load_steps=3 format=3 uid="uid://dchqh84a5lxdv"]
+[gd_resource type="Resource" script_class="InventoryItem" load_steps=3 format=3 uid="uid://cw454ckonuicl"]
 
 [ext_resource type="Script" path="res://addons/SwiftInv/Scripts/InventoryItem.gd" id="1_jtvu0"]
 [ext_resource type="Texture2D" uid="uid://cte1kcqnalbu1" path="res://assets/food/peanut_butter.png" id="2_h3ykw"]
@@ -8,6 +8,6 @@ script = ExtResource("1_jtvu0")
 name = "PeanutButter"
 description = ""
 texture = ExtResource("2_h3ykw")
-value = 1
+value = 20
 amount = 1
 max_stack = 1
