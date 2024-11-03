@@ -27,7 +27,7 @@ func _on_body_entered(body: Node2D) -> void:
 		
 func _unhandled_input(event: InputEvent):
 	if event.is_action_pressed("interact"):
-		if pickupable:
+		if pickupable && !inventory.is_full():
 			inventory.add_item(item_resource)
 			queue_free()
 

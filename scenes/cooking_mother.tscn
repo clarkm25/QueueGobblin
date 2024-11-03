@@ -1,10 +1,13 @@
-[gd_scene load_steps=8 format=3 uid="uid://cbir4c3j7r4tt"]
+[gd_scene load_steps=11 format=3 uid="uid://cbir4c3j7r4tt"]
 
 [ext_resource type="Script" path="res://scripts/inventory/sandwich_building/sandwich_scene.gd" id="1_enyul"]
 [ext_resource type="Texture2D" uid="uid://dt5dt7xuwbea8" path="res://assets/desk.png" id="1_xxetj"]
 [ext_resource type="PackedScene" uid="uid://d4dgfa8mtmy7e" path="res://scenes/inventory/itemresources/moritos_soft.tscn" id="2_ectb5"]
 [ext_resource type="PackedScene" uid="uid://d378jrgtiese8" path="res://scenes/inventory/itemresources/mount_doo.tscn" id="2_gq0lb"]
 [ext_resource type="PackedScene" uid="uid://d3tgv81bt3x4n" path="res://scenes/bread_slice.tscn" id="2_wlanp"]
+[ext_resource type="PackedScene" uid="uid://0mjd1sqn5iog" path="res://scenes/inventory/itemresources/mootpocket.tscn" id="4_kswip"]
+[ext_resource type="PackedScene" uid="uid://w86s1h3e5dbq" path="res://scenes/inventory/itemresources/peanut_butter.tscn" id="5_bikem"]
+[ext_resource type="PackedScene" uid="uid://8x5wmrjowqor" path="res://scenes/inventory/itemresources/jam.tscn" id="6_k2pjj"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_cbrg3"]
 size = Vector2(1153, 62.5)
@@ -15,8 +18,11 @@ size = Vector2(1182, 116)
 [node name="CookingMother" type="Node2D"]
 script = ExtResource("1_enyul")
 food_dict = {
+"Jam": ExtResource("6_k2pjj"),
+"Mootpocket": ExtResource("4_kswip"),
 "Moritos": ExtResource("2_ectb5"),
-"MountDoo": ExtResource("2_gq0lb")
+"MountDoo": ExtResource("2_gq0lb"),
+"PeanutButter": ExtResource("5_bikem")
 }
 
 [node name="StaticBody2D" type="StaticBody2D" parent="."]

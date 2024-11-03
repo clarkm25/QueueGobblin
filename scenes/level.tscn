@@ -1,13 +1,16 @@
-[gd_scene load_steps=12 format=3 uid="uid://csx6uumt536ag"]
+[gd_scene load_steps=15 format=3 uid="uid://csx6uumt536ag"]
 
 [ext_resource type="PackedScene" uid="uid://78psqsuy1rkv" path="res://scenes/player.tscn" id="1_clu1g"]
 [ext_resource type="Script" path="res://scripts/game_loop.gd" id="1_y16ym"]
 [ext_resource type="PackedScene" uid="uid://b25jekrf0yjff" path="res://scenes/inventory/inventory_manager.tscn" id="2_deb0n"]
 [ext_resource type="PackedScene" uid="uid://col3xjunm68cw" path="res://scenes/inventory/inventory.tscn" id="2_vah53"]
-[ext_resource type="Resource" path="res://scenes/inventory/itemresources/moritos.tres" id="5_3cn0c"]
+[ext_resource type="Resource" uid="uid://b8ni6upjipuj6" path="res://scenes/inventory/itemresources/moritos.tres" id="5_3cn0c"]
 [ext_resource type="PackedScene" uid="uid://bp45rocdgyvbp" path="res://scenes/inventory/ground_item.tscn" id="6_m1kao"]
+[ext_resource type="Resource" uid="uid://cs6v2xu8m0tk1" path="res://scenes/inventory/itemresources/mootpocket.tres" id="7_esh1l"]
 [ext_resource type="PackedScene" uid="uid://br1o5d65lfind" path="res://scenes/inventory/example_slot.tscn" id="7_g3upo"]
+[ext_resource type="Resource" uid="uid://dchqh84a5lxdv" path="res://scenes/inventory/itemresources/peanutbutter.tres" id="8_3td1q"]
 [ext_resource type="Script" path="res://addons/SwiftInv/Scripts/InventorySlot.gd" id="8_uqur3"]
+[ext_resource type="Resource" uid="uid://bbdakxaq4wv62" path="res://scenes/inventory/itemresources/jam.tres" id="9_dju17"]
 [ext_resource type="PackedScene" uid="uid://3j56tewil3yj" path="res://scenes/menus/clock.tscn" id="11_60pwl"]
 [ext_resource type="Resource" uid="uid://bphgykks1gmvd" path="res://scenes/inventory/itemresources/mountdoo.tres" id="11_qjwqs"]
 [ext_resource type="PackedScene" uid="uid://c2l3b5t3d16q7" path="res://scenes/inventory/dropoff/dropoff_zone.tscn" id="13_iwyjt"]
@@ -23,6 +26,22 @@ z_index = 1
 [node name="GroundItem" parent="." instance=ExtResource("6_m1kao")]
 position = Vector2(464, 143)
 item_resource = ExtResource("5_3cn0c")
+
+[node name="GroundItem2" parent="." instance=ExtResource("6_m1kao")]
+position = Vector2(1022, 306)
+item_resource = ExtResource("11_qjwqs")
+
+[node name="GroundItem3" parent="." instance=ExtResource("6_m1kao")]
+position = Vector2(833, 166)
+item_resource = ExtResource("7_esh1l")
+
+[node name="GroundItem4" parent="." instance=ExtResource("6_m1kao")]
+position = Vector2(466, 283)
+item_resource = ExtResource("8_3td1q")
+
+[node name="GroundItem5" parent="." instance=ExtResource("6_m1kao")]
+position = Vector2(642, 121)
+item_resource = ExtResource("9_dju17")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
@@ -68,10 +87,6 @@ amount_label = NodePath("AmountLabel")
 [node name="Control2" parent="CanvasLayer" instance=ExtResource("11_60pwl")]
 offset_left = -596.0
 offset_right = -556.0
-
-[node name="GroundItem2" parent="." instance=ExtResource("6_m1kao")]
-position = Vector2(1022, 306)
-item_resource = ExtResource("11_qjwqs")
 
 [node name="GameTimer" type="Timer" parent="."]
 
