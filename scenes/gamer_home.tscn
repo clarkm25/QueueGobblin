@@ -71,7 +71,6 @@ tile_map_data = PackedByteArray("AADx//j/BAAAAAAAAADx//n/BAAAAAAAAADx//r/BAAAAAA
 tile_set = SubResource("TileSet_d77rw")
 
 [node name="CameraLocks" type="Node2D" parent="."]
-visible = false
 
 [node name="BedRoom" parent="CameraLocks" instance=ExtResource("3_fshdu")]
 position = Vector2(72, 64)
@@ -156,7 +155,7 @@ position = Vector2(38, 169)
 [node name="AreaSpawner13" parent="ItemSpawners" instance=ExtResource("4_irmox")]
 position = Vector2(426, 169)
 
-[node name="Player" parent="." groups=["player"] instance=ExtResource("2_ead14")]
+[node name="Player" parent="." instance=ExtResource("2_ead14")]
 position = Vector2(176, 64)
 move_speed = 100.0
 
