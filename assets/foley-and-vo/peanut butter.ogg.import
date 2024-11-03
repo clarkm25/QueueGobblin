@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://bh07luno7q4fn"
+path="res://.godot/imported/peanut butter.ogg-a06312b765c94b3a9a1bc993272c3ef8.oggvorbisstr"
+
+[deps]
+
+source_file="res://assets/foley-and-vo/peanut butter.ogg"
+dest_files=["res://.godot/imported/peanut butter.ogg-a06312b765c94b3a9a1bc993272c3ef8.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4
