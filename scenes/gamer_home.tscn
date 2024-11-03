@@ -10,7 +10,7 @@
 [ext_resource type="PackedScene" uid="uid://br1o5d65lfind" path="res://scenes/inventory/example_slot.tscn" id="8_c5su7"]
 [ext_resource type="Script" path="res://addons/SwiftInv/Scripts/InventorySlot.gd" id="9_xocdk"]
 [ext_resource type="PackedScene" uid="uid://b25jekrf0yjff" path="res://scenes/inventory/inventory_manager.tscn" id="10_v1bwn"]
-[ext_resource type="PackedScene" path="res://scenes/menus/pause_menu.tscn" id="11_o2lub"]
+[ext_resource type="PackedScene" uid="uid://bq370gs06pwhw" path="res://scenes/menus/pause_menu.tscn" id="11_o2lub"]
 [ext_resource type="PackedScene" uid="uid://c2l3b5t3d16q7" path="res://scenes/inventory/dropoff/dropoff_zone.tscn" id="12_bwyl4"]
 [ext_resource type="AudioStream" uid="uid://k0q7kvf0gwg4" path="res://assets/music/220321__b_lamerichs__bas-21022014-game-loop-8.mp3" id="12_d3bl4"]
 [ext_resource type="PackedScene" uid="uid://3j56tewil3yj" path="res://scenes/menus/clock.tscn" id="12_erdqb"]
@@ -159,10 +159,6 @@ position = Vector2(38, 169)
 
 [node name="AreaSpawner13" parent="ItemSpawners" instance=ExtResource("4_irmox")]
 position = Vector2(426, 169)
-
-
-[node name="Player" parent="." instance=ExtResource("2_ead14")]
-position = Vector2(176, 64)
 
 [node name="InventoryManager" parent="." instance=ExtResource("10_v1bwn")]
 
