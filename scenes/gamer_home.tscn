@@ -1,7 +1,7 @@
-[gd_scene load_steps=27 format=4 uid="uid://c03ie5u7h5xhs"]
+[gd_scene load_steps=28 format=4 uid="uid://c03ie5u7h5xhs"]
 
 [ext_resource type="Script" path="res://scripts/camera/camera_lock.gd" id="1_e3jxk"]
-[ext_resource type="PackedScene" path="res://house.tscn" id="1_pknrw"]
+[ext_resource type="PackedScene" uid="uid://dip54pnfsfg58" path="res://house.tscn" id="1_pknrw"]
 [ext_resource type="PackedScene" uid="uid://78psqsuy1rkv" path="res://scenes/player.tscn" id="2_ead14"]
 [ext_resource type="PackedScene" uid="uid://ymf7fkfoy0vs" path="res://scenes/room.tscn" id="3_fshdu"]
 [ext_resource type="Texture2D" uid="uid://csjsgjwm8lhai" path="res://assets/black_void.tres" id="3_yafbo"]
@@ -13,7 +13,7 @@
 [ext_resource type="PackedScene" uid="uid://br1o5d65lfind" path="res://scenes/inventory/example_slot.tscn" id="8_c5su7"]
 [ext_resource type="Script" path="res://addons/SwiftInv/Scripts/InventorySlot.gd" id="9_xocdk"]
 [ext_resource type="PackedScene" uid="uid://b25jekrf0yjff" path="res://scenes/inventory/inventory_manager.tscn" id="10_v1bwn"]
-[ext_resource type="PackedScene" path="res://scenes/menus/pause_menu.tscn" id="11_o2lub"]
+[ext_resource type="PackedScene" uid="uid://bq370gs06pwhw" path="res://scenes/menus/pause_menu.tscn" id="11_o2lub"]
 [ext_resource type="PackedScene" uid="uid://c2l3b5t3d16q7" path="res://scenes/inventory/dropoff/dropoff_zone.tscn" id="12_bwyl4"]
 [ext_resource type="AudioStream" uid="uid://k0q7kvf0gwg4" path="res://assets/music/220321__b_lamerichs__bas-21022014-game-loop-8.mp3" id="12_d3bl4"]
 [ext_resource type="PackedScene" uid="uid://3j56tewil3yj" path="res://scenes/menus/clock.tscn" id="12_erdqb"]
