@@ -17,7 +17,7 @@ func _ready() -> void:
 	# Game timer setup
 	timer.one_shot = true
 	timer.autostart = false
-	timer.wait_time = 20 # Duration of game phase
+	timer.wait_time = 40 # Duration of game phase
 	timer.start()
 
 

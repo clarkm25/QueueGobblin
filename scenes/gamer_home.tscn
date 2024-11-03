@@ -190,13 +190,42 @@ shape = SubResource("RectangleShape2D_ehu2j")
 
 [node name="Player" parent="." instance=ExtResource("2_ead14")]
 position = Vector2(271, 257)
-move_speed = 125.0
 
 [node name="ItemSpawners" type="Node2D" parent="."]
 z_index = 1
 
 [node name="AreaSpawner" parent="ItemSpawners" instance=ExtResource("4_irmox")]
 position = Vector2(38, 85)
+
+[node name="AreaSpawner14" parent="ItemSpawners" instance=ExtResource("4_irmox")]
+position = Vector2(420, 88)
+
+[node name="AreaSpawner15" parent="ItemSpawners" instance=ExtResource("4_irmox")]
+position = Vector2(172, 248)
+
+[node name="AreaSpawner16" parent="ItemSpawners" instance=ExtResource("4_irmox")]
+position = Vector2(136, 260)
+
+[node name="AreaSpawner17" parent="ItemSpawners" instance=ExtResource("4_irmox")]
+position = Vector2(72, 52)
+
+[node name="AreaSpawner18" parent="ItemSpawners" instance=ExtResource("4_irmox")]
+position = Vector2(312, 60)
+
+[node name="AreaSpawner19" parent="ItemSpawners" instance=ExtResource("4_irmox")]
+position = Vector2(412, 60)
+
+[node name="AreaSpawner20" parent="ItemSpawners" instance=ExtResource("4_irmox")]
+position = Vector2(232, 168)
+
+[node name="AreaSpawner21" parent="ItemSpawners" instance=ExtResource("4_irmox")]
+position = Vector2(196, 248)
+
+[node name="AreaSpawner22" parent="ItemSpawners" instance=ExtResource("4_irmox")]
+position = Vector2(288, 244)
+
+[node name="AreaSpawner23" parent="ItemSpawners" instance=ExtResource("4_irmox")]
+position = Vector2(92, 276)
 
 [node name="AreaSpawner2" parent="ItemSpawners" instance=ExtResource("4_irmox")]
 position = Vector2(40, 266)
@@ -233,10 +262,6 @@ position = Vector2(38, 169)
 
 [node name="AreaSpawner13" parent="ItemSpawners" instance=ExtResource("4_irmox")]
 position = Vector2(426, 169)
-
-
-[node name="Player" parent="." instance=ExtResource("2_ead14")]
-position = Vector2(176, 64)
 
 [node name="InventoryManager" parent="." instance=ExtResource("10_v1bwn")]
 
