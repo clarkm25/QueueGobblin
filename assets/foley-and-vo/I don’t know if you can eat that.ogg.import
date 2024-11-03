@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://h8e33xesbxk5"
+path="res://.godot/imported/I don’t know if you can eat that.ogg-5b48c082758553c2ad07ee9cd02e9b7c.oggvorbisstr"
+
+[deps]
+
+source_file="res://assets/foley-and-vo/I don’t know if you can eat that.ogg"
+dest_files=["res://.godot/imported/I don’t know if you can eat that.ogg-5b48c082758553c2ad07ee9cd02e9b7c.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://jnh5stgjwygy"]
+
+[ext_resource type="Script" path="res://scripts/inventory/area_spawner.gd" id="1_h5rqb"]
+
+[node name="AreaSpawner" type="Node2D"]
+script = ExtResource("1_h5rqb")
+possible_resources = [null, null, null]
+chance_to_spawn = 0.25
