@@ -24,7 +24,7 @@ z_index = 1
 zoom = Vector2(4.5, 4.5)
 
 [node name="GroundItem" parent="." instance=ExtResource("6_m1kao")]
-position = Vector2(464, 143)
+position = Vector2(154, 41)
 item_resource = ExtResource("5_3cn0c")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
