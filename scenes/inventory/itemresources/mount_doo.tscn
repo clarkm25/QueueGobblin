@@ -1,8 +1,13 @@
-[gd_scene load_steps=2 format=3 uid="uid://d378jrgtiese8"]
+[gd_scene load_steps=3 format=3 uid="uid://d378jrgtiese8"]
 
 [ext_resource type="Texture2D" uid="uid://bbkfkfmi4asax" path="res://assets/food/mountdoo_highres.png" id="1_6u5qm"]
 
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_f7mng"]
+bounce = 0.3
+
 [node name="MountDoo" type="RigidBody2D"]
+mass = 2.0
+physics_material_override = SubResource("PhysicsMaterial_f7mng")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 rotation = -1.5708

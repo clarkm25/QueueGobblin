@@ -1,9 +1,10 @@
-[gd_scene load_steps=6 format=3 uid="uid://cbir4c3j7r4tt"]
+[gd_scene load_steps=7 format=3 uid="uid://cbir4c3j7r4tt"]
 
 [ext_resource type="Script" path="res://scripts/inventory/sandwich_building/sandwich_scene.gd" id="1_enyul"]
 [ext_resource type="Texture2D" uid="uid://dt5dt7xuwbea8" path="res://assets/desk.png" id="1_xxetj"]
+[ext_resource type="PackedScene" uid="uid://d4dgfa8mtmy7e" path="res://scenes/inventory/itemresources/moritos_soft.tscn" id="2_ectb5"]
 [ext_resource type="PackedScene" uid="uid://d378jrgtiese8" path="res://scenes/inventory/itemresources/mount_doo.tscn" id="2_gq0lb"]
-[ext_resource type="PackedScene" path="res://scenes/bread_slice.tscn" id="2_wlanp"]
+[ext_resource type="PackedScene" uid="uid://d3tgv81bt3x4n" path="res://scenes/bread_slice.tscn" id="2_wlanp"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_cbrg3"]
 size = Vector2(1153, 62.5)
@@ -11,6 +12,7 @@ size = Vector2(1153, 62.5)
 [node name="CookingMother" type="Node2D"]
 script = ExtResource("1_enyul")
 food_dict = {
+"Moritos": ExtResource("2_ectb5"),
 "MountDoo": ExtResource("2_gq0lb")
 }
 
@@ -46,7 +48,7 @@ shape = SubResource("RectangleShape2D_cbrg3")
 
 [node name="Ingredient1Location" type="Node2D" parent="."]
 z_index = 3
-position = Vector2(586, -392)
+position = Vector2(601, -511)
 
 [node name="Ingredient2Location" type="Node2D" parent="."]
 z_index = 4
@@ -56,13 +58,13 @@ position = Vector2(583, -683)
 z_index = 5
 position = Vector2(586, -924)
 
-[node name="BreadSlice" parent="." instance=ExtResource("2_wlanp")]
+[node name="BreadSlice1" parent="." instance=ExtResource("2_wlanp")]
 z_index = 2
-position = Vector2(580, -100)
+position = Vector2(593, -249)
+rotation = 0.289724
 
 [node name="BreadSlice2" parent="." instance=ExtResource("2_wlanp")]
 z_index = 6
-position = Vector2(586, -1184)
-rotation = -0.0523599
-mass = 0.2
-gravity_scale = 0.3
+position = Vector2(579, -1073)
+rotation = -0.260054
+gravity_scale = 0.4
