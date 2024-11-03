@@ -8,6 +8,6 @@ script = ExtResource("1_j5uo3")
 name = "GameJam"
 description = ""
 texture = ExtResource("2_w4b4d")
-value = 20
+value = 18
 amount = 1
 max_stack = 1

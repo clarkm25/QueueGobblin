@@ -8,6 +8,6 @@ script = ExtResource("1_4yhwd")
 name = "LaundryPod"
 description = ""
 texture = ExtResource("2_apsci")
-value = -10
+value = -5
 amount = 1
 max_stack = 1
