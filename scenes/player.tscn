@@ -100,6 +100,7 @@ _data = {
 [node name="Player" type="CharacterBody2D" groups=["player"]]
 physics_interpolation_mode = 1
 script = ExtResource("1_64nx0")
+move_speed = 100.0
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 texture_filter = 1

@@ -1,0 +1,338 @@
+[gd_scene load_steps=10 format=3 uid="uid://x7ug0fcjwmby"]
+
+[ext_resource type="Script" path="res://scenes/intro_scene.gd" id="1_8xl81"]
+[ext_resource type="PackedScene" uid="uid://dh4d806u0aovc" path="res://house.tscn" id="1_f4qgf"]
+[ext_resource type="PackedScene" uid="uid://78psqsuy1rkv" path="res://scenes/player.tscn" id="2_aw2yu"]
+[ext_resource type="Texture2D" uid="uid://gijmtlh164xh" path="res://assets/fridge.png" id="3_e1ah6"]
+
+[sub_resource type="Animation" id="Animation_o4b24"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Player:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(200, 70)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Player/Control/Panel/Label:visible_characters")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [-1]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Fridge:visible")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Player/Control/Panel/Label:text")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": ["[color=green]GamingGobblin:[/color] hey y'all, go 
+ahead and start the queue, 
+i'm gonna go grab some snacks 
+quickly"]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("Player/Control:visible")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+
+[sub_resource type="Animation" id="Animation_b8bmu"]
+resource_name = "first-dialogue"
+length = 4.5
+step = 0.05
+tracks/0/type = "animation"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Player/AnimationPlayer")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"clips": PackedStringArray("walk_right", "[stop]"),
+"times": PackedFloat32Array(0, 0.05)
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Player/Control/Panel/Label:visible_characters")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 2.95),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [14, 96]
+}
+tracks/2/type = "method"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Player/Control")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(4),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [],
+"method": &"hide"
+}]
+}
+
+[sub_resource type="Animation" id="Animation_dkd3j"]
+resource_name = "uh_just_bread"
+length = 20.0
+step = 0.05
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Player/Control/Panel/Label:visible_characters")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.6, 1, 1.7, 2.1, 2.35, 2.7, 3.5, 4.39, 4.4, 5.3, 5.8, 7.6, 7.9, 9, 9.7, 9.75, 11.95, 12.75, 13.95, 15.05),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [0, 30, 30, 47, 47, 54, 54, 96, 49, 0, 26, 26, 70, 70, 109, 109, 0, 80, 80, 130, 130]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Player/Control/Panel/Label:text")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 4.4, 9.7, 9.75),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 1,
+"values": ["um, where are all the snacks.
+it's just bread?
+oh god.
+oh no.", "i have to COOK FOR MYSELF?
+oh crap. i gotta get back to my 
+computer!! but i'm also sooooo 
+snackyyyyyyy....
+i gotta find what to put on this sandwich and get back before the queue pops!! my friends, and my elo, are relying on me!", "i have to COOK FOR MYSELF?
+oh crap. i gotta get back to my 
+computer!! but i'm also sooooo 
+snackyyyyyyy....
+i gotta find what to put on this sandwich and get back before the queue pops!! my friends, and my elo, are relying on me!", "i gotta find what to put on this 
+sandwich and get back before 
+the queue pops!! my friends, 
+and my elo, are relying on me!"]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Player/Control:visible")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 16.2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
+}
+
+[sub_resource type="Animation" id="Animation_m520u"]
+resource_name = "walk_to_kitchen"
+length = 12.0
+step = 0.05
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Player:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1, 3, 6.5, 8.5, 10, 10.5),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(200, 70), Vector2(175, 70), Vector2(175, 167), Vector2(335, 167), Vector2(335, 260), Vector2(272, 260), Vector2(272, 253)]
+}
+tracks/1/type = "animation"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Player/AnimationPlayer")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"clips": PackedStringArray("walk_left", "walk_down", "[stop]", "walk_down", "walk_right", "walk_right", "[stop]", "walk_right", "walk_right", "[stop]", "walk_right", "walk_right", "[stop]", "walk_right", "walk_down", "walk_down", "[stop]", "walk_down", "walk_left", "walk_left", "[stop]", "walk_left", "walk_up", "[stop]"),
+"times": PackedFloat32Array(0, 1, 2, 2.05, 3, 4, 4.0001, 4.05, 5, 5.0001, 5.05, 6, 6.0001, 6.05, 6.5, 7.5, 7.5001, 7.55, 8.5, 9.5, 9.5001, 9.55, 10, 10.8)
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Fridge:visible")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 11.35),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [false, true]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_imx6q"]
+_data = {
+"RESET": SubResource("Animation_o4b24"),
+"first-dialogue": SubResource("Animation_b8bmu"),
+"uh_just_bread": SubResource("Animation_dkd3j"),
+"walk_to_kitchen": SubResource("Animation_m520u")
+}
+
+[node name="IntroScene" type="Node2D"]
+script = ExtResource("1_8xl81")
+
+[node name="House" parent="." instance=ExtResource("1_f4qgf")]
+position = Vector2(258, 187)
+
+[node name="TheVoid" type="Node2D" parent="."]
+
+[node name="ColorRect" type="ColorRect" parent="TheVoid"]
+offset_left = 416.0
+offset_top = 192.0
+offset_right = 448.0
+offset_bottom = 352.0
+color = Color(0, 0, 0, 1)
+
+[node name="ColorRect2" type="ColorRect" parent="TheVoid"]
+offset_right = 16.0
+offset_bottom = 192.0
+color = Color(0, 0, 0, 1)
+
+[node name="ColorRect3" type="ColorRect" parent="TheVoid"]
+offset_left = 144.0
+offset_top = 352.0
+offset_right = 448.0
+offset_bottom = 368.0
+color = Color(0, 0, 0, 1)
+
+[node name="ColorRect4" type="ColorRect" parent="TheVoid"]
+offset_top = 352.0
+offset_right = 96.0
+offset_bottom = 368.0
+color = Color(0, 0, 0, 1)
+
+[node name="ColorRect5" type="ColorRect" parent="TheVoid"]
+offset_top = 368.0
+offset_right = 640.0
+offset_bottom = 560.0
+color = Color(0, 0, 0, 1)
+
+[node name="ColorRect6" type="ColorRect" parent="TheVoid"]
+offset_left = -192.0
+offset_top = -192.0
+offset_right = 448.0
+color = Color(0, 0, 0, 1)
+
+[node name="ColorRect7" type="ColorRect" parent="TheVoid"]
+offset_left = 640.0
+offset_top = -192.0
+offset_right = 1200.0
+rotation = 1.5708
+color = Color(0, 0, 0, 1)
+
+[node name="ColorRect8" type="ColorRect" parent="TheVoid"]
+offset_right = 560.0
+offset_bottom = 192.0
+rotation = 1.5708
+color = Color(0, 0, 0, 1)
+
+[node name="Player" parent="." instance=ExtResource("2_aw2yu")]
+process_mode = 4
+z_index = 2
+position = Vector2(200, 70)
+disable_mode = 1
+
+[node name="AnimationPlayer" parent="Player" index="3"]
+process_mode = 1
+
+[node name="Camera2D" type="Camera2D" parent="Player"]
+zoom = Vector2(4.5, 4.5)
+
+[node name="Control" type="Control" parent="Player"]
+process_mode = 1
+layout_mode = 3
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_top = -40.0
+offset_right = 40.0
+grow_vertical = 0
+
+[node name="Panel" type="Panel" parent="Player/Control"]
+texture_filter = 1
+layout_mode = 0
+offset_left = -36.0
+offset_top = 6.0
+offset_right = 213.0
+offset_bottom = 86.0
+scale = Vector2(0.3, 0.3)
+
+[node name="Label" type="RichTextLabel" parent="Player/Control/Panel"]
+layout_mode = 1
+offset_left = 3.33331
+offset_right = 1474.33
+offset_bottom = 360.0
+scale = Vector2(0.42, 0.42)
+theme_override_font_sizes/normal_font_size = 32
+bbcode_enabled = true
+text = "[color=green]GamingGobblin:[/color] hey y'all, go 
+ahead and start the queue, 
+i'm gonna go grab some snacks 
+quickly"
+fit_content = true
+autowrap_mode = 0
+shortcut_keys_enabled = false
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_imx6q")
+}
+autoplay = "first-dialogue"
+next/first-dialogue = &"walk_to_kitchen"
+next/walk_to_kitchen = &"uh_just_bread"
+
+[node name="Fridge" type="Sprite2D" parent="."]
+z_index = 1
+texture_filter = 1
+position = Vector2(275.5, 247.5)
+texture = ExtResource("3_e1ah6")
+
+[connection signal="animation_finished" from="AnimationPlayer" to="." method="_on_animation_player_animation_finished"]
+
+[editable path="Player"]
