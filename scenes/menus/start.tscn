@@ -68,6 +68,14 @@ max_value = 1.0
 step = 0.001
 value = 0.5
 
+[node name="Label" type="Label" parent="volume_slider"]
+layout_mode = 0
+offset_left = 2.0
+offset_top = 18.0
+offset_right = 86.0
+offset_bottom = 54.0
+text = "Volume"
+
 [node name="Panel" type="Panel" parent="."]
 layout_mode = 0
 offset_left = 320.0
