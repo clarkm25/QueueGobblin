@@ -379,7 +379,6 @@ texture = ExtResource("3_e1ah6")
 position = Vector2(270, 256)
 stream = ExtResource("5_b0akp")
 volume_db = 24.0
-bus = &"Fridge"
 
 [node name="Fridge-Close" type="AudioStreamPlayer2D" parent="."]
 position = Vector2(270, 256)
