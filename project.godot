@@ -13,8 +13,8 @@ config_version=5
 config/name="queuegobblin"
 run/main_scene="res://scenes/menus/start.tscn"
 config/features=PackedStringArray("4.3", "Forward Plus")
-boot_splash/bg_color=Color(0.582705, 0.661418, 0.806361, 1)
-boot_splash/image="res://assets/images/BetterRatStomp4.png"
+boot_splash/bg_color=Color(0.294118, 0.270588, 0.282353, 1)
+boot_splash/image="res://assets/images/RatStompers.png"
 config/icon="res://icon.svg"
 boot_splash/minimum_display_time=1500
 
