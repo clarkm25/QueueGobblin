@@ -1,8 +1,9 @@
-[gd_scene load_steps=5 format=3 uid="uid://jyuuyr0tff0b"]
+[gd_scene load_steps=6 format=3 uid="uid://jyuuyr0tff0b"]
 
 [ext_resource type="PackedScene" uid="uid://78psqsuy1rkv" path="res://scenes/player.tscn" id="1_78cvd"]
 [ext_resource type="Script" path="res://scripts/camera/camera_lock.gd" id="1_vlben"]
 [ext_resource type="Script" path="res://scripts/camera/camera_lock_room.gd" id="3_0fmwv"]
+[ext_resource type="PackedScene" uid="uid://ymf7fkfoy0vs" path="res://scenes/room.tscn" id="3_d3hyb"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_u2fpi"]
 resource_local_to_scene = true
@@ -17,14 +18,7 @@ collision_mask = 512
 
 [node name="Camera2D" type="Camera2D" parent="."]
 
-[node name="BedRoom" type="Node2D" parent="." groups=["room"]]
-script = ExtResource("3_0fmwv")
-
-[node name="CameraCapture" type="Area2D" parent="BedRoom"]
-collision_layer = 512
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="BedRoom/CameraCapture"]
-shape = SubResource("RectangleShape2D_u2fpi")
+[node name="BedRoom" parent="." instance=ExtResource("3_d3hyb")]
 
 [node name="GameRoom" type="Node2D" parent="." groups=["room"]]
 position = Vector2(250, 551)
@@ -298,6 +292,5 @@ offset_top = -158.0
 offset_right = 188.0
 offset_bottom = -118.0
 
-[connection signal="area_entered" from="BedRoom/CameraCapture" to="BedRoom" method="_on_camera_capture_area_entered"]
 [connection signal="area_entered" from="GameRoom/CameraCapture" to="GameRoom" method="_on_camera_capture_area_entered"]
 [connection signal="area_entered" from="HallwayRoom/CameraCapture" to="HallwayRoom" method="_on_camera_capture_area_entered"]
