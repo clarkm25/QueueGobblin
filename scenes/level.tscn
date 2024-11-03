@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=3 uid="uid://dm8no2sp4crm8"]
+[gd_scene load_steps=16 format=3 uid="uid://dm8no2sp4crm8"]
 
 [ext_resource type="PackedScene" uid="uid://78psqsuy1rkv" path="res://scenes/player.tscn" id="1_clu1g"]
 [ext_resource type="Script" path="res://scripts/game_loop.gd" id="1_y16ym"]
@@ -10,6 +10,7 @@
 [ext_resource type="Script" path="res://addons/SwiftInv/Scripts/InventoryItem.gd" id="5_cntmp"]
 [ext_resource type="VideoStream" path="res://assets/SkyrimOGG.ogv" id="5_fcc25"]
 [ext_resource type="PackedScene" uid="uid://bp45rocdgyvbp" path="res://scenes/inventory/ground_item.tscn" id="6_m1kao"]
+[ext_resource type="Script" path="res://addons/SwiftInv/Scripts/Inventory.gd" id="8_j02nc"]
 [ext_resource type="Texture2D" uid="uid://cr4iycc7ppnij" path="res://assets/food/mountdoo.png" id="8_n1nc4"]
 
 [sub_resource type="Resource" id="Resource_njlnr"]
@@ -20,6 +21,11 @@ texture = ExtResource("4_d1jhf")
 value = 5
 amount = 1
 max_stack = 1
+
+[sub_resource type="Resource" id="Resource_egog7"]
+resource_local_to_scene = true
+script = ExtResource("8_j02nc")
+items = Array[ExtResource("5_cntmp")]([null, null, null])
 
 [sub_resource type="Resource" id="Resource_8taha"]
 script = ExtResource("5_cntmp")
@@ -58,6 +64,7 @@ grow_horizontal = 2
 grow_vertical = 0
 size_flags_horizontal = 4
 size_flags_vertical = 4
+inventory = SubResource("Resource_egog7")
 
 [node name="Slot0" type="TextureRect" parent="CanvasLayer/Inventory" node_paths=PackedStringArray("amount_label") instance=ExtResource("3_dvbf2")]
 custom_minimum_size = Vector2(100, 100)
