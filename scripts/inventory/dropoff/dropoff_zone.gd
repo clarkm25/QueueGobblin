@@ -14,6 +14,7 @@ func _process(delta: float) -> void:
 func _unhandled_input(event: InputEvent) -> void:
 	if event.is_action_pressed("interact"):
 		if droppable == true:
+			get_viewport().set_input_as_handled()
 			var player_inventory = get_tree().get_first_node_in_group("inventory").inventory
 		
 			for n in player_inventory.items.size():
@@ -25,6 +26,8 @@ func _unhandled_input(event: InputEvent) -> void:
 				items.append(item)
 				player_inventory.remove_by_index(n)
 				print("Item added!")
+			ItemPasser.passed_inventory = items
+			get_tree().change_scene_to_file("res://scenes/cooking_mother.tscn")
 
 func _on_body_entered(body: Node2D) -> void:
 	if body.is_in_group("player"):
