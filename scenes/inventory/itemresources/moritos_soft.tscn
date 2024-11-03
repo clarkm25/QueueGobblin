@@ -1,134 +1,135 @@
-[gd_scene load_steps=20 format=3 uid="uid://d4dgfa8mtmy7e"]
+[gd_scene load_steps=21 format=3 uid="uid://d4dgfa8mtmy7e"]
 
 [ext_resource type="Script" path="res://addons/softbody2d/softbody2d.gd" id="1_g6qgg"]
 [ext_resource type="Texture2D" uid="uid://cto5x3pxr1mr6" path="res://assets/food/morito_highres.png" id="1_ub42l"]
+[ext_resource type="Resource" uid="uid://b8ni6upjipuj6" path="res://scenes/inventory/itemresources/moritos.tres" id="3_wf2js"]
 
-[sub_resource type="SkeletonModification2DLookAt" id="SkeletonModification2DLookAt_f2m01"]
+[sub_resource type="SkeletonModification2DLookAt" id="SkeletonModification2DLookAt_k0qqh"]
 resource_local_to_scene = true
 bone_index = 0
 bone2d_node = NodePath("Bone-0")
 target_nodepath = NodePath("Bone-5")
 editor/draw_gizmo = false
 
-[sub_resource type="SkeletonModification2DLookAt" id="SkeletonModification2DLookAt_c7ptp"]
+[sub_resource type="SkeletonModification2DLookAt" id="SkeletonModification2DLookAt_bsed8"]
 resource_local_to_scene = true
 bone_index = 1
 bone2d_node = NodePath("Bone-1")
 target_nodepath = NodePath("Bone-6")
 editor/draw_gizmo = false
 
-[sub_resource type="SkeletonModification2DLookAt" id="SkeletonModification2DLookAt_cskkd"]
+[sub_resource type="SkeletonModification2DLookAt" id="SkeletonModification2DLookAt_37f2x"]
 resource_local_to_scene = true
 bone_index = 10
 bone2d_node = NodePath("Bone-10")
 target_nodepath = NodePath("Bone-6")
 editor/draw_gizmo = false
 
-[sub_resource type="SkeletonModification2DLookAt" id="SkeletonModification2DLookAt_1gqqf"]
+[sub_resource type="SkeletonModification2DLookAt" id="SkeletonModification2DLookAt_tj3pr"]
 resource_local_to_scene = true
 bone_index = 11
 bone2d_node = NodePath("Bone-11")
 target_nodepath = NodePath("Bone-10")
 editor/draw_gizmo = false
 
-[sub_resource type="SkeletonModification2DLookAt" id="SkeletonModification2DLookAt_jap1c"]
+[sub_resource type="SkeletonModification2DLookAt" id="SkeletonModification2DLookAt_86wrh"]
 resource_local_to_scene = true
 bone_index = 12
 bone2d_node = NodePath("Bone-12")
 target_nodepath = NodePath("Bone-11")
 editor/draw_gizmo = false
 
-[sub_resource type="SkeletonModification2DLookAt" id="SkeletonModification2DLookAt_45g61"]
+[sub_resource type="SkeletonModification2DLookAt" id="SkeletonModification2DLookAt_xwus8"]
 resource_local_to_scene = true
 bone_index = 13
 bone2d_node = NodePath("Bone-13")
 target_nodepath = NodePath("Bone-8")
 editor/draw_gizmo = false
 
-[sub_resource type="SkeletonModification2DLookAt" id="SkeletonModification2DLookAt_cuxxd"]
+[sub_resource type="SkeletonModification2DLookAt" id="SkeletonModification2DLookAt_67muw"]
 resource_local_to_scene = true
 bone_index = 14
 bone2d_node = NodePath("Bone-14")
 target_nodepath = NodePath("Bone-8")
 editor/draw_gizmo = false
 
-[sub_resource type="SkeletonModification2DLookAt" id="SkeletonModification2DLookAt_ami7o"]
+[sub_resource type="SkeletonModification2DLookAt" id="SkeletonModification2DLookAt_u0w56"]
 resource_local_to_scene = true
 bone_index = 2
 bone2d_node = NodePath("Bone-2")
 target_nodepath = NodePath("Bone-7")
 editor/draw_gizmo = false
 
-[sub_resource type="SkeletonModification2DLookAt" id="SkeletonModification2DLookAt_opnm8"]
+[sub_resource type="SkeletonModification2DLookAt" id="SkeletonModification2DLookAt_i7f5o"]
 resource_local_to_scene = true
 bone_index = 3
 bone2d_node = NodePath("Bone-3")
 target_nodepath = NodePath("Bone-8")
 editor/draw_gizmo = false
 
-[sub_resource type="SkeletonModification2DLookAt" id="SkeletonModification2DLookAt_yyqqo"]
+[sub_resource type="SkeletonModification2DLookAt" id="SkeletonModification2DLookAt_1h87c"]
 resource_local_to_scene = true
 bone_index = 4
 bone2d_node = NodePath("Bone-4")
 target_nodepath = NodePath("Bone-8")
 editor/draw_gizmo = false
 
-[sub_resource type="SkeletonModification2DLookAt" id="SkeletonModification2DLookAt_ntfbj"]
+[sub_resource type="SkeletonModification2DLookAt" id="SkeletonModification2DLookAt_jy6w8"]
 resource_local_to_scene = true
 bone_index = 5
 bone2d_node = NodePath("Bone-5")
 target_nodepath = NodePath("Bone-6")
 editor/draw_gizmo = false
 
-[sub_resource type="SkeletonModification2DLookAt" id="SkeletonModification2DLookAt_lupj4"]
+[sub_resource type="SkeletonModification2DLookAt" id="SkeletonModification2DLookAt_claaa"]
 resource_local_to_scene = true
 bone_index = 6
 bone2d_node = NodePath("Bone-6")
 target_nodepath = NodePath("Bone-7")
 editor/draw_gizmo = false
 
-[sub_resource type="SkeletonModification2DLookAt" id="SkeletonModification2DLookAt_g8db8"]
+[sub_resource type="SkeletonModification2DLookAt" id="SkeletonModification2DLookAt_gwch5"]
 resource_local_to_scene = true
 bone_index = 7
 bone2d_node = NodePath("Bone-7")
 target_nodepath = NodePath("Bone-8")
 editor/draw_gizmo = false
 
-[sub_resource type="SkeletonModification2DLookAt" id="SkeletonModification2DLookAt_mm18c"]
+[sub_resource type="SkeletonModification2DLookAt" id="SkeletonModification2DLookAt_3343r"]
 resource_local_to_scene = true
 bone_index = 8
 bone2d_node = NodePath("Bone-8")
 target_nodepath = NodePath("Bone-9")
 editor/draw_gizmo = false
 
-[sub_resource type="SkeletonModification2DLookAt" id="SkeletonModification2DLookAt_0b5c1"]
+[sub_resource type="SkeletonModification2DLookAt" id="SkeletonModification2DLookAt_n84bi"]
 resource_local_to_scene = true
 bone_index = 9
 bone2d_node = NodePath("Bone-9")
 target_nodepath = NodePath("Bone-8")
 editor/draw_gizmo = false
 
-[sub_resource type="SkeletonModificationStack2D" id="SkeletonModificationStack2D_dlboj"]
+[sub_resource type="SkeletonModificationStack2D" id="SkeletonModificationStack2D_mw7x5"]
 resource_local_to_scene = true
 enabled = true
 modification_count = 15
-modifications/0 = SubResource("SkeletonModification2DLookAt_f2m01")
-modifications/1 = SubResource("SkeletonModification2DLookAt_c7ptp")
-modifications/2 = SubResource("SkeletonModification2DLookAt_ami7o")
-modifications/3 = SubResource("SkeletonModification2DLookAt_opnm8")
-modifications/4 = SubResource("SkeletonModification2DLookAt_yyqqo")
-modifications/5 = SubResource("SkeletonModification2DLookAt_ntfbj")
-modifications/6 = SubResource("SkeletonModification2DLookAt_lupj4")
-modifications/7 = SubResource("SkeletonModification2DLookAt_g8db8")
-modifications/8 = SubResource("SkeletonModification2DLookAt_mm18c")
-modifications/9 = SubResource("SkeletonModification2DLookAt_0b5c1")
-modifications/10 = SubResource("SkeletonModification2DLookAt_cskkd")
-modifications/11 = SubResource("SkeletonModification2DLookAt_1gqqf")
-modifications/12 = SubResource("SkeletonModification2DLookAt_jap1c")
-modifications/13 = SubResource("SkeletonModification2DLookAt_45g61")
-modifications/14 = SubResource("SkeletonModification2DLookAt_cuxxd")
+modifications/0 = SubResource("SkeletonModification2DLookAt_k0qqh")
+modifications/1 = SubResource("SkeletonModification2DLookAt_bsed8")
+modifications/2 = SubResource("SkeletonModification2DLookAt_u0w56")
+modifications/3 = SubResource("SkeletonModification2DLookAt_i7f5o")
+modifications/4 = SubResource("SkeletonModification2DLookAt_1h87c")
+modifications/5 = SubResource("SkeletonModification2DLookAt_jy6w8")
+modifications/6 = SubResource("SkeletonModification2DLookAt_claaa")
+modifications/7 = SubResource("SkeletonModification2DLookAt_gwch5")
+modifications/8 = SubResource("SkeletonModification2DLookAt_3343r")
+modifications/9 = SubResource("SkeletonModification2DLookAt_n84bi")
+modifications/10 = SubResource("SkeletonModification2DLookAt_37f2x")
+modifications/11 = SubResource("SkeletonModification2DLookAt_tj3pr")
+modifications/12 = SubResource("SkeletonModification2DLookAt_86wrh")
+modifications/13 = SubResource("SkeletonModification2DLookAt_xwus8")
+modifications/14 = SubResource("SkeletonModification2DLookAt_67muw")
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_7123s"]
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_jls5r"]
 resource_local_to_scene = true
 size = Vector2(60, 60)
 
@@ -149,15 +150,17 @@ stiffness = 50.0
 softness = 10.0
 radius = 60
 margin_offset_edge = 12.0
+metadata/item_resource = ExtResource("3_wf2js")
 
 [node name="Skeleton2D" type="Skeleton2D" parent="."]
 visible = false
-modification_stack = SubResource("SkeletonModificationStack2D_dlboj")
+modification_stack = SubResource("SkeletonModificationStack2D_mw7x5")
 
 [node name="Bone-0" type="Bone2D" parent="Skeleton2D"]
 position = Vector2(35.5209, 26.0736)
-rotation = 0.0374265
-rest = Transform2D(0.9993, 0.0374177, -0.0374177, 0.9993, 35.5209, 26.0736)
+rotation = 0.0374263
+scale = Vector2(1, 1)
+rest = Transform2D(0.9993, 0.0374176, -0.0374176, 0.9993, 35.5209, 26.0736)
 auto_calculate_length_and_angle = false
 length = 64.0
 bone_angle = 0.0
@@ -169,9 +172,8 @@ metadata/_local_pose_override_enabled_ = true
 
 [node name="Bone-1" type="Bone2D" parent="Skeleton2D"]
 position = Vector2(40.861, 72.1311)
-rotation = 0.0759335
-scale = Vector2(1, 1)
-rest = Transform2D(0.997118, 0.0758606, -0.0758606, 0.997118, 40.861, 72.1311)
+rotation = 0.0759332
+rest = Transform2D(0.997118, 0.0758603, -0.0758603, 0.997118, 40.861, 72.1311)
 auto_calculate_length_and_angle = false
 length = 64.0
 bone_angle = 0.0
@@ -183,7 +185,7 @@ metadata/_local_pose_override_enabled_ = true
 
 [node name="Bone-2" type="Bone2D" parent="Skeleton2D"]
 position = Vector2(47.9545, 128)
-rest = Transform2D(1, -1.45216e-07, 1.45216e-07, 1, 47.9545, 128)
+rest = Transform2D(1, 8.71297e-08, -8.71297e-08, 1, 47.9545, 128)
 auto_calculate_length_and_angle = false
 length = 64.0
 bone_angle = 0.0
@@ -222,7 +224,8 @@ metadata/_local_pose_override_enabled_ = true
 [node name="Bone-5" type="Bone2D" parent="Skeleton2D"]
 position = Vector2(79.5644, 27.7228)
 rotation = 1.53447
-rest = Transform2D(0.0363204, 0.99934, -0.99934, 0.0363204, 79.5644, 27.7228)
+scale = Vector2(1, 1)
+rest = Transform2D(0.0363205, 0.99934, -0.99934, 0.0363205, 79.5644, 27.7228)
 auto_calculate_length_and_angle = false
 length = 64.0
 bone_angle = 0.0
@@ -263,7 +266,7 @@ metadata/_local_pose_override_enabled_ = true
 position = Vector2(81.2901, 180.793)
 rotation = 1.60712
 scale = Vector2(1, 1)
-rest = Transform2D(-0.0363205, 0.99934, -0.99934, -0.0363205, 81.2901, 180.793)
+rest = Transform2D(-0.0363206, 0.99934, -0.99934, -0.0363206, 81.2901, 180.793)
 auto_calculate_length_and_angle = false
 length = 64.0
 bone_angle = 0.0
@@ -276,6 +279,7 @@ metadata/_local_pose_override_enabled_ = true
 [node name="Bone-9" type="Bone2D" parent="Skeleton2D"]
 position = Vector2(79.5644, 228.277)
 rotation = -1.53447
+scale = Vector2(1, 1)
 rest = Transform2D(0.0363205, -0.99934, 0.99934, 0.0363205, 79.5644, 228.277)
 auto_calculate_length_and_angle = false
 length = 64.0
@@ -303,7 +307,7 @@ metadata/_local_pose_override_enabled_ = true
 position = Vector2(139.935, 73.7893)
 rotation = -1.46769
 scale = Vector2(1, 1)
-rest = Transform2D(0.102925, -0.994689, 0.994689, 0.102925, 139.935, 73.7893)
+rest = Transform2D(0.102924, -0.994689, 0.994689, 0.102924, 139.935, 73.7893)
 auto_calculate_length_and_angle = false
 length = 64.0
 bone_angle = 0.0
@@ -317,7 +321,7 @@ metadata/_local_pose_override_enabled_ = true
 position = Vector2(131.5, 128)
 rotation = -1.41645
 scale = Vector2(1, 1)
-rest = Transform2D(0.153739, -0.988112, 0.988112, 0.153739, 131.5, 128)
+rest = Transform2D(0.153739, -0.988111, 0.988111, 0.153739, 131.5, 128)
 auto_calculate_length_and_angle = false
 length = 64.0
 bone_angle = 0.0
@@ -360,7 +364,7 @@ metadata/idx = 0
 metadata/bone_name = &"Bone-0"
 
 [node name="RectangleShape2D" type="CollisionShape2D" parent="Bone-0"]
-shape = SubResource("RectangleShape2D_7123s")
+shape = SubResource("RectangleShape2D_jls5r")
 
 [node name="RemoteTransform2D" type="RemoteTransform2D" parent="Bone-0"]
 visible = false
@@ -396,7 +400,7 @@ metadata/idx = 1
 metadata/bone_name = &"Bone-1"
 
 [node name="RectangleShape2D" type="CollisionShape2D" parent="Bone-1"]
-shape = SubResource("RectangleShape2D_7123s")
+shape = SubResource("RectangleShape2D_jls5r")
 
 [node name="RemoteTransform2D" type="RemoteTransform2D" parent="Bone-1"]
 visible = false
@@ -446,7 +450,7 @@ metadata/idx = 2
 metadata/bone_name = &"Bone-2"
 
 [node name="RectangleShape2D" type="CollisionShape2D" parent="Bone-2"]
-shape = SubResource("RectangleShape2D_7123s")
+shape = SubResource("RectangleShape2D_jls5r")
 
 [node name="RemoteTransform2D" type="RemoteTransform2D" parent="Bone-2"]
 visible = false
@@ -496,7 +500,7 @@ metadata/idx = 3
 metadata/bone_name = &"Bone-3"
 
 [node name="RectangleShape2D" type="CollisionShape2D" parent="Bone-3"]
-shape = SubResource("RectangleShape2D_7123s")
+shape = SubResource("RectangleShape2D_jls5r")
 
 [node name="RemoteTransform2D" type="RemoteTransform2D" parent="Bone-3"]
 visible = false
@@ -546,7 +550,7 @@ metadata/idx = 4
 metadata/bone_name = &"Bone-4"
 
 [node name="RectangleShape2D" type="CollisionShape2D" parent="Bone-4"]
-shape = SubResource("RectangleShape2D_7123s")
+shape = SubResource("RectangleShape2D_jls5r")
 
 [node name="RemoteTransform2D" type="RemoteTransform2D" parent="Bone-4"]
 visible = false
@@ -582,7 +586,7 @@ metadata/idx = 5
 metadata/bone_name = &"Bone-5"
 
 [node name="RectangleShape2D" type="CollisionShape2D" parent="Bone-5"]
-shape = SubResource("RectangleShape2D_7123s")
+shape = SubResource("RectangleShape2D_jls5r")
 
 [node name="RemoteTransform2D" type="RemoteTransform2D" parent="Bone-5"]
 visible = false
@@ -632,7 +636,7 @@ metadata/idx = 6
 metadata/bone_name = &"Bone-6"
 
 [node name="RectangleShape2D" type="CollisionShape2D" parent="Bone-6"]
-shape = SubResource("RectangleShape2D_7123s")
+shape = SubResource("RectangleShape2D_jls5r")
 
 [node name="RemoteTransform2D" type="RemoteTransform2D" parent="Bone-6"]
 visible = false
@@ -701,9 +705,10 @@ position = Vector2(89, 128)
 mass = 0.1
 metadata/idx = 7
 metadata/bone_name = &"Bone-7"
+metadata/item_resource = ExtResource("3_wf2js")
 
 [node name="RectangleShape2D" type="CollisionShape2D" parent="Bone-7"]
-shape = SubResource("RectangleShape2D_7123s")
+shape = SubResource("RectangleShape2D_jls5r")
 
 [node name="RemoteTransform2D" type="RemoteTransform2D" parent="Bone-7"]
 visible = false
@@ -774,7 +779,7 @@ metadata/idx = 8
 metadata/bone_name = &"Bone-8"
 
 [node name="RectangleShape2D" type="CollisionShape2D" parent="Bone-8"]
-shape = SubResource("RectangleShape2D_7123s")
+shape = SubResource("RectangleShape2D_jls5r")
 
 [node name="RemoteTransform2D" type="RemoteTransform2D" parent="Bone-8"]
 visible = false
@@ -845,7 +850,7 @@ metadata/idx = 9
 metadata/bone_name = &"Bone-9"
 
 [node name="RectangleShape2D" type="CollisionShape2D" parent="Bone-9"]
-shape = SubResource("RectangleShape2D_7123s")
+shape = SubResource("RectangleShape2D_jls5r")
 
 [node name="RemoteTransform2D" type="RemoteTransform2D" parent="Bone-9"]
 visible = false
@@ -895,7 +900,7 @@ metadata/idx = 10
 metadata/bone_name = &"Bone-10"
 
 [node name="RectangleShape2D" type="CollisionShape2D" parent="Bone-10"]
-shape = SubResource("RectangleShape2D_7123s")
+shape = SubResource("RectangleShape2D_jls5r")
 
 [node name="RemoteTransform2D" type="RemoteTransform2D" parent="Bone-10"]
 visible = false
@@ -931,7 +936,7 @@ metadata/idx = 11
 metadata/bone_name = &"Bone-11"
 
 [node name="RectangleShape2D" type="CollisionShape2D" parent="Bone-11"]
-shape = SubResource("RectangleShape2D_7123s")
+shape = SubResource("RectangleShape2D_jls5r")
 
 [node name="RemoteTransform2D" type="RemoteTransform2D" parent="Bone-11"]
 visible = false
@@ -981,7 +986,7 @@ metadata/idx = 12
 metadata/bone_name = &"Bone-12"
 
 [node name="RectangleShape2D" type="CollisionShape2D" parent="Bone-12"]
-shape = SubResource("RectangleShape2D_7123s")
+shape = SubResource("RectangleShape2D_jls5r")
 
 [node name="RemoteTransform2D" type="RemoteTransform2D" parent="Bone-12"]
 visible = false
@@ -1031,7 +1036,7 @@ metadata/idx = 13
 metadata/bone_name = &"Bone-13"
 
 [node name="RectangleShape2D" type="CollisionShape2D" parent="Bone-13"]
-shape = SubResource("RectangleShape2D_7123s")
+shape = SubResource("RectangleShape2D_jls5r")
 
 [node name="RemoteTransform2D" type="RemoteTransform2D" parent="Bone-13"]
 visible = false
@@ -1081,7 +1086,7 @@ metadata/idx = 14
 metadata/bone_name = &"Bone-14"
 
 [node name="RectangleShape2D" type="CollisionShape2D" parent="Bone-14"]
-shape = SubResource("RectangleShape2D_7123s")
+shape = SubResource("RectangleShape2D_jls5r")
 
 [node name="RemoteTransform2D" type="RemoteTransform2D" parent="Bone-14"]
 visible = false
