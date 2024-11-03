@@ -97,7 +97,7 @@ _data = {
 "walk_up": SubResource("Animation_042kh")
 }
 
-[node name="Player" type="CharacterBody2D"]
+[node name="Player" type="CharacterBody2D" groups=["player"]]
 physics_interpolation_mode = 1
 script = ExtResource("1_64nx0")
 
@@ -114,7 +114,7 @@ region_rect = Rect2(391, 0, 67, 52)
 position = Vector2(0, 2)
 shape = SubResource("CircleShape2D_wbgo7")
 
-[node name="Area2D" type="Area2D" parent="."]
+[node name="Area2D" type="Area2D" parent="." groups=["player"]]
 collision_mask = 512
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
