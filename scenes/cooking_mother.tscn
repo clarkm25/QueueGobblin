@@ -137,6 +137,7 @@ tile_set = SubResource("TileSet_yfshd")
 position = Vector2(577, 436)
 
 [node name="PanelContainer" type="PanelContainer" parent="StaticBody2D"]
+unique_name_in_owner = true
 z_index = 1
 z_as_relative = false
 offset_left = -275.0

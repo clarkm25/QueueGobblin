@@ -71,6 +71,7 @@ func _on_combo_timer_timeout() -> void:
 		rolling = true
 	else:
 		%nextbutton.show()
+	%PanelContainer.z_index = 7
 	ItemPasser.passed_inventory.clear()
 		
 
