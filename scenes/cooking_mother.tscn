@@ -8,7 +8,7 @@
 [ext_resource type="PackedScene" path="res://scenes/inventory/itemresources/mootpocket.tscn" id="4_kswip"]
 [ext_resource type="Texture2D" uid="uid://ch16ko2ftl6d6" path="res://assets/A4.png" id="4_xr6s0"]
 [ext_resource type="PackedScene" path="res://scenes/inventory/itemresources/peanut_butter.tscn" id="5_bikem"]
-[ext_resource type="PackedScene" path="res://scenes/inventory/itemresources/jam.tscn" id="6_k2pjj"]
+[ext_resource type="PackedScene" uid="uid://chuk2acs3qbgf" path="res://scenes/inventory/itemresources/jam.tscn" id="6_k2pjj"]
 [ext_resource type="PackedScene" path="res://scenes/inventory/itemresources/laundry_pod.tscn" id="7_e8s36"]
 [ext_resource type="PackedScene" path="res://scenes/inventory/itemresources/lettuce.tscn" id="8_df658"]
 [ext_resource type="PackedScene" path="res://scenes/inventory/itemresources/lunch_meat.tscn" id="9_sh31s"]
@@ -130,7 +130,7 @@ size = Vector2(1182, 116)
 [node name="CookingMother" type="Node2D"]
 script = ExtResource("1_enyul")
 food_dict = {
-"Jam": ExtResource("6_k2pjj"),
+"GameJam": ExtResource("6_k2pjj"),
 "LaundryPod": ExtResource("7_e8s36"),
 "Lettuce": ExtResource("8_df658"),
 "LunchMeat": ExtResource("9_sh31s"),
