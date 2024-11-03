@@ -46,10 +46,12 @@ script = ExtResource("1_ko1sp")
 z_index = 1
 
 [node name="GroundItem" parent="." instance=ExtResource("4_xu7aa")]
+visible = false
 position = Vector2(464, 143)
 item_resource = SubResource("Resource_njlnr")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
+visible = false
 
 [node name="Inventory" parent="CanvasLayer" groups=["inventory"] instance=ExtResource("7_y72wu")]
 anchors_preset = 7
@@ -123,6 +125,7 @@ anchor_right = 0.5
 anchor_bottom = 0.5
 
 [node name="GroundItem2" parent="." instance=ExtResource("4_xu7aa")]
+visible = false
 position = Vector2(1022, 306)
 item_resource = SubResource("Resource_8taha")
 

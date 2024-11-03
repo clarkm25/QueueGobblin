@@ -1,0 +1,23 @@
+[gd_scene load_steps=5 format=3 uid="uid://c2l3b5t3d16q7"]
+
+[ext_resource type="Script" path="res://scripts/inventory/dropoff/dropoff_zone.gd" id="1_v57jt"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_oqsdw"]
+
+[sub_resource type="Gradient" id="Gradient_5hkx5"]
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_rd52m"]
+gradient = SubResource("Gradient_5hkx5")
+
+[node name="DropoffZone" type="Area2D"]
+script = ExtResource("1_v57jt")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+scale = Vector2(4, 4)
+shape = SubResource("CircleShape2D_oqsdw")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = SubResource("GradientTexture2D_rd52m")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="body_exited" from="." to="." method="_on_body_exited"]
