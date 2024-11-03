@@ -1,5 +1,6 @@
 [gd_scene load_steps=26 format=4 uid="uid://cbir4c3j7r4tt"]
 
+
 [ext_resource type="Script" path="res://scripts/inventory/sandwich_building/sandwich_scene.gd" id="1_enyul"]
 [ext_resource type="Texture2D" uid="uid://dt5dt7xuwbea8" path="res://assets/desk.png" id="1_xxetj"]
 [ext_resource type="PackedScene" uid="uid://d4dgfa8mtmy7e" path="res://scenes/inventory/itemresources/moritos_soft.tscn" id="2_ectb5"]
