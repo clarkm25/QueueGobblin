@@ -1,11 +1,18 @@
-[gd_scene load_steps=20 format=4 uid="uid://cbir4c3j7r4tt"]
+[gd_scene load_steps=26 format=4 uid="uid://cbir4c3j7r4tt"]
+
 
 [ext_resource type="Script" path="res://scripts/inventory/sandwich_building/sandwich_scene.gd" id="1_enyul"]
 [ext_resource type="Texture2D" uid="uid://dt5dt7xuwbea8" path="res://assets/desk.png" id="1_xxetj"]
 [ext_resource type="PackedScene" uid="uid://d4dgfa8mtmy7e" path="res://scenes/inventory/itemresources/moritos_soft.tscn" id="2_ectb5"]
 [ext_resource type="PackedScene" uid="uid://d378jrgtiese8" path="res://scenes/inventory/itemresources/mount_doo.tscn" id="2_gq0lb"]
 [ext_resource type="PackedScene" uid="uid://d3tgv81bt3x4n" path="res://scenes/bread_slice.tscn" id="2_wlanp"]
+[ext_resource type="PackedScene" path="res://scenes/inventory/itemresources/mootpocket.tscn" id="4_kswip"]
 [ext_resource type="Texture2D" uid="uid://ch16ko2ftl6d6" path="res://assets/A4.png" id="4_xr6s0"]
+[ext_resource type="PackedScene" path="res://scenes/inventory/itemresources/peanut_butter.tscn" id="5_bikem"]
+[ext_resource type="PackedScene" uid="uid://chuk2acs3qbgf" path="res://scenes/inventory/itemresources/jam.tscn" id="6_k2pjj"]
+[ext_resource type="PackedScene" path="res://scenes/inventory/itemresources/laundry_pod.tscn" id="7_e8s36"]
+[ext_resource type="PackedScene" path="res://scenes/inventory/itemresources/lettuce.tscn" id="8_df658"]
+[ext_resource type="PackedScene" path="res://scenes/inventory/itemresources/lunch_meat.tscn" id="9_sh31s"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_rl8bm"]
 texture = ExtResource("4_xr6s0")
@@ -97,7 +104,7 @@ oversampling = 1.2
 
 [sub_resource type="LabelSettings" id="LabelSettings_n0ki6"]
 font = SubResource("SystemFont_fj7vt")
-font_size = 32
+font_size = 25
 
 [sub_resource type="LabelSettings" id="LabelSettings_8t0iu"]
 font_size = 24
@@ -106,13 +113,14 @@ font_size = 24
 
 [sub_resource type="LabelSettings" id="LabelSettings_sr7dq"]
 font = SubResource("SystemFont_bf2ss")
-font_size = 24
+font_size = 18
 
 [sub_resource type="LabelSettings" id="LabelSettings_7q4e5"]
 font_size = 32
+font_color = Color(1, 1, 0, 1)
 
 [sub_resource type="LabelSettings" id="LabelSettings_kvfum"]
-font_size = 24
+font_size = 18
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_cbrg3"]
 size = Vector2(1153, 62.5)
@@ -123,8 +131,14 @@ size = Vector2(1182, 116)
 [node name="CookingMother" type="Node2D"]
 script = ExtResource("1_enyul")
 food_dict = {
+"GameJam": ExtResource("6_k2pjj"),
+"LaundryPod": ExtResource("7_e8s36"),
+"Lettuce": ExtResource("8_df658"),
+"LunchMeat": ExtResource("9_sh31s"),
+"Mootpocket": ExtResource("4_kswip"),
 "Moritos": ExtResource("2_ectb5"),
-"MountDoo": ExtResource("2_gq0lb")
+"MountDoo": ExtResource("2_gq0lb"),
+"PeanutButter": ExtResource("5_bikem")
 }
 
 [node name="TileMapLayer" type="TileMapLayer" parent="."]
@@ -137,6 +151,7 @@ tile_set = SubResource("TileSet_yfshd")
 position = Vector2(577, 436)
 
 [node name="PanelContainer" type="PanelContainer" parent="StaticBody2D"]
+unique_name_in_owner = true
 z_index = 1
 z_as_relative = false
 offset_left = -275.0
@@ -222,6 +237,7 @@ horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="Button" type="Button" parent="StaticBody2D/PanelContainer/VBoxContainer/Panel/VBoxContainer/OUTCOME"]
+modulate = Color(1, 1, 0, 1)
 layout_mode = 2
 size_flags_horizontal = 4
 text = "CLICK TO STOP WHEEL"
@@ -258,6 +274,7 @@ horizontal_alignment = 1
 [node name="nextbutton" type="Button" parent="StaticBody2D/PanelContainer"]
 unique_name_in_owner = true
 visible = false
+modulate = Color(1, 1, 0, 1)
 layout_mode = 2
 size_flags_horizontal = 8
 size_flags_vertical = 8

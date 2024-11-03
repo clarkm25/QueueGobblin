@@ -6,7 +6,7 @@ signal points_gained(num, item)
 
 @onready var scorelabel = $StaticBody2D/PanelContainer/VBoxContainer/Panel/VBoxContainer/ScoreLabel
 var score := 0
-var score_threshhold := 160
+var score_threshhold := 120
 var rolling := false
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -42,6 +42,10 @@ func _check_for_pairs():
 	var gamejam := false
 	var morito := false
 	var mountdoo := false
+	var lunchmeat := false
+	var lettuce := false
+	var laundrypod := false
+	var mootpocket := false
 	
 	for item in invent:
 		match item.name:
@@ -53,11 +57,25 @@ func _check_for_pairs():
 				morito = true
 			"MountDoo":
 				mountdoo = true
+			"Lettuce":
+				lettuce = true
+			"LunchMeat":
+				lunchmeat = true
+			"LaundryPod":
+				laundrypod = true
+			"MootPocket":
+				mootpocket = true
 	
+	# food combos
 	if pb and gamejam:
-		points_gained.emit(20, "THE CLASSIC COMBO!")
+		points_gained.emit(30, "THE CLASSIC COMBO!")
 	if morito and mountdoo:
 		points_gained.emit(20, "GAMER FUEL AND MICROPLASTICS!")
+	if lunchmeat and lettuce:
+		points_gained.emit(30, "AN ACTUAL SANDWICH!")
+	if laundrypod:
+		points_gained.emit(-5, "THAT CAN'T BE HEALTHY!")
+
 
 func _point_popup(pts, title):
 	scorelabel.text += title + ": +" + str(pts) + "\n"
@@ -71,6 +89,8 @@ func _on_combo_timer_timeout() -> void:
 		rolling = true
 	else:
 		%nextbutton.show()
+	%PanelContainer.z_index = 7
+	$StaticBody2D/PanelContainer/VBoxContainer/Panel/VBoxContainer/Label2.hide()
 	ItemPasser.passed_inventory.clear()
 		
 

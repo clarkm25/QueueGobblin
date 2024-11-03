@@ -16,4 +16,5 @@ func _process(delta: float) -> void:
 
 
 func _on_camera_capture_area_entered(area: Area2D) -> void:
-	emit_signal("capture", self)
+	if area.is_in_group("player"):
+		emit_signal("capture", self)

@@ -1,4 +1,4 @@
-[gd_scene load_steps=26 format=3 uid="uid://dip54pnfsfg58"]
+[gd_scene load_steps=26 format=3 uid="uid://dh4d806u0aovc"]
 
 [ext_resource type="Texture2D" uid="uid://8yh2waepdu5u" path="res://assets/home.png" id="1_hbchr"]
 
@@ -155,6 +155,7 @@ position = Vector2(70.9375, 119.523)
 shape = SubResource("RectangleShape2D_6lo5a")
 
 [node name="CollisionShape2D16" type="CollisionShape2D" parent="StaticBody2D"]
+visible = false
 light_mask = 3
 position = Vector2(14.9688, 49.2617)
 shape = SubResource("RectangleShape2D_knh8k")
@@ -207,9 +208,9 @@ shape = SubResource("RectangleShape2D_45qlj")
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="StaticBody2D"]
 position = Vector2(-256, -185)
 build_mode = 1
-polygon = PackedVector2Array(33, 47, 112, 47, 114, 97, 97, 97, 97, 159, 159, 159, 159, 98, 143, 98, 144, 46, 225, 47, 225, 97, 193, 97, 193, 159, 367, 160, 367, 98, 255, 97, 255, 47, 320, 47, 320, 79, 352, 79, 352, 47, 432, 47, 431, 96, 400, 97, 400, 159, 433, 159, 433, 177, 353, 177, 352, 233, 399, 233, 400, 337, 239, 336, 240, 290, 210, 290, 210, 337, 15, 337, 16, 239, 79, 239, 79, 177, 31, 177, 31, 159, 63, 159, 63, 98, 30, 98, 30, 46)
+polygon = PackedVector2Array(34, 48, 111, 48, 111, 96, 95, 96, 95, 160, 159, 160, 159, 96, 143, 96, 143, 48, 223, 48, 223, 96, 191, 96, 191, 160, 367, 160, 367, 96, 255, 96, 255, 48, 319, 48, 319, 80, 351, 80, 351, 48, 431, 48, 431, 96, 399, 96, 399, 160, 431, 160, 431, 176, 351, 176, 351, 234, 399, 234, 399, 336, 239, 336, 239, 288, 207, 288, 207, 336, 15, 336, 15, 240, 79, 240, 79, 176, 31, 176, 31, 160, 63, 160, 63, 96, 31, 96, 31, 48)
 
 [node name="CollisionPolygon2D2" type="CollisionPolygon2D" parent="StaticBody2D"]
 position = Vector2(-256, -185)
 build_mode = 1
-polygon = PackedVector2Array(113, 178, 320, 178, 319, 241, 240, 240, 240, 273, 209, 273, 209, 239, 114, 239)
+polygon = PackedVector2Array(111, 176, 319, 176, 319, 240, 239, 240, 239, 272, 207, 272, 207, 240, 111, 240)

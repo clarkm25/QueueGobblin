@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://cqo7pqiuql6m"]
+
+[ext_resource type="Script" path="res://addons/softbody2d/softbody2d_rigidbody.gd" id="1_phdrw"]
+
+[node name="JamSoft" type="RigidBody2D"]
+script = ExtResource("1_phdrw")

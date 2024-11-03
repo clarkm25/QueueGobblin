@@ -1,0 +1,20 @@
+[gd_scene load_steps=4 format=3 uid="uid://s5wevi6uqo3p"]
+
+[ext_resource type="Resource" uid="uid://dc74y0bo7676m" path="res://scenes/inventory/itemresources/lettuce.tres" id="1_haodb"]
+[ext_resource type="Texture2D" uid="uid://bs6ewmv0g5gfm" path="res://assets/food/lettuce_highres.png" id="1_quck2"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_6yxn5"]
+size = Vector2(135.5, 19)
+
+[node name="Lettuce" type="RigidBody2D"]
+gravity_scale = 0.5
+metadata/item_resource = ExtResource("1_haodb")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture_filter = 1
+scale = Vector2(0.6, 0.2)
+texture = ExtResource("1_quck2")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-1.75, 5.5)
+shape = SubResource("RectangleShape2D_6yxn5")

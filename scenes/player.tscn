@@ -4,7 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://c680ug6sv8o2f" path="res://assets/player/tilemap.png" id="2_nluo4"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_wbgo7"]
-radius = 5.0
+radius = 5.2
 
 [sub_resource type="SegmentShape2D" id="SegmentShape2D_1iq26"]
 b = Vector2(0, 0)
@@ -97,9 +97,10 @@ _data = {
 "walk_up": SubResource("Animation_042kh")
 }
 
-[node name="Player" type="CharacterBody2D"]
+[node name="Player" type="CharacterBody2D" groups=["player"]]
 physics_interpolation_mode = 1
 script = ExtResource("1_64nx0")
+move_speed = 100.0
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 texture_filter = 1
@@ -114,7 +115,7 @@ region_rect = Rect2(391, 0, 67, 52)
 position = Vector2(0, 2)
 shape = SubResource("CircleShape2D_wbgo7")
 
-[node name="Area2D" type="Area2D" parent="."]
+[node name="Area2D" type="Area2D" parent="." groups=["player"]]
 collision_mask = 512
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]

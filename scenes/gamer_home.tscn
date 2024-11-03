@@ -4,12 +4,9 @@
 [ext_resource type="PackedScene" uid="uid://dip54pnfsfg58" path="res://house.tscn" id="1_pknrw"]
 [ext_resource type="PackedScene" uid="uid://78psqsuy1rkv" path="res://scenes/player.tscn" id="2_ead14"]
 [ext_resource type="PackedScene" uid="uid://ymf7fkfoy0vs" path="res://scenes/room.tscn" id="3_fshdu"]
-[ext_resource type="Texture2D" uid="uid://csjsgjwm8lhai" path="res://assets/black_void.tres" id="3_yafbo"]
-[ext_resource type="PackedScene" uid="uid://jnh5stgjwygy" path="res://scenes/inventory/area_spawner.tscn" id="4_irmox"]
+[ext_resource type="Texture2D" uid="uid://q6ewd8v474y7" path="res://assets/black_void.tres" id="3_yafbo"]
+[ext_resource type="PackedScene" uid="uid://bjo6al5y1bbuu" path="res://scenes/inventory/area_spawner.tscn" id="4_irmox"]
 [ext_resource type="PackedScene" uid="uid://col3xjunm68cw" path="res://scenes/inventory/inventory.tscn" id="5_hvo0p"]
-[ext_resource type="Script" path="res://addons/SwiftInv/Scripts/InventoryItem.gd" id="5_yduve"]
-[ext_resource type="Resource" uid="uid://b8ni6upjipuj6" path="res://scenes/inventory/itemresources/moritos.tres" id="6_3k5us"]
-[ext_resource type="Resource" uid="uid://bphgykks1gmvd" path="res://scenes/inventory/itemresources/mountdoo.tres" id="7_00rw1"]
 [ext_resource type="PackedScene" uid="uid://br1o5d65lfind" path="res://scenes/inventory/example_slot.tscn" id="8_c5su7"]
 [ext_resource type="Script" path="res://addons/SwiftInv/Scripts/InventorySlot.gd" id="9_xocdk"]
 [ext_resource type="PackedScene" uid="uid://b25jekrf0yjff" path="res://scenes/inventory/inventory_manager.tscn" id="10_v1bwn"]
@@ -137,7 +134,7 @@ script = ExtResource("1_e3jxk")
 position = Vector2(258, 187)
 
 [node name="Camera2D" type="Camera2D" parent="."]
-position = Vector2(184, 96)
+position = Vector2(320, 280)
 zoom = Vector2(4.5, 4.5)
 editor_draw_limits = true
 
@@ -148,7 +145,6 @@ tile_map_data = PackedByteArray("AADx//j/BAAAAAAAAADx//n/BAAAAAAAAADx//r/BAAAAAA
 tile_set = SubResource("TileSet_d77rw")
 
 [node name="CameraLocks" type="Node2D" parent="."]
-visible = false
 
 [node name="BedRoom" parent="CameraLocks" instance=ExtResource("3_fshdu")]
 position = Vector2(72, 64)
@@ -192,63 +188,55 @@ position = Vector2(112, 280)
 [node name="CollisionShape2D" parent="CameraLocks/LivingRoom/CameraCapture" index="0"]
 shape = SubResource("RectangleShape2D_ehu2j")
 
+[node name="Player" parent="." instance=ExtResource("2_ead14")]
+position = Vector2(271, 257)
+move_speed = 125.0
+
 [node name="ItemSpawners" type="Node2D" parent="."]
+z_index = 1
 
 [node name="AreaSpawner" parent="ItemSpawners" instance=ExtResource("4_irmox")]
 position = Vector2(38, 85)
-possible_resources = Array[ExtResource("5_yduve")]([ExtResource("6_3k5us"), ExtResource("7_00rw1")])
 
 [node name="AreaSpawner2" parent="ItemSpawners" instance=ExtResource("4_irmox")]
 position = Vector2(40, 266)
-possible_resources = Array[ExtResource("5_yduve")]([ExtResource("6_3k5us"), ExtResource("7_00rw1")])
 
 [node name="AreaSpawner3" parent="ItemSpawners" instance=ExtResource("4_irmox")]
 position = Vector2(39, 324)
-possible_resources = Array[ExtResource("5_yduve")]([ExtResource("6_3k5us"), ExtResource("7_00rw1")])
 
 [node name="AreaSpawner4" parent="ItemSpawners" instance=ExtResource("4_irmox")]
 position = Vector2(168, 321)
-possible_resources = Array[ExtResource("5_yduve")]([ExtResource("6_3k5us"), ExtResource("7_00rw1")])
 
 [node name="AreaSpawner5" parent="ItemSpawners" instance=ExtResource("4_irmox")]
 position = Vector2(310, 312)
-possible_resources = Array[ExtResource("5_yduve")]([ExtResource("6_3k5us"), ExtResource("7_00rw1")])
 
 [node name="AreaSpawner6" parent="ItemSpawners" instance=ExtResource("4_irmox")]
 position = Vector2(375, 244)
-possible_resources = Array[ExtResource("5_yduve")]([ExtResource("6_3k5us"), ExtResource("7_00rw1")])
 
 [node name="AreaSpawner7" parent="ItemSpawners" instance=ExtResource("4_irmox")]
 position = Vector2(304, 244)
-possible_resources = Array[ExtResource("5_yduve")]([ExtResource("6_3k5us"), ExtResource("7_00rw1")])
 
 [node name="AreaSpawner8" parent="ItemSpawners" instance=ExtResource("4_irmox")]
 position = Vector2(375, 328)
-possible_resources = Array[ExtResource("5_yduve")]([ExtResource("6_3k5us"), ExtResource("7_00rw1")])
 
 [node name="AreaSpawner9" parent="ItemSpawners" instance=ExtResource("4_irmox")]
 position = Vector2(360, 53)
-possible_resources = Array[ExtResource("5_yduve")]([ExtResource("6_3k5us"), ExtResource("7_00rw1")])
 
 [node name="AreaSpawner10" parent="ItemSpawners" instance=ExtResource("4_irmox")]
 position = Vector2(264, 59)
-possible_resources = Array[ExtResource("5_yduve")]([ExtResource("6_3k5us"), ExtResource("7_00rw1")])
 
 [node name="AreaSpawner11" parent="ItemSpawners" instance=ExtResource("4_irmox")]
 position = Vector2(263, 89)
-possible_resources = Array[ExtResource("5_yduve")]([ExtResource("6_3k5us"), ExtResource("7_00rw1")])
 
 [node name="AreaSpawner12" parent="ItemSpawners" instance=ExtResource("4_irmox")]
 position = Vector2(38, 169)
-possible_resources = Array[ExtResource("5_yduve")]([ExtResource("6_3k5us"), ExtResource("7_00rw1")])
 
 [node name="AreaSpawner13" parent="ItemSpawners" instance=ExtResource("4_irmox")]
 position = Vector2(426, 169)
-possible_resources = Array[ExtResource("5_yduve")]([ExtResource("6_3k5us"), ExtResource("7_00rw1")])
 
-[node name="Player" parent="." groups=["player"] instance=ExtResource("2_ead14")]
+
+[node name="Player" parent="." instance=ExtResource("2_ead14")]
 position = Vector2(176, 64)
-move_speed = 125.0
 
 [node name="InventoryManager" parent="." instance=ExtResource("10_v1bwn")]
 
@@ -324,7 +312,7 @@ size_flags_horizontal = 4
 [node name="pause-menu" parent="CanvasLayer2" instance=ExtResource("11_o2lub")]
 visible = false
 
-[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("12_d3bl4")
 autoplay = true
 

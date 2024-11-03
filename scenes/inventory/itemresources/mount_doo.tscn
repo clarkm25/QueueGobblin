@@ -7,8 +7,8 @@
 bounce = 0.3
 
 [node name="MountDoo" type="RigidBody2D"]
-mass = 2.0
 physics_material_override = SubResource("PhysicsMaterial_f7mng")
+gravity_scale = 0.5
 metadata/item_resource = ExtResource("1_var0q")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
