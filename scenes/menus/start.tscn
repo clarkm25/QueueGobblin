@@ -6,8 +6,8 @@
 [ext_resource type="Texture2D" uid="uid://ce4rxek8kfxtf" path="res://scenes/exitNotHover.png" id="4_2s1gf"]
 [ext_resource type="Texture2D" uid="uid://cb728haosbgv8" path="res://scenes/startHover.png" id="5_we681"]
 [ext_resource type="Texture2D" uid="uid://bspf5m5pxav0f" path="res://scenes/startNotHover.png" id="6_t4pnl"]
-[ext_resource type="AudioStream" uid="uid://c755j5rmxbynk" path="res://assets/music/761671__loudkevin__reborn.mp3" id="7_0sim4"]
 [ext_resource type="Texture2D" uid="uid://dh2e46sd50n70" path="res://assets/images/NewQueueGobblinLogo.png" id="7_aod08"]
+[ext_resource type="PackedScene" uid="uid://c3l3fu47vxuv1" path="res://scenes/menus/menu_audio.tscn" id="8_68skg"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_7a3dk"]
 texture = ExtResource("3_qapej")
@@ -98,10 +98,7 @@ texture = ExtResource("7_aod08")
 
 [node name="AudioListener2D" type="AudioListener2D" parent="."]
 
-[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
-stream = ExtResource("7_0sim4")
-volume_db = 15.0
-autoplay = true
+[node name="AudioStreamPlayer" parent="." instance=ExtResource("8_68skg")]
 
 [connection signal="pressed" from="exit button" to="." method="_on_exit_button_pressed"]
 [connection signal="pressed" from="start_button" to="." method="_on_start_button_pressed"]

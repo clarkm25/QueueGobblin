@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://c3l3fu47vxuv1"]
+
+[ext_resource type="AudioStream" uid="uid://c755j5rmxbynk" path="res://assets/music/761671__loudkevin__reborn.mp3" id="1_knu3a"]
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer"]
+stream = ExtResource("1_knu3a")
+volume_db = 15.0
+autoplay = true

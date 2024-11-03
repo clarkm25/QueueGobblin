@@ -160,8 +160,7 @@ position = Vector2(38, 169)
 [node name="AreaSpawner13" parent="ItemSpawners" instance=ExtResource("4_irmox")]
 position = Vector2(426, 169)
 
-
-[node name="Player" parent="." instance=ExtResource("2_ead14")]
+[node name="Player2" parent="." instance=ExtResource("2_ead14")]
 position = Vector2(176, 64)
 
 [node name="InventoryManager" parent="." instance=ExtResource("10_v1bwn")]
