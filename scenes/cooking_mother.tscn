@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=4 uid="uid://cbir4c3j7r4tt"]
+[gd_scene load_steps=20 format=4 uid="uid://cbir4c3j7r4tt"]
 
 [ext_resource type="Script" path="res://scripts/inventory/sandwich_building/sandwich_scene.gd" id="1_enyul"]
 [ext_resource type="Texture2D" uid="uid://dt5dt7xuwbea8" path="res://assets/desk.png" id="1_xxetj"]
