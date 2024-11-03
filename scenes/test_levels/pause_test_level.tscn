@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=3 uid="uid://b2bd4xo0auaag"]
+[gd_scene load_steps=18 format=3 uid="uid://b2bd4xo0auaag"]
 
 [ext_resource type="Script" path="res://scripts/game_loop.gd" id="1_ko1sp"]
 [ext_resource type="PackedScene" uid="uid://b25jekrf0yjff" path="res://scenes/inventory/inventory_manager.tscn" id="2_g7rh6"]
@@ -11,8 +11,9 @@
 [ext_resource type="Script" path="res://addons/SwiftInv/Scripts/Inventory.gd" id="8_ja6bt"]
 [ext_resource type="Script" path="res://addons/SwiftInv/Scripts/InventorySlot.gd" id="9_uo1vi"]
 [ext_resource type="VideoStream" path="res://assets/SkyrimOGG.ogv" id="10_lh58i"]
-[ext_resource type="PackedScene" uid="uid://c0e4rm66g3rao" path="res://scenes/menus/pause_menu.tscn" id="11_314sj"]
+[ext_resource type="PackedScene" uid="uid://bq370gs06pwhw" path="res://scenes/menus/pause_menu.tscn" id="11_314sj"]
 [ext_resource type="Texture2D" uid="uid://cr4iycc7ppnij" path="res://assets/food/mountdoo.png" id="11_na40a"]
+[ext_resource type="AudioStream" uid="uid://k0q7kvf0gwg4" path="res://assets/music/220321__b_lamerichs__bas-21022014-game-loop-8.mp3" id="14_lrd65"]
 
 [sub_resource type="Resource" id="Resource_njlnr"]
 script = ExtResource("5_fqgaj")
@@ -23,7 +24,7 @@ value = 5
 amount = 1
 max_stack = 1
 
-[sub_resource type="Resource" id="Resource_ypf8s"]
+[sub_resource type="Resource" id="Resource_8vqtr"]
 resource_local_to_scene = true
 script = ExtResource("8_ja6bt")
 items = Array[ExtResource("5_fqgaj")]([null, null, null])
@@ -67,7 +68,7 @@ grow_horizontal = 2
 grow_vertical = 0
 size_flags_horizontal = 4
 size_flags_vertical = 4
-inventory = SubResource("Resource_ypf8s")
+inventory = SubResource("Resource_8vqtr")
 
 [node name="Slot0" type="TextureRect" parent="CanvasLayer/Inventory" node_paths=PackedStringArray("amount_label") instance=ExtResource("8_d7f05")]
 custom_minimum_size = Vector2(100, 100)
@@ -117,12 +118,8 @@ expand = true
 [node name="CanvasLayer2" type="CanvasLayer" parent="."]
 
 [node name="pause-menu" parent="CanvasLayer2" instance=ExtResource("11_314sj")]
-visible = false
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
+offset_top = 0.0
+offset_bottom = 0.0
 
 [node name="GroundItem2" parent="." instance=ExtResource("4_xu7aa")]
 visible = false
@@ -130,3 +127,9 @@ position = Vector2(1022, 306)
 item_resource = SubResource("Resource_8taha")
 
 [node name="GameTimer" type="Timer" parent="."]
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("14_lrd65")
+autoplay = true
+
+[node name="AudioListener2D" type="AudioListener2D" parent="."]

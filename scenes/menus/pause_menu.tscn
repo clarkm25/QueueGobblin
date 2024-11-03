@@ -1,7 +1,8 @@
-[gd_scene load_steps=7 format=3 uid="uid://bq370gs06pwhw"]
+[gd_scene load_steps=8 format=3 uid="uid://bq370gs06pwhw"]
 
 [ext_resource type="Script" path="res://scripts/UI/pause/pause_menu.gd" id="1_5cpxb"]
 [ext_resource type="Shader" path="res://shaders/pause_shader/pause_shader.gdshader" id="2_oxcd5"]
+[ext_resource type="Script" path="res://scripts/UI/pause/audio_options.gd" id="3_2bplg"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_eer5t"]
 shader = ExtResource("2_oxcd5")
@@ -31,9 +32,9 @@ tracks/0/path = NodePath("ColorRect:material:shader_parameter/lod")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"handle_modes": PackedInt32Array(0),
-"points": PackedFloat32Array(0, -0.15, 0, 0.15, 0),
-"times": PackedFloat32Array(0)
+"handle_modes": PackedInt32Array(0, 0),
+"points": PackedFloat32Array(0, -0.15, 0, 0.15, 0, 0.3, -0.15, 0, 0.15, 0),
+"times": PackedFloat32Array(0, 0.2)
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_mrbea"]
@@ -42,12 +43,14 @@ _data = {
 "blur": SubResource("Animation_tm282")
 }
 
-[node name="pause-menu" type="Control"]
+[node name="PauseMenu" type="Control"]
 process_mode = 3
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
+offset_top = 11.0
+offset_bottom = 11.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_5cpxb")
@@ -61,6 +64,31 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
+[node name="AudioOptions" type="Control" parent="."]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("3_2bplg")
+
+[node name="VolumeUI" type="VBoxContainer" parent="AudioOptions"]
+layout_mode = 2
+offset_left = 748.0
+offset_top = 549.0
+offset_right = 1116.0
+offset_bottom = 592.0
+size_flags_vertical = 8
+
+[node name="Label" type="Label" parent="AudioOptions/VolumeUI"]
+texture_filter = 1
+layout_mode = 2
+text = "Master Volume"
+
+[node name="VolumeSlider" type="HSlider" parent="AudioOptions/VolumeUI"]
+layout_mode = 2
+max_value = 1.0
+step = 0.001
+value = 0.5
+
 [node name="PanelContainer" type="PanelContainer" parent="."]
 layout_mode = 1
 anchors_preset = 8
@@ -68,27 +96,28 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -184.0
+offset_left = -191.5
 offset_top = -50.5
-offset_right = 184.0
+offset_right = 191.5
 offset_bottom = 50.5
 grow_horizontal = 2
 grow_vertical = 2
 
 [node name="VBoxContainer" type="VBoxContainer" parent="PanelContainer"]
 layout_mode = 2
+size_flags_vertical = 4
 
-[node name="resume" type="Button" parent="PanelContainer/VBoxContainer"]
+[node name="Resume" type="Button" parent="PanelContainer/VBoxContainer"]
 texture_filter = 1
 layout_mode = 2
 text = "Resume"
 
-[node name="restart" type="Button" parent="PanelContainer/VBoxContainer"]
+[node name="Restart" type="Button" parent="PanelContainer/VBoxContainer"]
 texture_filter = 1
 layout_mode = 2
 text = "Restart"
 
-[node name="quit" type="Button" parent="PanelContainer/VBoxContainer"]
+[node name="Quit" type="Button" parent="PanelContainer/VBoxContainer"]
 texture_filter = 1
 layout_mode = 2
 text = "Quit"
@@ -98,6 +127,7 @@ libraries = {
 "": SubResource("AnimationLibrary_mrbea")
 }
 
-[connection signal="pressed" from="PanelContainer/VBoxContainer/resume" to="." method="_on_resume_pressed"]
-[connection signal="pressed" from="PanelContainer/VBoxContainer/restart" to="." method="_on_restart_pressed"]
-[connection signal="pressed" from="PanelContainer/VBoxContainer/quit" to="." method="_on_quit_pressed"]
+[connection signal="value_changed" from="AudioOptions/VolumeUI/VolumeSlider" to="AudioOptions" method="_on_volume_slider_value_changed"]
+[connection signal="pressed" from="PanelContainer/VBoxContainer/Resume" to="." method="_on_resume_pressed"]
+[connection signal="pressed" from="PanelContainer/VBoxContainer/Restart" to="." method="_on_restart_pressed"]
+[connection signal="pressed" from="PanelContainer/VBoxContainer/Quit" to="." method="_on_quit_pressed"]
