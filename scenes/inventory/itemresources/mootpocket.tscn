@@ -10,4 +10,5 @@ metadata/item_resource = ExtResource("1_ar7ct")
 texture = ExtResource("1_tcm4t")
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+scale = Vector2(0.5, 0.5)
 polygon = PackedVector2Array(80, -66.2, 43, -60, -20, -42, -36, -35, -77, -19, -101, -4, -121, 12, -128, 10.5, -128, 12.6, -124, 23.1, -124, 26, -90, 43, -90, 44.4, -9.6, 70.5, 4.10001, 70.5, 124.1, -2.5, 128, -2.5, 128, -7.5, 112, -39.5, 112, -42.4, 97, -54.4, 97, -56, 80, -64.1)
