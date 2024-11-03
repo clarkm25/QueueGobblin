@@ -1,4 +1,4 @@
-[gd_scene load_steps=20 format=3 uid="uid://cib2wsxicmb2a"]
+[gd_scene load_steps=21 format=3 uid="uid://cib2wsxicmb2a"]
 
 [ext_resource type="Script" path="res://scripts/camera/camera_lock.gd" id="1_e3jxk"]
 [ext_resource type="PackedScene" uid="uid://dip54pnfsfg58" path="res://house.tscn" id="1_pknrw"]
@@ -11,6 +11,7 @@
 [ext_resource type="Script" path="res://addons/SwiftInv/Scripts/InventorySlot.gd" id="9_xocdk"]
 [ext_resource type="PackedScene" uid="uid://b25jekrf0yjff" path="res://scenes/inventory/inventory_manager.tscn" id="10_v1bwn"]
 [ext_resource type="PackedScene" uid="uid://bq370gs06pwhw" path="res://scenes/menus/pause_menu.tscn" id="11_o2lub"]
+[ext_resource type="PackedScene" uid="uid://c2l3b5t3d16q7" path="res://scenes/inventory/dropoff/dropoff_zone.tscn" id="12_bwyl4"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_wyeno"]
 resource_local_to_scene = true
@@ -40,7 +41,7 @@ size = Vector2(192, 144)
 resource_local_to_scene = true
 size = Vector2(224, 144)
 
-[sub_resource type="Resource" id="Resource_e071x"]
+[sub_resource type="Resource" id="Resource_ievyw"]
 resource_local_to_scene = true
 script = ExtResource("7_j2fxr")
 items = Array[ExtResource("6_hy4yl")]([null, null, null])
@@ -173,7 +174,7 @@ offset_right = 154.0
 offset_bottom = 0.0
 grow_horizontal = 2
 grow_vertical = 0
-inventory = SubResource("Resource_e071x")
+inventory = SubResource("Resource_ievyw")
 
 [node name="Slot0" type="TextureRect" parent="CanvasLayer/Inventory" node_paths=PackedStringArray("amount_label") instance=ExtResource("8_c5su7")]
 custom_minimum_size = Vector2(100, 100)
@@ -203,6 +204,9 @@ amount_label = NodePath("AmountLabel")
 
 [node name="pause-menu" parent="CanvasLayer2" instance=ExtResource("11_o2lub")]
 visible = false
+
+[node name="DropoffZone" parent="." instance=ExtResource("12_bwyl4")]
+position = Vector2(208, 72)
 
 [connection signal="timeout" from="GameTimer" to="." method="_on_game_timer_timeout"]
 

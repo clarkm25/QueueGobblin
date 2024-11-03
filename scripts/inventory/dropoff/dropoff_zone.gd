@@ -1,7 +1,11 @@
 extends Area2D
 
+@onready var timer = $"../GameTimer"
+
 var items : Array[InventoryItem] = []
 var droppable : bool = false
+
+var dub_menu := preload("res://scenes/menus/end/end_menu_dub.tscn")
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -14,6 +18,11 @@ func _process(delta: float) -> void:
 func _unhandled_input(event: InputEvent) -> void:
 	if event.is_action_pressed("interact"):
 		if droppable == true:
+			timer.stop()
+			
+			# temporary win condition
+			var dub_menu := preload("res://scenes/menus/end/end_menu_dub.tscn")
+			
 			var player_inventory = get_tree().get_first_node_in_group("inventory").inventory
 		
 			for n in player_inventory.items.size():

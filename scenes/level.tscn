@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=3 uid="uid://dm8no2sp4crm8"]
+[gd_scene load_steps=17 format=3 uid="uid://dm8no2sp4crm8"]
 
 [ext_resource type="PackedScene" uid="uid://78psqsuy1rkv" path="res://scenes/player.tscn" id="1_clu1g"]
 [ext_resource type="Script" path="res://scripts/game_loop.gd" id="1_y16ym"]
@@ -23,7 +23,7 @@ value = 5
 amount = 1
 max_stack = 1
 
-[sub_resource type="Resource" id="Resource_egog7"]
+[sub_resource type="Resource" id="Resource_nofag"]
 resource_local_to_scene = true
 script = ExtResource("8_j02nc")
 items = Array[ExtResource("5_cntmp")]([null, null, null])
@@ -65,7 +65,7 @@ grow_horizontal = 2
 grow_vertical = 0
 size_flags_horizontal = 4
 size_flags_vertical = 4
-inventory = SubResource("Resource_egog7")
+inventory = SubResource("Resource_nofag")
 
 [node name="Slot0" type="TextureRect" parent="CanvasLayer/Inventory" node_paths=PackedStringArray("amount_label") instance=ExtResource("9_le876")]
 custom_minimum_size = Vector2(100, 100)

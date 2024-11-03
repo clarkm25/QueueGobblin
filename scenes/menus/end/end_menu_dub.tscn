@@ -58,6 +58,7 @@ offset_left = 456.0
 offset_top = 312.0
 offset_right = 686.0
 offset_bottom = 408.0
+mouse_default_cursor_shape = 2
 theme_override_styles/hover_pressed = SubResource("StyleBoxTexture_tnjsb")
 theme_override_styles/hover = SubResource("StyleBoxTexture_ymjfj")
 theme_override_styles/pressed = SubResource("StyleBoxTexture_h1212")

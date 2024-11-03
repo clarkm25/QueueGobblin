@@ -4,7 +4,8 @@ extends Node2D
 @onready var player = $Player
 @onready var timer = $GameTimer
 
-var replay_main_scene := preload("res://scenes/level.tscn")
+var scrub_menu := preload("res://scenes/menus/end/end_menu_loss.tscn")
+
 var target_pos = null
 
 # Called when the node enters the scene tree for the first time.
@@ -36,4 +37,4 @@ func set_camera(room : Node2D):
 
 func _on_game_timer_timeout() -> void:
 	# temp functionality of the timer
-	replay_main_scene.instantiate()
+	scrub_menu.instantiate()
