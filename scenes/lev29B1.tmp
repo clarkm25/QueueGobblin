@@ -73,7 +73,7 @@ offset_left = -596.0
 offset_right = -556.0
 
 [node name="GroundItem2" parent="." instance=ExtResource("6_m1kao")]
-position = Vector2(100, 46)
+position = Vector2(1022, 306)
 item_resource = ExtResource("11_qjwqs")
 
 [node name="GameTimer" type="Timer" parent="."]
