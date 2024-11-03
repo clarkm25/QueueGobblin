@@ -24,9 +24,7 @@ value = 5
 amount = 1
 max_stack = 1
 
-
-[sub_resource type="Resource" id="Resource_8vqtr"]
-
+[sub_resource type="Resource" id="Resource_vfs1v"]
 resource_local_to_scene = true
 script = ExtResource("8_ja6bt")
 items = Array[ExtResource("5_fqgaj")]([null, null, null])
@@ -70,8 +68,7 @@ grow_horizontal = 2
 grow_vertical = 0
 size_flags_horizontal = 4
 size_flags_vertical = 4
-inventory = SubResource("Resource_8vqtr")
-
+inventory = SubResource("Resource_vfs1v")
 
 [node name="Slot0" type="TextureRect" parent="CanvasLayer/Inventory" node_paths=PackedStringArray("amount_label") instance=ExtResource("8_d7f05")]
 custom_minimum_size = Vector2(100, 100)
@@ -121,8 +118,6 @@ expand = true
 [node name="CanvasLayer2" type="CanvasLayer" parent="."]
 
 [node name="pause-menu" parent="CanvasLayer2" instance=ExtResource("11_314sj")]
-offset_top = 0.0
-offset_bottom = 0.0
 
 [node name="GroundItem2" parent="." instance=ExtResource("4_xu7aa")]
 visible = false
