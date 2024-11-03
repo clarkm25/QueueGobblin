@@ -41,3 +41,80 @@ func _on_game_timer_timeout() -> void:
 	# temp functionality of the timer
 	print("YOU LOSE SCRUB!")
 	get_tree().change_scene_to_file("res://scenes/menus/end/end_menu_loss.tscn")
+
+
+func _on_wash_area_body_entered(body: Node2D) -> void:
+	if body.is_in_group("player"):
+		$Node2D/WashArea/WashPanel.show()
+
+
+func _on_wash_area_body_exited(body: Node2D) -> void:
+	if body.is_in_group("player"):
+		$Node2D/WashArea/WashPanel.hide()
+
+
+func _on_chair_area_body_shape_entered(body_rid: RID, body: Node2D, body_shape_index: int, local_shape_index: int) -> void:
+	if body.is_in_group("player"):
+		$Node2D/ChairArea/ChairPanel.show()
+
+
+func _on_chair_area_body_shape_exited(body_rid: RID, body: Node2D, body_shape_index: int, local_shape_index: int) -> void:
+	if body.is_in_group("player"):
+		$Node2D/ChairArea/ChairPanel.hide()
+
+
+func _on_counter_area_body_entered(body: Node2D) -> void:
+	if body.is_in_group("player"):
+		$Node2D/CounterArea/CounterPanel.show()
+		
+func _on_counter_area_body_exited(body: Node2D) -> void:
+	if body.is_in_group("player"):
+		$Node2D/CounterArea/CounterPanel.hide()
+
+
+func _on_bed_area_body_entered(body: Node2D) -> void:
+	if body.is_in_group("player"):
+		$Node2D/BedArea/BedPanel.show()
+
+func _on_bed_area_body_exited(body: Node2D) -> void:
+	if body.is_in_group("player"):
+		$Node2D/BedArea/BedPanel.hide()
+
+func _on_door_area_body_entered(body: Node2D) -> void:
+	if body.is_in_group("player"):
+		$Node2D/DoorArea/DoorPanel.show()
+
+
+func _on_door_area_body_exited(body: Node2D) -> void:
+	if body.is_in_group("player"):
+		$Node2D/DoorArea/DoorPanel.hide()
+
+
+func _on_book_area_body_entered(body: Node2D) -> void:
+	if body.is_in_group("player"):
+		$Node2D/BookArea/BookPanel.show()
+
+
+func _on_book_area_body_exited(body: Node2D) -> void:
+	if body.is_in_group("player"):
+		$Node2D/BookArea/BookPanel.hide()
+
+
+func _on_laundry_area_body_entered(body: Node2D) -> void:
+	if body.is_in_group("player"):
+		$Node2D/LaundryArea/LandryPanel.show()
+
+
+func _on_laundry_area_body_exited(body: Node2D) -> void:
+	if body.is_in_group("player"):
+		$Node2D/LaundryArea/LandryPanel.hide()
+
+
+func _on_table_area_body_entered(body: Node2D) -> void:
+	if body.is_in_group("player"):
+		$Node2D/TableArea/TablePanel.show()
+
+
+func _on_table_area_body_exited(body: Node2D) -> void:
+	if body.is_in_group("player"):
+		$Node2D/TableArea/TablePanel.hide()

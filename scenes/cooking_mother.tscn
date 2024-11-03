@@ -1,5 +1,6 @@
 [gd_scene load_steps=26 format=4 uid="uid://cbir4c3j7r4tt"]
 
+
 [ext_resource type="Script" path="res://scripts/inventory/sandwich_building/sandwich_scene.gd" id="1_enyul"]
 [ext_resource type="Texture2D" uid="uid://dt5dt7xuwbea8" path="res://assets/desk.png" id="1_xxetj"]
 [ext_resource type="PackedScene" uid="uid://d4dgfa8mtmy7e" path="res://scenes/inventory/itemresources/moritos_soft.tscn" id="2_ectb5"]
@@ -12,6 +13,7 @@
 [ext_resource type="PackedScene" uid="uid://fj6xh8xpt37c" path="res://scenes/inventory/itemresources/laundry_pod.tscn" id="7_e8s36"]
 [ext_resource type="PackedScene" uid="uid://s5wevi6uqo3p" path="res://scenes/inventory/itemresources/lettuce.tscn" id="8_df658"]
 [ext_resource type="PackedScene" uid="uid://k76e12sr4y6o" path="res://scenes/inventory/itemresources/lunch_meat.tscn" id="9_sh31s"]
+
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_rl8bm"]
 texture = ExtResource("4_xr6s0")
@@ -130,7 +132,7 @@ size = Vector2(1182, 116)
 [node name="CookingMother" type="Node2D"]
 script = ExtResource("1_enyul")
 food_dict = {
-"Jam": ExtResource("6_k2pjj"),
+"GameJam": ExtResource("6_k2pjj"),
 "LaundryPod": ExtResource("7_e8s36"),
 "Lettuce": ExtResource("8_df658"),
 "LunchMeat": ExtResource("9_sh31s"),

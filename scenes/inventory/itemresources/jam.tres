@@ -1,13 +1,13 @@
-[gd_resource type="Resource" script_class="InventoryItem" load_steps=3 format=3 uid="uid://bbdakxaq4wv62"]
+[gd_resource type="Resource" script_class="InventoryItem" load_steps=3 format=3 uid="uid://ckx7ue42up4tr"]
 
 [ext_resource type="Script" path="res://addons/SwiftInv/Scripts/InventoryItem.gd" id="1_j5uo3"]
 [ext_resource type="Texture2D" uid="uid://dcjkpcbfve342" path="res://assets/food/jam.png" id="2_w4b4d"]
 
 [resource]
 script = ExtResource("1_j5uo3")
-name = "Jam"
+name = "GameJam"
 description = ""
 texture = ExtResource("2_w4b4d")
-value = 1
+value = 18
 amount = 1
 max_stack = 1
