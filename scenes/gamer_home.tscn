@@ -53,6 +53,9 @@ size = Vector2(192, 144)
 resource_local_to_scene = true
 size = Vector2(224, 144)
 
+[sub_resource type="LabelSettings" id="LabelSettings_te2u7"]
+font_size = 23
+
 [node name="GamerHome" type="Node2D"]
 script = ExtResource("1_e3jxk")
 
@@ -71,6 +74,7 @@ tile_map_data = PackedByteArray("AADx//j/BAAAAAAAAADx//n/BAAAAAAAAADx//r/BAAAAAA
 tile_set = SubResource("TileSet_d77rw")
 
 [node name="CameraLocks" type="Node2D" parent="."]
+visible = false
 
 [node name="BedRoom" parent="CameraLocks" instance=ExtResource("3_fshdu")]
 position = Vector2(72, 64)
@@ -176,6 +180,24 @@ move_speed = 125.0
 
 [node name="DropoffZone" parent="." instance=ExtResource("12_bwyl4")]
 position = Vector2(208, 72)
+
+[node name="FoodDialog" type="Label" parent="DropoffZone"]
+visible = false
+offset_left = -38.0
+offset_top = -26.0
+offset_right = 205.0
+offset_bottom = 45.0
+scale = Vector2(0.235, 0.235)
+text = "I need to make food 
+before I can rank up"
+label_settings = SubResource("LabelSettings_te2u7")
+
+[node name="DialogBackground" type="Panel" parent="DropoffZone/FoodDialog"]
+show_behind_parent = true
+layout_mode = 0
+offset_left = -4.0
+offset_right = 230.0
+offset_bottom = 68.0
 
 [node name="GameTimer" type="Timer" parent="."]
 
