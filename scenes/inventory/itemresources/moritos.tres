@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="InventoryItem" load_steps=3 format=3 uid="uid://b8ni6upjipuj6"]
+
+[ext_resource type="Script" path="res://addons/SwiftInv/Scripts/InventoryItem.gd" id="1_qm48w"]
+[ext_resource type="Texture2D" uid="uid://3x1lkf2brpep" path="res://assets/food/morito3.png" id="2_3284y"]
+
+[resource]
+script = ExtResource("1_qm48w")
+name = "Moritos"
+description = ""
+texture = ExtResource("2_3284y")
+value = 1
+amount = 1
+max_stack = 1

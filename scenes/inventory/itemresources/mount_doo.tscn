@@ -1,0 +1,18 @@
+[gd_scene load_steps=3 format=3 uid="uid://d378jrgtiese8"]
+
+[ext_resource type="Texture2D" uid="uid://bbkfkfmi4asax" path="res://assets/food/mountdoo_highres.png" id="1_6u5qm"]
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_f7mng"]
+bounce = 0.3
+
+[node name="MountDoo" type="RigidBody2D"]
+mass = 2.0
+physics_material_override = SubResource("PhysicsMaterial_f7mng")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+rotation = -1.5708
+texture = ExtResource("1_6u5qm")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+rotation = -1.5708
+polygon = PackedVector2Array(-11, -125.1, -11, -123.8, -15.3, -123, -17.9, -123, -19, -107.1, -19, -101.8, -15, -99.8, -15, -96.8, -25.8, -86, -27.1, -86, -40.1, -64, -42, -64, -42, 23.3, -34.5, 47, -34, 60, -33.4, 60, -35, 68.8, -35, 75.5, -40.2, 86, -42, 86, -42, 107.4, -38, 117.4, -38, 120.1, -35, 122.1, -35, 123.9, -18, 124.8, -18, 126, -4.4, 126, 2.3, 121.5, 13.7, 125, 31, 125, 30, 117, 30, 101, 30, 90, 31, 81, 31, 67, 31, 58, 31, 20, 31, -35, 30, -53, 30, -62, 29, -82.6, 29, -84.8, 16.6, -97.2, 18.4, -102, 20.3, -102, 18, -119.3, 18, -123.9)

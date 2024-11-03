@@ -1,0 +1,49 @@
+[gd_scene load_steps=5 format=3 uid="uid://3j56tewil3yj"]
+
+[ext_resource type="Texture2D" uid="uid://cuknmykptqkfo" path="res://assets/kenny_ui/kenney_ui-pack-pixel-adventure/Tiles/Large tiles/Thin outline/tile_0018.png" id="1_02pgd"]
+[ext_resource type="Texture2D" uid="uid://lxy6ypwvv3fr" path="res://assets/kenny_ui/tile_0012.png" id="2_1wist"]
+[ext_resource type="FontFile" uid="uid://2h5bfpn3bpnm" path="res://assets/fonts/kenney_kenney-fonts/Fonts/Kenney Pixel.ttf" id="3_efbxq"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_m4ulp"]
+font = ExtResource("3_efbxq")
+font_size = 58
+font_color = Color(0, 0, 0, 1)
+
+[node name="Control2" type="Control"]
+layout_mode = 3
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -20.0
+offset_right = 20.0
+offset_bottom = 40.0
+grow_horizontal = 2
+
+[node name="NinePatchRect" type="NinePatchRect" parent="."]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -64.0
+offset_right = 64.0
+offset_bottom = 64.0
+grow_horizontal = 2
+texture = ExtResource("1_02pgd")
+patch_margin_left = 7
+patch_margin_top = 6
+patch_margin_right = 13
+patch_margin_bottom = 6
+
+[node name="Sprite2D" type="Sprite2D" parent="NinePatchRect"]
+position = Vector2(32, 32)
+scale = Vector2(1.84375, 2.23438)
+texture = ExtResource("2_1wist")
+
+[node name="Seconds" type="Label" parent="NinePatchRect"]
+layout_mode = 0
+offset_left = 64.0
+offset_top = 8.0
+offset_right = 108.0
+offset_bottom = 53.0
+text = "60"
+label_settings = SubResource("LabelSettings_m4ulp")

@@ -1,0 +1,18 @@
+[gd_scene load_steps=3 format=3 uid="uid://ymf7fkfoy0vs"]
+
+[ext_resource type="Script" path="res://scripts/camera/camera_lock_room.gd" id="1_dtlll"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_u2fpi"]
+resource_local_to_scene = true
+size = Vector2(500, 500)
+
+[node name="Room" type="Node2D" groups=["room"]]
+script = ExtResource("1_dtlll")
+
+[node name="CameraCapture" type="Area2D" parent="."]
+collision_layer = 512
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CameraCapture"]
+shape = SubResource("RectangleShape2D_u2fpi")
+
+[connection signal="area_entered" from="CameraCapture" to="." method="_on_camera_capture_area_entered"]

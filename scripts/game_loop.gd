@@ -1,7 +1,7 @@
 extends Node2D
 
 var replay_main_scene := preload("res://scenes/level.tscn")
-
+@onready var second_label := $CanvasLayer/Control2/NinePatchRect/Seconds
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	$GameTimer.one_shot = true
@@ -12,6 +12,7 @@ func _ready() -> void:
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
+	second_label.text = str(round($GameTimer.time_left))
 	pass
 
 

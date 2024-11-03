@@ -12,6 +12,8 @@ class_name InventoryItem extends Resource
 @export var description: String = ""
 ## The node's [Texture2D] resource.
 @export var texture: Texture2D = null
+@export var sandwich_texture : Texture2D
+
 @export var value := 1
 @export_group("Count")
 ## The amount of [InventoryItem] in [Inventory].
