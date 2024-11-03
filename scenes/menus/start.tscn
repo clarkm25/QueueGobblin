@@ -100,6 +100,25 @@ texture = ExtResource("7_aod08")
 
 [node name="AudioStreamPlayer" parent="." instance=ExtResource("8_68skg")]
 
+[node name="TextEdit" type="TextEdit" parent="."]
+layout_mode = 1
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -251.0
+offset_top = 65.0
+offset_right = -13.0
+offset_bottom = 210.0
+grow_horizontal = 0
+grow_vertical = 2
+text = "Combo items for more LP!
+
+WASD to move
+E to interact
+Drop items using 1, 2, and 3"
+
 [connection signal="pressed" from="exit button" to="." method="_on_exit_button_pressed"]
 [connection signal="pressed" from="start_button" to="." method="_on_start_button_pressed"]
 [connection signal="value_changed" from="volume_slider" to="." method="_on_volume_slider_value_changed"]
