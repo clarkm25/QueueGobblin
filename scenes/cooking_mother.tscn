@@ -97,7 +97,7 @@ oversampling = 1.2
 
 [sub_resource type="LabelSettings" id="LabelSettings_n0ki6"]
 font = SubResource("SystemFont_fj7vt")
-font_size = 32
+font_size = 25
 
 [sub_resource type="LabelSettings" id="LabelSettings_8t0iu"]
 font_size = 24
@@ -106,13 +106,13 @@ font_size = 24
 
 [sub_resource type="LabelSettings" id="LabelSettings_sr7dq"]
 font = SubResource("SystemFont_bf2ss")
-font_size = 24
+font_size = 18
 
 [sub_resource type="LabelSettings" id="LabelSettings_7q4e5"]
 font_size = 32
 
 [sub_resource type="LabelSettings" id="LabelSettings_kvfum"]
-font_size = 24
+font_size = 18
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_cbrg3"]
 size = Vector2(1153, 62.5)
@@ -223,6 +223,7 @@ horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="Button" type="Button" parent="StaticBody2D/PanelContainer/VBoxContainer/Panel/VBoxContainer/OUTCOME"]
+modulate = Color(1, 1, 0, 1)
 layout_mode = 2
 size_flags_horizontal = 4
 text = "CLICK TO STOP WHEEL"
