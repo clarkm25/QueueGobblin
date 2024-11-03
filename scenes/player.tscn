@@ -1,10 +1,13 @@
-[gd_scene load_steps=10 format=3 uid="uid://78psqsuy1rkv"]
+[gd_scene load_steps=11 format=3 uid="uid://78psqsuy1rkv"]
 
 [ext_resource type="Script" path="res://scripts/player/player.gd" id="1_64nx0"]
 [ext_resource type="Texture2D" uid="uid://c680ug6sv8o2f" path="res://assets/player/tilemap.png" id="2_nluo4"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_xhjc8"]
-size = Vector2(128, 127)
+[sub_resource type="CircleShape2D" id="CircleShape2D_wbgo7"]
+radius = 5.0
+
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_1iq26"]
+b = Vector2(0, 0)
 
 [sub_resource type="Animation" id="Animation_j7hvf"]
 length = 0.001
@@ -108,11 +111,14 @@ region_enabled = true
 region_rect = Rect2(391, 0, 67, 52)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(0, -0.5)
-shape = SubResource("RectangleShape2D_xhjc8")
+position = Vector2(0, 2)
+shape = SubResource("CircleShape2D_wbgo7")
 
-[node name="Camera2D" type="Camera2D" parent="."]
-zoom = Vector2(4, 4)
+[node name="Area2D" type="Area2D" parent="."]
+collision_mask = 512
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource("SegmentShape2D_1iq26")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 libraries = {

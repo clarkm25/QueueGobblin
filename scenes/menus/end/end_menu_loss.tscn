@@ -1,0 +1,87 @@
+[gd_scene load_steps=15 format=3 uid="uid://blch2njym2c6l"]
+
+[ext_resource type="Script" path="res://scripts/UI/end/end_menu_loss.gd" id="1_1n74y"]
+[ext_resource type="Texture2D" uid="uid://cok2ci4546h2u" path="res://scenes/StartBackground.png" id="1_ew38x"]
+[ext_resource type="Texture2D" uid="uid://seponkinrwsk" path="res://assets/menu_end/restartButton.png" id="2_pldtk"]
+[ext_resource type="Texture2D" uid="uid://bwpwqba3koy0e" path="res://assets/menu_end/quitButton.png" id="3_wrc23"]
+[ext_resource type="Texture2D" uid="uid://dvfwod6cqolxq" path="res://assets/menu_end/Derank.png" id="4_1xcdf"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_hhdyh"]
+texture = ExtResource("1_ew38x")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_tnjsb"]
+texture = ExtResource("2_pldtk")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_ymjfj"]
+texture = ExtResource("2_pldtk")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_h1212"]
+texture = ExtResource("2_pldtk")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_ymdko"]
+texture = ExtResource("2_pldtk")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_4m4al"]
+texture = ExtResource("3_wrc23")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_oepbh"]
+texture = ExtResource("3_wrc23")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_wmwqw"]
+texture = ExtResource("3_wrc23")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_6bgvg"]
+texture = ExtResource("3_wrc23")
+
+[node name="EndMenuLoss" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_1n74y")
+metadata/_edit_vertical_guides_ = [576.0]
+
+[node name="Panel" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_hhdyh")
+
+[node name="restart_button" type="Button" parent="."]
+layout_mode = 0
+offset_left = 456.0
+offset_top = 312.0
+offset_right = 686.0
+offset_bottom = 408.0
+theme_override_styles/hover_pressed = SubResource("StyleBoxTexture_tnjsb")
+theme_override_styles/hover = SubResource("StyleBoxTexture_ymjfj")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_h1212")
+theme_override_styles/normal = SubResource("StyleBoxTexture_ymdko")
+
+[node name="quit_button" type="Button" parent="."]
+layout_mode = 0
+offset_left = 456.0
+offset_top = 432.0
+offset_right = 686.0
+offset_bottom = 528.0
+mouse_default_cursor_shape = 2
+theme_override_styles/hover_pressed = SubResource("StyleBoxTexture_4m4al")
+theme_override_styles/hover = SubResource("StyleBoxTexture_oepbh")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_wmwqw")
+theme_override_styles/normal = SubResource("StyleBoxTexture_6bgvg")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 0
+offset_left = 424.0
+offset_top = 80.0
+offset_right = 724.0
+offset_bottom = 280.0
+texture = ExtResource("4_1xcdf")
+
+[connection signal="pressed" from="restart_button" to="." method="_on_restart_button_pressed"]
+[connection signal="pressed" from="quit_button" to="." method="_on_quit_button_pressed"]
