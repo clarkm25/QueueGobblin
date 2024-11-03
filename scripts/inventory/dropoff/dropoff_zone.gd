@@ -1,6 +1,7 @@
 extends Area2D
 
 @onready var timer = $"../GameTimer"
+@onready var foodDialog = $FoodDialog
 
 var items : Array[InventoryItem] = []
 var droppable : bool = false
@@ -36,8 +37,10 @@ func _unhandled_input(event: InputEvent) -> void:
 func _on_body_entered(body: Node2D) -> void:
 	if body.is_in_group("player"):
 		droppable = true
+		foodDialog.show()
 
 
 func _on_body_exited(body: Node2D) -> void:
 	if body.is_in_group("player"):
 		droppable = false
+		foodDialog.hide()
