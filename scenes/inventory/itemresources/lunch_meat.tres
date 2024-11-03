@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="InventoryItem" load_steps=3 format=3 uid="uid://lbxj3f56tqt4"]
+
+[ext_resource type="Script" path="res://addons/SwiftInv/Scripts/InventoryItem.gd" id="1_8c1l5"]
+[ext_resource type="Texture2D" uid="uid://balk27f3aiano" path="res://assets/food/lunch_meat.png" id="2_3emjq"]
+
+[resource]
+script = ExtResource("1_8c1l5")
+name = "LunchMeat"
+description = ""
+texture = ExtResource("2_3emjq")
+value = 1
+amount = 1
+max_stack = 1

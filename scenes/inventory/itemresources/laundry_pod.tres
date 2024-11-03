@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="InventoryItem" load_steps=3 format=3 uid="uid://dxfeiwy3uapk"]
+
+[ext_resource type="Script" path="res://addons/SwiftInv/Scripts/InventoryItem.gd" id="1_4yhwd"]
+[ext_resource type="Texture2D" uid="uid://4p8oryhqlrua" path="res://assets/food/pod.png" id="2_apsci"]
+
+[resource]
+script = ExtResource("1_4yhwd")
+name = "LaundryPod"
+description = ""
+texture = ExtResource("2_apsci")
+value = 1
+amount = 1
+max_stack = 1

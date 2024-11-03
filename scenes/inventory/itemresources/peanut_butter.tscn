@@ -11,6 +11,7 @@ gravity_scale = 0.5
 metadata/item_resource = ExtResource("1_no6wk")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
+texture_filter = 1
 rotation = -0.120428
 scale = Vector2(0.6, 0.2)
 texture = ExtResource("2_l7hrn")
