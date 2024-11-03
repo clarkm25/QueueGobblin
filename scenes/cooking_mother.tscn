@@ -1,0 +1,70 @@
+[gd_scene load_steps=5 format=3 uid="uid://ocssj41m6625"]
+
+[ext_resource type="Texture2D" uid="uid://dt5dt7xuwbea8" path="res://assets/desk.png" id="1_xxetj"]
+[ext_resource type="PackedScene" path="res://scenes/bread_slice.tscn" id="2_wlanp"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_cbrg3"]
+size = Vector2(1153, 62.5)
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_5hk3l"]
+radius = 20.11
+height = 421.16
+
+[node name="CookingMother" type="Node2D"]
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+position = Vector2(577, 436)
+
+[node name="Sprite2D" type="Sprite2D" parent="StaticBody2D"]
+texture_filter = 1
+scale = Vector2(10, 10)
+texture = ExtResource("1_xxetj")
+region_enabled = true
+region_rect = Rect2(263, 300, 115, 84)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(0, 126)
+shape = SubResource("RectangleShape2D_cbrg3")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(-175, 75)
+rotation = 1.5708
+shape = SubResource("CapsuleShape2D_5hk3l")
+
+[node name="Control" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+size_flags_vertical = 0
+
+[node name="BreadSlice" parent="." instance=ExtResource("2_wlanp")]
+z_index = 1
+position = Vector2(580, -100)
+continuous_cd = 1
+
+[node name="Ingredient1Location" type="Node2D" parent="."]
+position = Vector2(586, -392)
+
+[node name="Ingredient2Location" type="Node2D" parent="."]
+position = Vector2(583, -683)
+
+[node name="BreadSlice2" parent="." instance=ExtResource("2_wlanp")]
+z_index = 1
+position = Vector2(577, -897)
+rotation = -0.0523599
+mass = 0.2
+gravity_scale = 0.3
+
+[node name="PanelContainer" type="PanelContainer" parent="."]
+z_as_relative = false
+offset_left = 302.0
+offset_top = 36.0
+offset_right = 902.0
+offset_bottom = 396.0
+size_flags_vertical = 0
+
+[node name="Label" type="Label" parent="PanelContainer"]
+layout_mode = 2
+size_flags_vertical = 0
+text = "league of lorgends - competitive
+
+good sandwihc!"
