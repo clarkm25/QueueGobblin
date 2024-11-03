@@ -1,4 +1,4 @@
-[gd_resource type="Resource" script_class="InventoryItem" load_steps=3 format=3 uid="uid://dxuy31dijqggo"]
+[gd_resource type="Resource" script_class="InventoryItem" load_steps=3 format=3 uid="uid://yks130431lr6"]
 
 [ext_resource type="Script" path="res://addons/SwiftInv/Scripts/InventoryItem.gd" id="1_tl4xq"]
 [ext_resource type="Texture2D" uid="uid://di0ep5qheftup" path="res://assets/food/mootpocket.png" id="2_qdam4"]
@@ -8,6 +8,6 @@ script = ExtResource("1_tl4xq")
 name = "Mootpocket"
 description = ""
 texture = ExtResource("2_qdam4")
-value = 40
+value = 30
 amount = 1
 max_stack = 1
