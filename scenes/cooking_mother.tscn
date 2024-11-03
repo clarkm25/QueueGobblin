@@ -1,17 +1,19 @@
 [gd_scene load_steps=26 format=4 uid="uid://cbir4c3j7r4tt"]
 
+
 [ext_resource type="Script" path="res://scripts/inventory/sandwich_building/sandwich_scene.gd" id="1_enyul"]
 [ext_resource type="Texture2D" uid="uid://dt5dt7xuwbea8" path="res://assets/desk.png" id="1_xxetj"]
 [ext_resource type="PackedScene" uid="uid://d4dgfa8mtmy7e" path="res://scenes/inventory/itemresources/moritos_soft.tscn" id="2_ectb5"]
 [ext_resource type="PackedScene" uid="uid://d378jrgtiese8" path="res://scenes/inventory/itemresources/mount_doo.tscn" id="2_gq0lb"]
 [ext_resource type="PackedScene" uid="uid://d3tgv81bt3x4n" path="res://scenes/bread_slice.tscn" id="2_wlanp"]
-[ext_resource type="PackedScene" path="res://scenes/inventory/itemresources/mootpocket.tscn" id="4_kswip"]
+[ext_resource type="PackedScene" uid="uid://0mjd1sqn5iog" path="res://scenes/inventory/itemresources/mootpocket.tscn" id="4_kswip"]
 [ext_resource type="Texture2D" uid="uid://ch16ko2ftl6d6" path="res://assets/A4.png" id="4_xr6s0"]
-[ext_resource type="PackedScene" path="res://scenes/inventory/itemresources/peanut_butter.tscn" id="5_bikem"]
-[ext_resource type="PackedScene" uid="uid://chuk2acs3qbgf" path="res://scenes/inventory/itemresources/jam.tscn" id="6_k2pjj"]
-[ext_resource type="PackedScene" path="res://scenes/inventory/itemresources/laundry_pod.tscn" id="7_e8s36"]
-[ext_resource type="PackedScene" path="res://scenes/inventory/itemresources/lettuce.tscn" id="8_df658"]
-[ext_resource type="PackedScene" path="res://scenes/inventory/itemresources/lunch_meat.tscn" id="9_sh31s"]
+[ext_resource type="PackedScene" uid="uid://w86s1h3e5dbq" path="res://scenes/inventory/itemresources/peanut_butter.tscn" id="5_bikem"]
+[ext_resource type="PackedScene" uid="uid://8x5wmrjowqor" path="res://scenes/inventory/itemresources/jam.tscn" id="6_k2pjj"]
+[ext_resource type="PackedScene" uid="uid://fj6xh8xpt37c" path="res://scenes/inventory/itemresources/laundry_pod.tscn" id="7_e8s36"]
+[ext_resource type="PackedScene" uid="uid://s5wevi6uqo3p" path="res://scenes/inventory/itemresources/lettuce.tscn" id="8_df658"]
+[ext_resource type="PackedScene" uid="uid://k76e12sr4y6o" path="res://scenes/inventory/itemresources/lunch_meat.tscn" id="9_sh31s"]
+
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_rl8bm"]
 texture = ExtResource("4_xr6s0")
