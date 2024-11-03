@@ -19,3 +19,9 @@ func _ready() -> void:
 	
 	ItemPasser.passed_inventory.clear()
 	
+
+
+func _on_area_2d_body_entered(body: Node2D) -> void:
+	if body.has_meta("item_resource"):
+		var item = body.get_meta("item_resource")
+		$StaticBody2D/PanelContainer/ScoreLabel.text += "score of item: " + item.name + " = " + str(item.value) + "\n"
