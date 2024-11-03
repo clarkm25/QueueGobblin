@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=3 uid="uid://dm8no2sp4crm8"]
+[gd_scene load_steps=18 format=3 uid="uid://csx6uumt536ag"]
 
 [ext_resource type="PackedScene" uid="uid://78psqsuy1rkv" path="res://scenes/player.tscn" id="1_clu1g"]
 [ext_resource type="Script" path="res://scripts/game_loop.gd" id="1_y16ym"]
@@ -12,6 +12,7 @@
 [ext_resource type="Texture2D" uid="uid://cr4iycc7ppnij" path="res://assets/food/mountdoo.png" id="8_n1nc4"]
 [ext_resource type="PackedScene" uid="uid://br1o5d65lfind" path="res://scenes/inventory/example_slot.tscn" id="9_le876"]
 [ext_resource type="Script" path="res://addons/SwiftInv/Scripts/InventorySlot.gd" id="10_ix281"]
+[ext_resource type="PackedScene" uid="uid://3j56tewil3yj" path="res://scenes/menus/Clock.tscn" id="12_xgabu"]
 [ext_resource type="PackedScene" uid="uid://c2l3b5t3d16q7" path="res://scenes/inventory/dropoff/dropoff_zone.tscn" id="13_iwyjt"]
 
 [sub_resource type="Resource" id="Resource_njlnr"]
@@ -23,7 +24,7 @@ value = 5
 amount = 1
 max_stack = 1
 
-[sub_resource type="Resource" id="Resource_nofag"]
+[sub_resource type="Resource" id="Resource_a2h7s"]
 resource_local_to_scene = true
 script = ExtResource("8_j02nc")
 items = Array[ExtResource("5_cntmp")]([null, null, null])
@@ -65,7 +66,7 @@ grow_horizontal = 2
 grow_vertical = 0
 size_flags_horizontal = 4
 size_flags_vertical = 4
-inventory = SubResource("Resource_nofag")
+inventory = SubResource("Resource_a2h7s")
 
 [node name="Slot0" type="TextureRect" parent="CanvasLayer/Inventory" node_paths=PackedStringArray("amount_label") instance=ExtResource("9_le876")]
 custom_minimum_size = Vector2(100, 100)
@@ -111,6 +112,8 @@ grow_vertical = 2
 stream = ExtResource("5_fcc25")
 autoplay = true
 expand = true
+
+[node name="Control2" parent="CanvasLayer" instance=ExtResource("12_xgabu")]
 
 [node name="GroundItem2" parent="." instance=ExtResource("6_m1kao")]
 position = Vector2(1022, 306)
