@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cr4iycc7ppnij"
-path="res://.godot/imported/mountdoo.png-57886f5bb80def362b8d9cbcfcfc3f8a.ctex"
+uid="uid://balk27f3aiano"
+path="res://.godot/imported/lunch_meat.png-43d990befa557feb03ebfd9c2d28187d.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/food/mountdoo.png"
-dest_files=["res://.godot/imported/mountdoo.png-57886f5bb80def362b8d9cbcfcfc3f8a.ctex"]
+source_file="res://assets/food/lunch_meat.png"
+dest_files=["res://.godot/imported/lunch_meat.png-43d990befa557feb03ebfd9c2d28187d.ctex"]
 
 [params]
 

@@ -1,8 +1,17 @@
-[gd_scene load_steps=2 format=3 uid="uid://jnh5stgjwygy"]
+[gd_scene load_steps=11 format=3 uid="uid://bjo6al5y1bbuu"]
 
 [ext_resource type="Script" path="res://scripts/inventory/area_spawner.gd" id="1_h5rqb"]
+[ext_resource type="Script" path="res://addons/SwiftInv/Scripts/InventoryItem.gd" id="2_5kt7s"]
+[ext_resource type="Resource" uid="uid://bbdakxaq4wv62" path="res://scenes/inventory/itemresources/jam.tres" id="3_5wj5o"]
+[ext_resource type="Resource" uid="uid://dxfeiwy3uapk" path="res://scenes/inventory/itemresources/laundry_pod.tres" id="4_kvm1a"]
+[ext_resource type="Resource" uid="uid://dc74y0bo7676m" path="res://scenes/inventory/itemresources/lettuce.tres" id="5_nexk7"]
+[ext_resource type="Resource" uid="uid://lbxj3f56tqt4" path="res://scenes/inventory/itemresources/lunch_meat.tres" id="6_bbi6l"]
+[ext_resource type="Resource" uid="uid://cs6v2xu8m0tk1" path="res://scenes/inventory/itemresources/mootpocket.tres" id="7_dlbsq"]
+[ext_resource type="Resource" uid="uid://b8ni6upjipuj6" path="res://scenes/inventory/itemresources/moritos.tres" id="8_6oygm"]
+[ext_resource type="Resource" uid="uid://bphgykks1gmvd" path="res://scenes/inventory/itemresources/mountdoo.tres" id="9_kgm7f"]
+[ext_resource type="Resource" uid="uid://dchqh84a5lxdv" path="res://scenes/inventory/itemresources/peanutbutter.tres" id="10_ms6n3"]
 
 [node name="AreaSpawner" type="Node2D"]
 script = ExtResource("1_h5rqb")
-possible_resources = [null, null, null]
+possible_resources = Array[ExtResource("2_5kt7s")]([ExtResource("3_5wj5o"), ExtResource("4_kvm1a"), ExtResource("5_nexk7"), ExtResource("6_bbi6l"), ExtResource("7_dlbsq"), ExtResource("8_6oygm"), ExtResource("9_kgm7f"), ExtResource("10_ms6n3")])
 chance_to_spawn = 0.25

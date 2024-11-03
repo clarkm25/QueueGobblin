@@ -1,0 +1,22 @@
+[gd_scene load_steps=4 format=3 uid="uid://k76e12sr4y6o"]
+
+[ext_resource type="Texture2D" uid="uid://tywvwopiwmxm" path="res://assets/food/lunch_meat_slice.png" id="1_44jxo"]
+[ext_resource type="Resource" uid="uid://lbxj3f56tqt4" path="res://scenes/inventory/itemresources/lunch_meat.tres" id="1_x102o"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_0sybf"]
+size = Vector2(178, 34)
+
+[node name="LunchMeat" type="RigidBody2D"]
+gravity_scale = 0.5
+metadata/item_resource = ExtResource("1_x102o")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture_filter = 1
+texture = ExtResource("1_44jxo")
+region_enabled = true
+region_rect = Rect2(48, 62, 169, 59)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(1, 6)
+scale = Vector2(0.969634, 1.00271)
+shape = SubResource("RectangleShape2D_0sybf")

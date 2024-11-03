@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cr4iycc7ppnij"
-path="res://.godot/imported/mountdoo.png-57886f5bb80def362b8d9cbcfcfc3f8a.ctex"
+uid="uid://dcjkpcbfve342"
+path="res://.godot/imported/jam.png-daf0b57fb33efe3f14cab3357865b224.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/food/mountdoo.png"
-dest_files=["res://.godot/imported/mountdoo.png-57886f5bb80def362b8d9cbcfcfc3f8a.ctex"]
+source_file="res://assets/food/jam.png"
+dest_files=["res://.godot/imported/jam.png-daf0b57fb33efe3f14cab3357865b224.ctex"]
 
 [params]
 

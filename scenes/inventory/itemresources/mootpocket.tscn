@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=3 uid="uid://0mjd1sqn5iog"]
+
+[ext_resource type="Resource" uid="uid://cs6v2xu8m0tk1" path="res://scenes/inventory/itemresources/mootpocket.tres" id="1_ar7ct"]
+[ext_resource type="Texture2D" uid="uid://5fk2nua02krx" path="res://assets/food/mootpocket_highres.png" id="1_tcm4t"]
+
+[node name="Mootpocket" type="RigidBody2D"]
+gravity_scale = 0.5
+metadata/item_resource = ExtResource("1_ar7ct")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture_filter = 1
+texture = ExtResource("1_tcm4t")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+scale = Vector2(0.5, 0.5)
+polygon = PackedVector2Array(80, -66.2, 43, -60, -20, -42, -36, -35, -77, -19, -101, -4, -121, 12, -128, 10.5, -128, 12.6, -124, 23.1, -124, 26, -90, 43, -90, 44.4, -9.6, 70.5, 4.10001, 70.5, 124.1, -2.5, 128, -2.5, 128, -7.5, 112, -39.5, 112, -42.4, 97, -54.4, 97, -56, 80, -64.1)

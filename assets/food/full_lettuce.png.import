@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cr4iycc7ppnij"
-path="res://.godot/imported/mountdoo.png-57886f5bb80def362b8d9cbcfcfc3f8a.ctex"
+uid="uid://cpw8s8m1pqppp"
+path="res://.godot/imported/full_lettuce.png-80990cae0d920e7d5126cef5e3136442.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/food/mountdoo.png"
-dest_files=["res://.godot/imported/mountdoo.png-57886f5bb80def362b8d9cbcfcfc3f8a.ctex"]
+source_file="res://assets/food/full_lettuce.png"
+dest_files=["res://.godot/imported/full_lettuce.png-80990cae0d920e7d5126cef5e3136442.ctex"]
 
 [params]
 
