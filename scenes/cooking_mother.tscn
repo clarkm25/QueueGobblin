@@ -1,7 +1,7 @@
-[gd_scene load_steps=5 format=3 uid="uid://bewk03xdfbtq3"]
+[gd_scene load_steps=5 format=3 uid="uid://ocssj41m6625"]
 
 [ext_resource type="Texture2D" uid="uid://dt5dt7xuwbea8" path="res://assets/desk.png" id="1_xxetj"]
-[ext_resource type="PackedScene" uid="uid://dkis0to466niq" path="res://scenes/bread_slice.tscn" id="2_wlanp"]
+[ext_resource type="PackedScene" path="res://scenes/bread_slice.tscn" id="2_wlanp"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_cbrg3"]
 size = Vector2(1153, 62.5)
