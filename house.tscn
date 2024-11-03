@@ -1,4 +1,4 @@
-[gd_scene load_steps=26 format=3 uid="uid://dip54pnfsfg58"]
+[gd_scene load_steps=26 format=3 uid="uid://dh4d806u0aovc"]
 
 [ext_resource type="Texture2D" uid="uid://8yh2waepdu5u" path="res://assets/home.png" id="1_hbchr"]
 
@@ -155,6 +155,7 @@ position = Vector2(70.9375, 119.523)
 shape = SubResource("RectangleShape2D_6lo5a")
 
 [node name="CollisionShape2D16" type="CollisionShape2D" parent="StaticBody2D"]
+visible = false
 light_mask = 3
 position = Vector2(14.9688, 49.2617)
 shape = SubResource("RectangleShape2D_knh8k")
