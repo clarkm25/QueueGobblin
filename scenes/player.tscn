@@ -4,7 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://c680ug6sv8o2f" path="res://assets/player/tilemap.png" id="2_nluo4"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_wbgo7"]
-radius = 5.0
+radius = 5.2
 
 [sub_resource type="SegmentShape2D" id="SegmentShape2D_1iq26"]
 b = Vector2(0, 0)
