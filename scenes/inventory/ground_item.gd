@@ -3,6 +3,7 @@ extends Area2D
 @export var item_resource : InventoryItem
 var inventory : Inventory
 @onready var sprite : Sprite2D = $Sprite2D
+@onready var label : Label = $ItemLabel
 
 # max contributed a newline here ^
 
@@ -40,9 +41,10 @@ func _glow():
 	# material applied to sprite2d node glows;
 	# so setting use_parent_material to false uses the material that glows.
 	sprite.use_parent_material = false
+	label.show()
 	
 func _unglow():
 	sprite.use_parent_material = true
-
+	label.hide()
 
 	
