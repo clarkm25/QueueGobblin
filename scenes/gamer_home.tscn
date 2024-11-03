@@ -1,7 +1,7 @@
-[gd_scene load_steps=27 format=4 uid="uid://c03ie5u7h5xhs"]
+[gd_scene load_steps=45 format=4 uid="uid://c03ie5u7h5xhs"]
 
 [ext_resource type="Script" path="res://scripts/camera/camera_lock.gd" id="1_e3jxk"]
-[ext_resource type="PackedScene" path="res://house.tscn" id="1_pknrw"]
+[ext_resource type="PackedScene" uid="uid://dip54pnfsfg58" path="res://house.tscn" id="1_pknrw"]
 [ext_resource type="PackedScene" uid="uid://78psqsuy1rkv" path="res://scenes/player.tscn" id="2_ead14"]
 [ext_resource type="PackedScene" uid="uid://ymf7fkfoy0vs" path="res://scenes/room.tscn" id="3_fshdu"]
 [ext_resource type="Texture2D" uid="uid://csjsgjwm8lhai" path="res://assets/black_void.tres" id="3_yafbo"]
@@ -13,10 +13,11 @@
 [ext_resource type="PackedScene" uid="uid://br1o5d65lfind" path="res://scenes/inventory/example_slot.tscn" id="8_c5su7"]
 [ext_resource type="Script" path="res://addons/SwiftInv/Scripts/InventorySlot.gd" id="9_xocdk"]
 [ext_resource type="PackedScene" uid="uid://b25jekrf0yjff" path="res://scenes/inventory/inventory_manager.tscn" id="10_v1bwn"]
-[ext_resource type="PackedScene" path="res://scenes/menus/pause_menu.tscn" id="11_o2lub"]
+[ext_resource type="PackedScene" uid="uid://bq370gs06pwhw" path="res://scenes/menus/pause_menu.tscn" id="11_o2lub"]
 [ext_resource type="PackedScene" uid="uid://c2l3b5t3d16q7" path="res://scenes/inventory/dropoff/dropoff_zone.tscn" id="12_bwyl4"]
 [ext_resource type="AudioStream" uid="uid://k0q7kvf0gwg4" path="res://assets/music/220321__b_lamerichs__bas-21022014-game-loop-8.mp3" id="12_d3bl4"]
 [ext_resource type="PackedScene" uid="uid://3j56tewil3yj" path="res://scenes/menus/clock.tscn" id="12_erdqb"]
+[ext_resource type="FontFile" uid="uid://ciu1c0knpjeq" path="res://assets/fonts/kenney_kenney-fonts/Fonts/Kenney Mini Square.ttf" id="18_gtex2"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_yxhli"]
 texture = ExtResource("3_yafbo")
@@ -55,6 +56,79 @@ size = Vector2(224, 144)
 
 [sub_resource type="LabelSettings" id="LabelSettings_te2u7"]
 font_size = 23
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_hcorj"]
+size = Vector2(31, 38.5)
+
+[sub_resource type="LabelSettings" id="LabelSettings_2wwy0"]
+font = ExtResource("18_gtex2")
+font_size = 8
+outline_size = 3
+outline_color = Color(0.988235, 0, 0.0941176, 1)
+shadow_size = 0
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_vuiqv"]
+size = Vector2(32, 21)
+
+[sub_resource type="LabelSettings" id="LabelSettings_jpssb"]
+font = ExtResource("18_gtex2")
+font_size = 8
+outline_size = 4
+outline_color = Color(0.8, 0, 0, 1)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ms233"]
+size = Vector2(24, 27)
+
+[sub_resource type="LabelSettings" id="LabelSettings_h86dv"]
+font = ExtResource("18_gtex2")
+font_size = 8
+outline_size = 3
+outline_color = Color(0.8, 0, 0, 1)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_6o86a"]
+size = Vector2(20, 29)
+
+[sub_resource type="LabelSettings" id="LabelSettings_d1ggg"]
+font = ExtResource("18_gtex2")
+font_size = 8
+outline_size = 3
+outline_color = Color(0.8, 0, 0, 1)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_3yjg3"]
+size = Vector2(29.875, 37)
+
+[sub_resource type="LabelSettings" id="LabelSettings_4kr5c"]
+font = ExtResource("18_gtex2")
+font_size = 8
+outline_size = 3
+outline_color = Color(0.8, 0, 0, 1)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ecp6i"]
+size = Vector2(23, 18.5)
+
+[sub_resource type="LabelSettings" id="LabelSettings_idyh3"]
+font = ExtResource("18_gtex2")
+font_size = 8
+outline_size = 3
+outline_color = Color(0.80112, 0, 0.191961, 1)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_bwnfa"]
+size = Vector2(17.5371, 20)
+
+[sub_resource type="LabelSettings" id="LabelSettings_nmbsh"]
+font = ExtResource("18_gtex2")
+font_size = 8
+outline_size = 3
+outline_color = Color(0.80112, 0, 0.191961, 1)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_5gvf3"]
+size = Vector2(47, 37)
+
+[sub_resource type="LabelSettings" id="LabelSettings_n7h55"]
+font = ExtResource("18_gtex2")
+font_size = 8
+outline_size = 3
+outline_color = Color(0.80112, 0, 0.191961, 1)
 
 [node name="GamerHome" type="Node2D"]
 script = ExtResource("1_e3jxk")
@@ -256,7 +330,283 @@ autoplay = true
 
 [node name="AudioListener2D" type="AudioListener2D" parent="."]
 
+[node name="Node2D" type="Node2D" parent="."]
+
+[node name="WashArea" type="Area2D" parent="Node2D"]
+monitorable = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Node2D/WashArea"]
+position = Vector2(413.5, 66.75)
+shape = SubResource("RectangleShape2D_hcorj")
+
+[node name="WashPanel" type="Panel" parent="Node2D/WashArea"]
+visible = false
+offset_left = 415.0
+offset_top = 14.0
+offset_right = 479.0
+offset_bottom = 40.0
+
+[node name="Label" type="Label" parent="Node2D/WashArea/WashPanel"]
+texture_filter = 1
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -30.5
+offset_top = -11.5
+offset_right = 30.5
+offset_bottom = 11.5
+grow_horizontal = 2
+grow_vertical = 2
+text = "Is that black 
+mold in the tub
+"
+label_settings = SubResource("LabelSettings_2wwy0")
+
+[node name="ChairArea" type="Area2D" parent="Node2D"]
+monitorable = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Node2D/ChairArea"]
+position = Vector2(136, 262)
+shape = SubResource("RectangleShape2D_vuiqv")
+
+[node name="ChairPanel" type="Panel" parent="Node2D/ChairArea"]
+visible = false
+offset_left = 109.0
+offset_top = 215.0
+offset_right = 162.0
+offset_bottom = 240.0
+
+[node name="Label" type="Label" parent="Node2D/ChairArea/ChairPanel"]
+texture_filter = 1
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -11.5
+offset_right = 20.0
+offset_bottom = 11.5
+grow_horizontal = 2
+grow_vertical = 2
+text = "ahh... 
+Goon Chair"
+label_settings = SubResource("LabelSettings_jpssb")
+
+[node name="CounterArea" type="Area2D" parent="Node2D"]
+monitorable = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Node2D/CounterArea"]
+position = Vector2(380, 253.5)
+shape = SubResource("RectangleShape2D_ms233")
+
+[node name="CounterPanel" type="Panel" parent="Node2D/CounterArea"]
+visible = false
+offset_left = 353.0
+offset_top = 207.0
+offset_right = 403.0
+offset_bottom = 234.0
+
+[node name="Label" type="Label" parent="Node2D/CounterArea/CounterPanel"]
+texture_filter = 1
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -21.5
+offset_top = -11.5
+offset_right = 21.5
+offset_bottom = 11.5
+grow_horizontal = 2
+grow_vertical = 2
+text = "A good old 
+cup a joe"
+label_settings = SubResource("LabelSettings_h86dv")
+
+[node name="BedArea" type="Area2D" parent="Node2D"]
+monitorable = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Node2D/BedArea"]
+position = Vector2(42, 52.5)
+shape = SubResource("RectangleShape2D_6o86a")
+
+[node name="BedPanel" type="Panel" parent="Node2D/BedArea"]
+visible = false
+offset_left = 24.0
+offset_top = 7.0
+offset_right = 84.0
+offset_bottom = 47.0
+
+[node name="Label" type="Label" parent="Node2D/BedArea/BedPanel"]
+texture_filter = 1
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -29.0
+offset_top = -18.0
+offset_right = 29.0
+offset_bottom = 18.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "No one shine a 
+blacklight on 
+the bed"
+label_settings = SubResource("LabelSettings_d1ggg")
+
+[node name="BookArea" type="Area2D" parent="Node2D"]
+monitorable = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Node2D/BookArea"]
+position = Vector2(44.0625, 318)
+shape = SubResource("RectangleShape2D_3yjg3")
+
+[node name="BookPanel" type="Panel" parent="Node2D/BookArea"]
+visible = false
+offset_left = 3.0
+offset_top = 279.0
+offset_right = 86.0
+offset_bottom = 307.0
+
+[node name="Label" type="Label" parent="Node2D/BookArea/BookPanel"]
+texture_filter = 1
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -39.5
+offset_top = -11.5
+offset_right = 39.5
+offset_bottom = 11.5
+grow_horizontal = 2
+grow_vertical = 2
+text = "My favorite series 
+is Highschool DXD"
+label_settings = SubResource("LabelSettings_4kr5c")
+
+[node name="DoorArea" type="Area2D" parent="Node2D"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Node2D/DoorArea"]
+position = Vector2(120, 327.25)
+shape = SubResource("RectangleShape2D_ecp6i")
+
+[node name="DoorPanel" type="Panel" parent="Node2D/DoorArea"]
+visible = false
+offset_left = 84.0
+offset_top = 303.0
+offset_right = 150.0
+offset_bottom = 328.0
+
+[node name="Label" type="Label" parent="Node2D/DoorArea/DoorPanel"]
+texture_filter = 1
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -30.5
+offset_top = -11.5
+offset_right = 30.5
+offset_bottom = 11.5
+grow_horizontal = 2
+grow_vertical = 2
+text = "touch grass??
+YUCK!!!"
+label_settings = SubResource("LabelSettings_idyh3")
+horizontal_alignment = 1
+
+[node name="LaundryArea" type="Area2D" parent="Node2D"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Node2D/LaundryArea"]
+position = Vector2(271.713, 61)
+rotation = -3.14159
+scale = Vector2(1.85747, -0.761338)
+shape = SubResource("RectangleShape2D_bwnfa")
+
+[node name="LandryPanel" type="Panel" parent="Node2D/LaundryArea"]
+visible = false
+offset_left = 255.0
+offset_top = 14.0
+offset_right = 297.0
+offset_bottom = 43.0
+
+[node name="Label" type="Label" parent="Node2D/LaundryArea/LandryPanel"]
+texture_filter = 1
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -11.5
+offset_right = 20.0
+offset_bottom = 11.5
+grow_horizontal = 2
+grow_vertical = 2
+text = "OH SH*T!
+A RAT!!"
+label_settings = SubResource("LabelSettings_nmbsh")
+
+[node name="TableArea" type="Area2D" parent="Node2D"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Node2D/TableArea"]
+position = Vector2(327.5, 290.5)
+shape = SubResource("RectangleShape2D_5gvf3")
+
+[node name="TablePanel" type="Panel" parent="Node2D/TableArea"]
+visible = false
+offset_left = 300.0
+offset_top = 286.0
+offset_right = 357.0
+offset_bottom = 318.0
+
+[node name="Label" type="Label" parent="Node2D/TableArea/TablePanel"]
+texture_filter = 1
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -26.0
+offset_top = -11.5
+offset_right = 26.0
+offset_bottom = 11.5
+grow_horizontal = 2
+grow_vertical = 2
+text = "This food is 
+f**king RAW!"
+label_settings = SubResource("LabelSettings_n7h55")
+
 [connection signal="timeout" from="GameTimer" to="." method="_on_game_timer_timeout"]
+[connection signal="body_entered" from="Node2D/WashArea" to="." method="_on_wash_area_body_entered"]
+[connection signal="body_exited" from="Node2D/WashArea" to="." method="_on_wash_area_body_exited"]
+[connection signal="body_shape_entered" from="Node2D/ChairArea" to="." method="_on_chair_area_body_shape_entered"]
+[connection signal="body_shape_exited" from="Node2D/ChairArea" to="." method="_on_chair_area_body_shape_exited"]
+[connection signal="body_entered" from="Node2D/CounterArea" to="." method="_on_counter_area_body_entered"]
+[connection signal="body_exited" from="Node2D/CounterArea" to="." method="_on_counter_area_body_exited"]
+[connection signal="body_entered" from="Node2D/BedArea" to="." method="_on_bed_area_body_entered"]
+[connection signal="body_exited" from="Node2D/BedArea" to="." method="_on_bed_area_body_exited"]
+[connection signal="body_entered" from="Node2D/BookArea" to="." method="_on_book_area_body_entered"]
+[connection signal="body_exited" from="Node2D/BookArea" to="." method="_on_book_area_body_exited"]
+[connection signal="body_entered" from="Node2D/DoorArea" to="." method="_on_door_area_body_entered"]
+[connection signal="body_exited" from="Node2D/DoorArea" to="." method="_on_door_area_body_exited"]
+[connection signal="body_entered" from="Node2D/LaundryArea" to="." method="_on_laundry_area_body_entered"]
+[connection signal="body_exited" from="Node2D/LaundryArea" to="." method="_on_laundry_area_body_exited"]
+[connection signal="body_entered" from="Node2D/TableArea" to="." method="_on_table_area_body_entered"]
+[connection signal="body_exited" from="Node2D/TableArea" to="." method="_on_table_area_body_exited"]
 
 [editable path="CameraLocks/BedRoom"]
 [editable path="CameraLocks/GameRoom"]
