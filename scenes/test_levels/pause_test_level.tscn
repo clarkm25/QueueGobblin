@@ -11,7 +11,7 @@
 [ext_resource type="Script" path="res://addons/SwiftInv/Scripts/Inventory.gd" id="8_ja6bt"]
 [ext_resource type="Script" path="res://addons/SwiftInv/Scripts/InventorySlot.gd" id="9_uo1vi"]
 [ext_resource type="VideoStream" path="res://assets/SkyrimOGG.ogv" id="10_lh58i"]
-[ext_resource type="PackedScene" uid="uid://c0e4rm66g3rao" path="res://scenes/menus/pause_menu.tscn" id="11_314sj"]
+[ext_resource type="PackedScene" uid="uid://bq370gs06pwhw" path="res://scenes/menus/pause_menu.tscn" id="11_314sj"]
 [ext_resource type="Texture2D" uid="uid://cr4iycc7ppnij" path="res://assets/food/mountdoo.png" id="11_na40a"]
 
 [sub_resource type="Resource" id="Resource_njlnr"]
@@ -23,7 +23,7 @@ value = 5
 amount = 1
 max_stack = 1
 
-[sub_resource type="Resource" id="Resource_ypf8s"]
+[sub_resource type="Resource" id="Resource_vjj0e"]
 resource_local_to_scene = true
 script = ExtResource("8_ja6bt")
 items = Array[ExtResource("5_fqgaj")]([null, null, null])
@@ -67,7 +67,7 @@ grow_horizontal = 2
 grow_vertical = 0
 size_flags_horizontal = 4
 size_flags_vertical = 4
-inventory = SubResource("Resource_ypf8s")
+inventory = SubResource("Resource_vjj0e")
 
 [node name="Slot0" type="TextureRect" parent="CanvasLayer/Inventory" node_paths=PackedStringArray("amount_label") instance=ExtResource("8_d7f05")]
 custom_minimum_size = Vector2(100, 100)
