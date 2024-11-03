@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cr4iycc7ppnij"
-path="res://.godot/imported/mountdoo.png-57886f5bb80def362b8d9cbcfcfc3f8a.ctex"
+uid="uid://di0ep5qheftup"
+path="res://.godot/imported/mootpocket.png-232debb59b0800bb49762a41e9b6d561.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/food/mountdoo.png"
-dest_files=["res://.godot/imported/mountdoo.png-57886f5bb80def362b8d9cbcfcfc3f8a.ctex"]
+source_file="res://assets/food/mootpocket.png"
+dest_files=["res://.godot/imported/mootpocket.png-232debb59b0800bb49762a41e9b6d561.ctex"]
 
 [params]
 

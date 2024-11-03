@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=3 uid="uid://fj6xh8xpt37c"]
+
+[ext_resource type="Texture2D" uid="uid://dsjdwf4fuehc3" path="res://assets/food/pod_highres.png" id="1_sv3f8"]
+[ext_resource type="Resource" uid="uid://dxfeiwy3uapk" path="res://scenes/inventory/itemresources/laundry_pod.tres" id="2_w2ax6"]
+
+[node name="LaundryPod" type="RigidBody2D"]
+gravity_scale = 0.5
+metadata/item_resource = ExtResource("2_w2ax6")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture_filter = 1
+texture = ExtResource("1_sv3f8")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+polygon = PackedVector2Array(-21, -13, -21, -5.6, -19.4, -4, -20, -2, -20, 20, 13, 20, 13, 17, 14, 17, 14, -6.2, 12, -11.2, 8, -13)

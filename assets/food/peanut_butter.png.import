@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cr4iycc7ppnij"
-path="res://.godot/imported/mountdoo.png-57886f5bb80def362b8d9cbcfcfc3f8a.ctex"
+uid="uid://cte1kcqnalbu1"
+path="res://.godot/imported/peanut_butter.png-4cf4732edc6e97cff8cceabb746d4ce1.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/food/mountdoo.png"
-dest_files=["res://.godot/imported/mountdoo.png-57886f5bb80def362b8d9cbcfcfc3f8a.ctex"]
+source_file="res://assets/food/peanut_butter.png"
+dest_files=["res://.godot/imported/peanut_butter.png-4cf4732edc6e97cff8cceabb746d4ce1.ctex"]
 
 [params]
 

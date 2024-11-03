@@ -1,0 +1,21 @@
+[gd_scene load_steps=4 format=3 uid="uid://w86s1h3e5dbq"]
+
+[ext_resource type="Resource" uid="uid://dchqh84a5lxdv" path="res://scenes/inventory/itemresources/peanutbutter.tres" id="1_no6wk"]
+[ext_resource type="Texture2D" uid="uid://dumn2grqraybg" path="res://assets/food/peanut_butter_spread_highres.png" id="2_l7hrn"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_vqix3"]
+size = Vector2(130, 14)
+
+[node name="PeanutButter" type="RigidBody2D"]
+gravity_scale = 0.5
+metadata/item_resource = ExtResource("1_no6wk")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture_filter = 1
+rotation = -0.120428
+scale = Vector2(0.6, 0.2)
+texture = ExtResource("2_l7hrn")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-4, 3)
+shape = SubResource("RectangleShape2D_vqix3")

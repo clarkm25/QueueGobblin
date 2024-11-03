@@ -6,7 +6,7 @@ signal points_gained(num, item)
 
 @onready var scorelabel = $StaticBody2D/PanelContainer/VBoxContainer/Panel/VBoxContainer/ScoreLabel
 var score := 0
-var score_threshhold := 160
+var score_threshhold := 120
 var rolling := false
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -71,6 +71,8 @@ func _on_combo_timer_timeout() -> void:
 		rolling = true
 	else:
 		%nextbutton.show()
+	%PanelContainer.z_index = 7
+	$StaticBody2D/PanelContainer/VBoxContainer/Panel/VBoxContainer/Label2.hide()
 	ItemPasser.passed_inventory.clear()
 		
 
