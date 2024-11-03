@@ -72,6 +72,7 @@ func _on_combo_timer_timeout() -> void:
 	else:
 		%nextbutton.show()
 	%PanelContainer.z_index = 7
+	$StaticBody2D/PanelContainer/VBoxContainer/Panel/VBoxContainer/Label2.hide()
 	ItemPasser.passed_inventory.clear()
 		
 
