@@ -74,7 +74,6 @@ tile_map_data = PackedByteArray("AADx//j/BAAAAAAAAADx//n/BAAAAAAAAADx//r/BAAAAAA
 tile_set = SubResource("TileSet_d77rw")
 
 [node name="CameraLocks" type="Node2D" parent="."]
-visible = false
 
 [node name="BedRoom" parent="CameraLocks" instance=ExtResource("3_fshdu")]
 position = Vector2(72, 64)
@@ -172,7 +171,7 @@ possible_resources = Array[ExtResource("5_yduve")]([ExtResource("6_3k5us"), ExtR
 position = Vector2(426, 169)
 possible_resources = Array[ExtResource("5_yduve")]([ExtResource("6_3k5us"), ExtResource("7_00rw1")])
 
-[node name="Player" parent="." groups=["player"] instance=ExtResource("2_ead14")]
+[node name="Player" parent="." instance=ExtResource("2_ead14")]
 position = Vector2(176, 64)
 move_speed = 100.0
 
