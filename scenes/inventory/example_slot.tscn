@@ -7,7 +7,8 @@ custom_minimum_size = Vector2(100, 100)
 offset_right = 40.0
 offset_bottom = 40.0
 mouse_filter = 2
-stretch_mode = 3
+expand_mode = 2
+stretch_mode = 5
 script = ExtResource("1_iw5u5")
 amount_label = NodePath("AmountLabel")
 
