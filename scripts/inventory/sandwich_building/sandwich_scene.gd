@@ -74,9 +74,9 @@ func _on_combo_timer_timeout() -> void:
 	%PanelContainer.z_index = 7
 	$StaticBody2D/PanelContainer/VBoxContainer/Panel/VBoxContainer/Label2.hide()
 	ItemPasser.passed_inventory.clear()
-		
-
 	
+
+
 func _process(_delta):
 	if rolling:
 		%LPNUM.text = str(randi_range(0, 80))
