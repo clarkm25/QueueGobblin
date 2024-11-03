@@ -37,7 +37,7 @@ func _check_for_pairs():
 	if invent.is_empty():
 		scorelabel.text += "really showing your lack of life-skills here, \nmr. \"bread sandwich\""
 		return
-
+	
 	var pb := false
 	var gamejam := false
 	var morito := false
@@ -46,6 +46,8 @@ func _check_for_pairs():
 	var lettuce := false
 	var laundrypod := false
 	var mootpocket := false
+	
+	var laundrypod_count = 0
 	
 	for item in invent:
 		match item.name:
@@ -63,6 +65,7 @@ func _check_for_pairs():
 				lunchmeat = true
 			"LaundryPod":
 				laundrypod = true
+				laundrypod_count += 1
 			"MootPocket":
 				mootpocket = true
 	
@@ -73,7 +76,9 @@ func _check_for_pairs():
 		points_gained.emit(20, "GAMER FUEL AND MICROPLASTICS!")
 	if lunchmeat and lettuce:
 		points_gained.emit(30, "AN ACTUAL SANDWICH!")
-	if laundrypod:
+	if laundrypod_count >= 3:
+		points_gained.emit(100*laundrypod_count, "THE FORBIDDEN FRUIT!")
+	elif laundrypod:
 		points_gained.emit(-5, "THAT CAN'T BE HEALTHY!")
 
 

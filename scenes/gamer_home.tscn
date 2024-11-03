@@ -1,7 +1,7 @@
-[gd_scene load_steps=45 format=4 uid="uid://c03ie5u7h5xhs"]
+[gd_scene load_steps=42 format=4 uid="uid://c03ie5u7h5xhs"]
 
 [ext_resource type="Script" path="res://scripts/camera/camera_lock.gd" id="1_e3jxk"]
-[ext_resource type="PackedScene" uid="uid://dip54pnfsfg58" path="res://house.tscn" id="1_pknrw"]
+[ext_resource type="PackedScene" uid="uid://dh4d806u0aovc" path="res://house.tscn" id="1_pknrw"]
 [ext_resource type="PackedScene" uid="uid://78psqsuy1rkv" path="res://scenes/player.tscn" id="2_ead14"]
 [ext_resource type="PackedScene" uid="uid://ymf7fkfoy0vs" path="res://scenes/room.tscn" id="3_fshdu"]
 [ext_resource type="Texture2D" uid="uid://q6ewd8v474y7" path="res://assets/black_void.tres" id="3_yafbo"]
