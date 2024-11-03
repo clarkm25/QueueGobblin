@@ -173,6 +173,7 @@ label_settings = SubResource("LabelSettings_te2u7")
 
 [node name="DialogBackground" type="Panel" parent="DropoffZone/FoodDialog"]
 show_behind_parent = true
+layout_mode = 0
 offset_left = -4.0
 offset_right = 230.0
 offset_bottom = 68.0

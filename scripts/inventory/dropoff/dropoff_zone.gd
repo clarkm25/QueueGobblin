@@ -16,27 +16,20 @@ func _process(delta: float) -> void:
 
 func _unhandled_input(event: InputEvent) -> void:
 	if event.is_action_pressed("interact"):
-		
 		if droppable == true:
 			get_viewport().set_input_as_handled()
-			var player_inventory = get_tree().get_first_node_in_group("inventory").inventory
-		
-			for n in player_inventory.items.size():
-				var item = player_inventory.items[n]
-				
-				if item == null:
-					continue
-				
-				items.append(item)
-				player_inventory.remove_by_index(n)
-				print("Item added!")
-			ItemPasser.passed_inventory = items
+			_update_pass_inventory(true)
 			get_tree().change_scene_to_file("res://scenes/cooking_mother.tscn")
 
 
 func _on_body_entered(body: Node2D) -> void:
 	if body.is_in_group("player"):
 		droppable = true
+		_update_pass_inventory(false)
+		if ItemPasser.passed_inventory.is_empty():
+			foodDialog.text = "I need to make food \nbefore I can rank up"
+		else:
+			foodDialog.text = "Click e to queue!"
 		foodDialog.show()
 
 
@@ -44,3 +37,18 @@ func _on_body_exited(body: Node2D) -> void:
 	if body.is_in_group("player"):
 		droppable = false
 		foodDialog.hide()
+		
+func _update_pass_inventory(clear : bool):
+	var player_inventory = get_tree().get_first_node_in_group("inventory").inventory
+		
+	for n in player_inventory.items.size():
+		var item = player_inventory.items[n]
+		
+		if item == null:
+			continue
+		
+		items.append(item)
+		if clear:
+			player_inventory.remove_by_index(n)
+		print("Item added!")
+	ItemPasser.passed_inventory = items
