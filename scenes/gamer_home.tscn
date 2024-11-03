@@ -1,7 +1,7 @@
 [gd_scene load_steps=21 format=3 uid="uid://c03ie5u7h5xhs"]
 
 [ext_resource type="Script" path="res://scripts/camera/camera_lock.gd" id="1_e3jxk"]
-[ext_resource type="PackedScene" path="res://house.tscn" id="1_pknrw"]
+[ext_resource type="PackedScene" uid="uid://dh4d806u0aovc" path="res://house.tscn" id="1_pknrw"]
 [ext_resource type="PackedScene" uid="uid://78psqsuy1rkv" path="res://scenes/player.tscn" id="2_ead14"]
 [ext_resource type="PackedScene" uid="uid://ymf7fkfoy0vs" path="res://scenes/room.tscn" id="3_fshdu"]
 [ext_resource type="PackedScene" uid="uid://col3xjunm68cw" path="res://scenes/inventory/inventory.tscn" id="5_hvo0p"]
@@ -51,7 +51,7 @@ script = ExtResource("1_e3jxk")
 position = Vector2(258, 187)
 
 [node name="Camera2D" type="Camera2D" parent="."]
-position = Vector2(184, 96)
+position = Vector2(320, 280)
 zoom = Vector2(4.5, 4.5)
 
 [node name="TheVoid" type="Node2D" parent="."]
@@ -107,7 +107,6 @@ rotation = 1.5708
 color = Color(0, 0, 0, 1)
 
 [node name="CameraLocks" type="Node2D" parent="."]
-visible = false
 
 [node name="BedRoom" parent="CameraLocks" instance=ExtResource("3_fshdu")]
 position = Vector2(72, 64)
@@ -152,7 +151,7 @@ position = Vector2(112, 280)
 shape = SubResource("RectangleShape2D_ehu2j")
 
 [node name="Player" parent="." groups=["player"] instance=ExtResource("2_ead14")]
-position = Vector2(176, 64)
+position = Vector2(271, 257)
 move_speed = 125.0
 
 [node name="InventoryManager" parent="." instance=ExtResource("10_v1bwn")]
