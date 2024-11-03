@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://cyiqb3tbh43g8"
+path="res://.godot/imported/Nice sandwich.ogg-d02bcf8f409c04ef1d57fe0b94ecccb3.oggvorbisstr"
+
+[deps]
+
+source_file="res://assets/foley-and-vo/Nice sandwich.ogg"
+dest_files=["res://.godot/imported/Nice sandwich.ogg-d02bcf8f409c04ef1d57fe0b94ecccb3.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

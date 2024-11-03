@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://b3hoqoh1l14iw"
+path="res://.godot/imported/A CHIP OFF THE OL BLOCK.ogg-3a0d66e012294b752014f771b3f7d2c3.oggvorbisstr"
+
+[deps]
+
+source_file="res://assets/foley-and-vo/A CHIP OFF THE OL BLOCK.ogg"
+dest_files=["res://.godot/imported/A CHIP OFF THE OL BLOCK.ogg-3a0d66e012294b752014f771b3f7d2c3.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4
