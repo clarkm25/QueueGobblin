@@ -39,8 +39,10 @@ func _on_body_exited(body: Node2D) -> void:
 		foodDialog.hide()
 		
 func _update_pass_inventory(clear : bool):
+	items = []
+	
 	var player_inventory = get_tree().get_first_node_in_group("inventory").inventory
-		
+	
 	for n in player_inventory.items.size():
 		var item = player_inventory.items[n]
 		
