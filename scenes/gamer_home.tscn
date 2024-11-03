@@ -161,6 +161,7 @@ move_speed = 125.0
 position = Vector2(208, 72)
 
 [node name="FoodDialog" type="Label" parent="DropoffZone"]
+visible = false
 offset_left = -38.0
 offset_top = -26.0
 offset_right = 205.0
@@ -171,6 +172,7 @@ before I can rank up"
 label_settings = SubResource("LabelSettings_te2u7")
 
 [node name="DialogBackground" type="Panel" parent="DropoffZone/FoodDialog"]
+visible = false
 show_behind_parent = true
 offset_left = -4.0
 offset_right = 230.0
