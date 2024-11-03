@@ -8,6 +8,6 @@ script = ExtResource("1_nhwns")
 name = "MountDoo"
 description = ""
 texture = ExtResource("2_qruai")
-value = 1
+value = 40
 amount = 1
 max_stack = 1

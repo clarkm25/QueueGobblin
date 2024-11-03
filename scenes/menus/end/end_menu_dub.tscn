@@ -1,10 +1,13 @@
-[gd_scene load_steps=15 format=3 uid="uid://bvky66yyni2c"]
+[gd_scene load_steps=19 format=3 uid="uid://bvky66yyni2c"]
 
 [ext_resource type="Texture2D" uid="uid://cok2ci4546h2u" path="res://scenes/StartBackground.png" id="1_4y10w"]
 [ext_resource type="Script" path="res://scripts/UI/end/end_menu_dub.gd" id="1_ylmh0"]
 [ext_resource type="Texture2D" uid="uid://seponkinrwsk" path="res://assets/menu_end/restartButton.png" id="2_konwh"]
 [ext_resource type="Texture2D" uid="uid://bwpwqba3koy0e" path="res://assets/menu_end/quitButton.png" id="3_nn5c4"]
 [ext_resource type="Texture2D" uid="uid://bv35q055bn724" path="res://assets/menu_end/Rankup.png" id="4_6q6tx"]
+[ext_resource type="AudioStream" uid="uid://ggfolddgbbvv" path="res://assets/foley-and-vo/Congrats.ogg" id="6_1ll8w"]
+[ext_resource type="AudioStream" uid="uid://dywp7vm6h7dr6" path="res://assets/foley-and-vo/It looks pretty good.ogg" id="7_nnqph"]
+[ext_resource type="AudioStream" uid="uid://cyiqb3tbh43g8" path="res://assets/foley-and-vo/Nice sandwich.ogg" id="8_l03eu"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_hhdyh"]
 texture = ExtResource("1_4y10w")
@@ -32,6 +35,13 @@ texture = ExtResource("3_nn5c4")
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_6bgvg"]
 texture = ExtResource("3_nn5c4")
+
+[sub_resource type="AudioStreamRandomizer" id="AudioStreamRandomizer_12tat"]
+playback_mode = 1
+streams_count = 3
+stream_0/stream = ExtResource("6_1ll8w")
+stream_1/stream = ExtResource("7_nnqph")
+stream_2/stream = ExtResource("8_l03eu")
 
 [node name="EndMenuDub" type="Control"]
 layout_mode = 3
@@ -83,6 +93,10 @@ offset_top = 80.0
 offset_right = 724.0
 offset_bottom = 280.0
 texture = ExtResource("4_6q6tx")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = SubResource("AudioStreamRandomizer_12tat")
+autoplay = true
 
 [connection signal="pressed" from="restart_button" to="." method="_on_restart_button_pressed"]
 [connection signal="pressed" from="quit_button" to="." method="_on_quit_button_pressed"]

@@ -1,10 +1,13 @@
-[gd_scene load_steps=15 format=3 uid="uid://blch2njym2c6l"]
+[gd_scene load_steps=19 format=3 uid="uid://blch2njym2c6l"]
 
 [ext_resource type="Script" path="res://scripts/UI/end/end_menu_loss.gd" id="1_1n74y"]
 [ext_resource type="Texture2D" uid="uid://cok2ci4546h2u" path="res://scenes/StartBackground.png" id="1_ew38x"]
 [ext_resource type="Texture2D" uid="uid://seponkinrwsk" path="res://assets/menu_end/restartButton.png" id="2_pldtk"]
 [ext_resource type="Texture2D" uid="uid://bwpwqba3koy0e" path="res://assets/menu_end/quitButton.png" id="3_wrc23"]
 [ext_resource type="Texture2D" uid="uid://dvfwod6cqolxq" path="res://assets/menu_end/Derank.png" id="4_1xcdf"]
+[ext_resource type="AudioStream" uid="uid://b0dq7tnwdw4f6" path="res://assets/foley-and-vo/Friend just put me on keto.ogg" id="6_on1hr"]
+[ext_resource type="AudioStream" uid="uid://b8dx13c6jj8fj" path="res://assets/foley-and-vo/New Recording 96.ogg" id="7_gqvf1"]
+[ext_resource type="AudioStream" uid="uid://h8e33xesbxk5" path="res://assets/foley-and-vo/I don’t know if you can eat that.ogg" id="8_i5b1y"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_hhdyh"]
 texture = ExtResource("1_ew38x")
@@ -32,6 +35,12 @@ texture = ExtResource("3_wrc23")
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_6bgvg"]
 texture = ExtResource("3_wrc23")
+
+[sub_resource type="AudioStreamRandomizer" id="AudioStreamRandomizer_breli"]
+streams_count = 3
+stream_0/stream = ExtResource("6_on1hr")
+stream_1/stream = ExtResource("7_gqvf1")
+stream_2/stream = ExtResource("8_i5b1y")
 
 [node name="EndMenuLoss" type="Control"]
 layout_mode = 3
@@ -83,6 +92,10 @@ offset_top = 80.0
 offset_right = 724.0
 offset_bottom = 280.0
 texture = ExtResource("4_1xcdf")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = SubResource("AudioStreamRandomizer_breli")
+autoplay = true
 
 [connection signal="pressed" from="restart_button" to="." method="_on_restart_button_pressed"]
 [connection signal="pressed" from="quit_button" to="." method="_on_quit_button_pressed"]
