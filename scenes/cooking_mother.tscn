@@ -1,19 +1,39 @@
-[gd_scene load_steps=5 format=3 uid="uid://ocssj41m6625"]
+[gd_scene load_steps=7 format=3 uid="uid://cbir4c3j7r4tt"]
 
+[ext_resource type="Script" path="res://scripts/inventory/sandwich_building/sandwich_scene.gd" id="1_enyul"]
 [ext_resource type="Texture2D" uid="uid://dt5dt7xuwbea8" path="res://assets/desk.png" id="1_xxetj"]
-[ext_resource type="PackedScene" path="res://scenes/bread_slice.tscn" id="2_wlanp"]
+[ext_resource type="PackedScene" uid="uid://d4dgfa8mtmy7e" path="res://scenes/inventory/itemresources/moritos_soft.tscn" id="2_ectb5"]
+[ext_resource type="PackedScene" uid="uid://d378jrgtiese8" path="res://scenes/inventory/itemresources/mount_doo.tscn" id="2_gq0lb"]
+[ext_resource type="PackedScene" uid="uid://d3tgv81bt3x4n" path="res://scenes/bread_slice.tscn" id="2_wlanp"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_cbrg3"]
 size = Vector2(1153, 62.5)
 
-[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_5hk3l"]
-radius = 20.11
-height = 421.16
-
 [node name="CookingMother" type="Node2D"]
+script = ExtResource("1_enyul")
+food_dict = {
+"Moritos": ExtResource("2_ectb5"),
+"MountDoo": ExtResource("2_gq0lb")
+}
 
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
 position = Vector2(577, 436)
+
+[node name="PanelContainer" type="PanelContainer" parent="StaticBody2D"]
+z_index = 1
+z_as_relative = false
+offset_left = -275.0
+offset_top = -400.0
+offset_right = 325.0
+offset_bottom = -40.0
+size_flags_vertical = 0
+
+[node name="Label" type="Label" parent="StaticBody2D/PanelContainer"]
+layout_mode = 2
+size_flags_vertical = 0
+text = "league of lorgends - competitive
+
+good sandwihc!"
 
 [node name="Sprite2D" type="Sprite2D" parent="StaticBody2D"]
 texture_filter = 1
@@ -26,45 +46,25 @@ region_rect = Rect2(263, 300, 115, 84)
 position = Vector2(0, 126)
 shape = SubResource("RectangleShape2D_cbrg3")
 
-[node name="CollisionShape2D2" type="CollisionShape2D" parent="StaticBody2D"]
-position = Vector2(-175, 75)
-rotation = 1.5708
-shape = SubResource("CapsuleShape2D_5hk3l")
-
-[node name="Control" type="Control" parent="."]
-layout_mode = 3
-anchors_preset = 0
-size_flags_vertical = 0
-
-[node name="BreadSlice" parent="." instance=ExtResource("2_wlanp")]
-z_index = 1
-position = Vector2(580, -100)
-continuous_cd = 1
-
 [node name="Ingredient1Location" type="Node2D" parent="."]
-position = Vector2(586, -392)
+z_index = 3
+position = Vector2(601, -511)
 
 [node name="Ingredient2Location" type="Node2D" parent="."]
+z_index = 4
 position = Vector2(583, -683)
 
+[node name="Ingredient3Location" type="Node2D" parent="."]
+z_index = 5
+position = Vector2(586, -924)
+
+[node name="BreadSlice1" parent="." instance=ExtResource("2_wlanp")]
+z_index = 2
+position = Vector2(593, -249)
+rotation = 0.289724
+
 [node name="BreadSlice2" parent="." instance=ExtResource("2_wlanp")]
-z_index = 1
-position = Vector2(577, -897)
-rotation = -0.0523599
-mass = 0.2
-gravity_scale = 0.3
-
-[node name="PanelContainer" type="PanelContainer" parent="."]
-z_as_relative = false
-offset_left = 302.0
-offset_top = 36.0
-offset_right = 902.0
-offset_bottom = 396.0
-size_flags_vertical = 0
-
-[node name="Label" type="Label" parent="PanelContainer"]
-layout_mode = 2
-size_flags_vertical = 0
-text = "league of lorgends - competitive
-
-good sandwihc!"
+z_index = 6
+position = Vector2(579, -1073)
+rotation = -0.260054
+gravity_scale = 0.4

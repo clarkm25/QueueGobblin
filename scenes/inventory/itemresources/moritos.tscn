@@ -1,0 +1,18 @@
+[gd_scene load_steps=3 format=3 uid="uid://cybm475b8ydaa"]
+
+[ext_resource type="Texture2D" uid="uid://cto5x3pxr1mr6" path="res://assets/food/morito_highres.png" id="1_dnr41"]
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_l3dps"]
+
+[node name="Moritos" type="RigidBody2D"]
+mass = 0.1
+physics_material_override = SubResource("PhysicsMaterial_l3dps")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+rotation = -1.5708
+texture = ExtResource("1_dnr41")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+rotation = -1.5708
+scale = Vector2(0.405, 0.405)
+polygon = PackedVector2Array(-212, -316.5, -212, -315.5, -219, -315.5, -219, -292.2, -183.5, -178.5, -184.9, -151.5, -186.1, -151.5, -182.9, -47.5, -182, -47.5, -185, 99.5, -185, 141.7, -179, 173.9, -179, 177.9, -186.2, 191.5, -187.4, 191.5, -194.4, 212.5, -195.6, 212.5, -212, 280.3, -212, 285.1, -219, 302.1, -219, 316.5, -37, 313.5, -37, 312.5, 151, 316, 149, 284, 143, 249, 132, 218, 129, 168, 112, 98, 105, -91, 109, -178, 125, -319)

@@ -1,16 +1,14 @@
-[gd_scene load_steps=22 format=3 uid="uid://c03ie5u7h5xhs"]
+[gd_scene load_steps=19 format=3 uid="uid://c03ie5u7h5xhs"]
 
 [ext_resource type="Script" path="res://scripts/camera/camera_lock.gd" id="1_e3jxk"]
-[ext_resource type="PackedScene" uid="uid://dip54pnfsfg58" path="res://house.tscn" id="1_pknrw"]
+[ext_resource type="PackedScene" path="res://house.tscn" id="1_pknrw"]
 [ext_resource type="PackedScene" uid="uid://78psqsuy1rkv" path="res://scenes/player.tscn" id="2_ead14"]
-[ext_resource type="PackedScene" path="res://scenes/room.tscn" id="3_fshdu"]
+[ext_resource type="PackedScene" uid="uid://ymf7fkfoy0vs" path="res://scenes/room.tscn" id="3_fshdu"]
 [ext_resource type="PackedScene" uid="uid://col3xjunm68cw" path="res://scenes/inventory/inventory.tscn" id="5_hvo0p"]
-[ext_resource type="Script" path="res://addons/SwiftInv/Scripts/InventoryItem.gd" id="6_hy4yl"]
-[ext_resource type="Script" path="res://addons/SwiftInv/Scripts/Inventory.gd" id="7_j2fxr"]
 [ext_resource type="PackedScene" uid="uid://br1o5d65lfind" path="res://scenes/inventory/example_slot.tscn" id="8_c5su7"]
 [ext_resource type="Script" path="res://addons/SwiftInv/Scripts/InventorySlot.gd" id="9_xocdk"]
 [ext_resource type="PackedScene" uid="uid://b25jekrf0yjff" path="res://scenes/inventory/inventory_manager.tscn" id="10_v1bwn"]
-[ext_resource type="PackedScene" uid="uid://bq370gs06pwhw" path="res://scenes/menus/pause_menu.tscn" id="11_o2lub"]
+[ext_resource type="PackedScene" path="res://scenes/menus/pause_menu.tscn" id="11_o2lub"]
 [ext_resource type="PackedScene" uid="uid://c2l3b5t3d16q7" path="res://scenes/inventory/dropoff/dropoff_zone.tscn" id="12_bwyl4"]
 [ext_resource type="PackedScene" uid="uid://3j56tewil3yj" path="res://scenes/menus/clock.tscn" id="12_erdqb"]
 
@@ -41,11 +39,6 @@ size = Vector2(192, 144)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ehu2j"]
 resource_local_to_scene = true
 size = Vector2(224, 144)
-
-[sub_resource type="Resource" id="Resource_0krco"]
-resource_local_to_scene = true
-script = ExtResource("7_j2fxr")
-items = Array[ExtResource("6_hy4yl")]([null, null, null])
 
 [node name="GamerHome" type="Node2D"]
 script = ExtResource("1_e3jxk")
@@ -167,6 +160,7 @@ position = Vector2(208, 72)
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
 [node name="Inventory" parent="CanvasLayer" groups=["inventory"] instance=ExtResource("5_hvo0p")]
+texture_filter = 1
 anchors_preset = 7
 anchor_left = 0.5
 anchor_top = 1.0
@@ -178,7 +172,6 @@ offset_right = 154.0
 offset_bottom = 0.0
 grow_horizontal = 2
 grow_vertical = 0
-inventory = SubResource("Resource_0krco")
 
 [node name="Slot0" type="TextureRect" parent="CanvasLayer/Inventory" node_paths=PackedStringArray("amount_label") instance=ExtResource("8_c5su7")]
 custom_minimum_size = Vector2(100, 100)
@@ -205,6 +198,7 @@ script = ExtResource("9_xocdk")
 amount_label = NodePath("AmountLabel")
 
 [node name="Clock" parent="CanvasLayer" instance=ExtResource("12_erdqb")]
+texture_filter = 1
 size_flags_horizontal = 4
 
 [node name="CanvasLayer2" type="CanvasLayer" parent="."]
